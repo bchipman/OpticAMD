@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */; };
+		D33AF5541BEC07D200B37DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5531BEC07D200B37DB1 /* ViewController.swift */; };
+		D33AF5571BEC07D200B37DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33AF5551BEC07D200B37DB1 /* Main.storyboard */; };
+		D33AF5591BEC07D200B37DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33AF5581BEC07D200B37DB1 /* Assets.xcassets */; };
+		D33AF55C1BEC07D200B37DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */; };
+		D33AF5671BEC07D200B37DB1 /* opticAMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5661BEC07D200B37DB1 /* opticAMDTests.swift */; };
+		D33AF5721BEC07D200B37DB1 /* opticAMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5711BEC07D200B37DB1 /* opticAMDUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D33AF5631BEC07D200B37DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D33AF5461BEC07D200B37DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D33AF54D1BEC07D200B37DB1;
+			remoteInfo = opticAMD;
+		};
+		D33AF56E1BEC07D200B37DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D33AF5461BEC07D200B37DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D33AF54D1BEC07D200B37DB1;
+			remoteInfo = opticAMD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D33AF54E1BEC07D200B37DB1 /* opticAMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opticAMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D33AF5531BEC07D200B37DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D33AF5561BEC07D200B37DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D33AF5581BEC07D200B37DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D33AF55B1BEC07D200B37DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D33AF55D1BEC07D200B37DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33AF5621BEC07D200B37DB1 /* opticAMDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opticAMDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33AF5661BEC07D200B37DB1 /* opticAMDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opticAMDTests.swift; sourceTree = "<group>"; };
+		D33AF5681BEC07D200B37DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33AF56D1BEC07D200B37DB1 /* opticAMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opticAMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33AF5711BEC07D200B37DB1 /* opticAMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opticAMDUITests.swift; sourceTree = "<group>"; };
+		D33AF5731BEC07D200B37DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D33AF54B1BEC07D200B37DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33AF55F1BEC07D200B37DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33AF56A1BEC07D200B37DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D33AF5451BEC07D200B37DB1 = {
+			isa = PBXGroup;
+			children = (
+				D33AF5501BEC07D200B37DB1 /* opticAMD */,
+				D33AF5651BEC07D200B37DB1 /* opticAMDTests */,
+				D33AF5701BEC07D200B37DB1 /* opticAMDUITests */,
+				D33AF54F1BEC07D200B37DB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D33AF54F1BEC07D200B37DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D33AF54E1BEC07D200B37DB1 /* opticAMD.app */,
+				D33AF5621BEC07D200B37DB1 /* opticAMDTests.xctest */,
+				D33AF56D1BEC07D200B37DB1 /* opticAMDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D33AF5501BEC07D200B37DB1 /* opticAMD */ = {
+			isa = PBXGroup;
+			children = (
+				D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */,
+				D33AF5531BEC07D200B37DB1 /* ViewController.swift */,
+				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
+				D33AF5581BEC07D200B37DB1 /* Assets.xcassets */,
+				D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */,
+				D33AF55D1BEC07D200B37DB1 /* Info.plist */,
+			);
+			path = opticAMD;
+			sourceTree = "<group>";
+		};
+		D33AF5651BEC07D200B37DB1 /* opticAMDTests */ = {
+			isa = PBXGroup;
+			children = (
+				D33AF5661BEC07D200B37DB1 /* opticAMDTests.swift */,
+				D33AF5681BEC07D200B37DB1 /* Info.plist */,
+			);
+			path = opticAMDTests;
+			sourceTree = "<group>";
+		};
+		D33AF5701BEC07D200B37DB1 /* opticAMDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D33AF5711BEC07D200B37DB1 /* opticAMDUITests.swift */,
+				D33AF5731BEC07D200B37DB1 /* Info.plist */,
+			);
+			path = opticAMDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D33AF54D1BEC07D200B37DB1 /* opticAMD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33AF5761BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMD" */;
+			buildPhases = (
+				D33AF54A1BEC07D200B37DB1 /* Sources */,
+				D33AF54B1BEC07D200B37DB1 /* Frameworks */,
+				D33AF54C1BEC07D200B37DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = opticAMD;
+			productName = opticAMD;
+			productReference = D33AF54E1BEC07D200B37DB1 /* opticAMD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D33AF5611BEC07D200B37DB1 /* opticAMDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33AF5791BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMDTests" */;
+			buildPhases = (
+				D33AF55E1BEC07D200B37DB1 /* Sources */,
+				D33AF55F1BEC07D200B37DB1 /* Frameworks */,
+				D33AF5601BEC07D200B37DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D33AF5641BEC07D200B37DB1 /* PBXTargetDependency */,
+			);
+			name = opticAMDTests;
+			productName = opticAMDTests;
+			productReference = D33AF5621BEC07D200B37DB1 /* opticAMDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D33AF56C1BEC07D200B37DB1 /* opticAMDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33AF57C1BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMDUITests" */;
+			buildPhases = (
+				D33AF5691BEC07D200B37DB1 /* Sources */,
+				D33AF56A1BEC07D200B37DB1 /* Frameworks */,
+				D33AF56B1BEC07D200B37DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D33AF56F1BEC07D200B37DB1 /* PBXTargetDependency */,
+			);
+			name = opticAMDUITests;
+			productName = opticAMDUITests;
+			productReference = D33AF56D1BEC07D200B37DB1 /* opticAMDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D33AF5461BEC07D200B37DB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Med AppJam 2015 - Team 9";
+				TargetAttributes = {
+					D33AF54D1BEC07D200B37DB1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					D33AF5611BEC07D200B37DB1 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D33AF54D1BEC07D200B37DB1;
+					};
+					D33AF56C1BEC07D200B37DB1 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D33AF54D1BEC07D200B37DB1;
+					};
+				};
+			};
+			buildConfigurationList = D33AF5491BEC07D200B37DB1 /* Build configuration list for PBXProject "opticAMD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D33AF5451BEC07D200B37DB1;
+			productRefGroup = D33AF54F1BEC07D200B37DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D33AF54D1BEC07D200B37DB1 /* opticAMD */,
+				D33AF5611BEC07D200B37DB1 /* opticAMDTests */,
+				D33AF56C1BEC07D200B37DB1 /* opticAMDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D33AF54C1BEC07D200B37DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33AF55C1BEC07D200B37DB1 /* LaunchScreen.storyboard in Resources */,
+				D33AF5591BEC07D200B37DB1 /* Assets.xcassets in Resources */,
+				D33AF5571BEC07D200B37DB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33AF5601BEC07D200B37DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33AF56B1BEC07D200B37DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D33AF54A1BEC07D200B37DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33AF5541BEC07D200B37DB1 /* ViewController.swift in Sources */,
+				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33AF55E1BEC07D200B37DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33AF5671BEC07D200B37DB1 /* opticAMDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33AF5691BEC07D200B37DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33AF5721BEC07D200B37DB1 /* opticAMDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D33AF5641BEC07D200B37DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D33AF54D1BEC07D200B37DB1 /* opticAMD */;
+			targetProxy = D33AF5631BEC07D200B37DB1 /* PBXContainerItemProxy */;
+		};
+		D33AF56F1BEC07D200B37DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D33AF54D1BEC07D200B37DB1 /* opticAMD */;
+			targetProxy = D33AF56E1BEC07D200B37DB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D33AF5551BEC07D200B37DB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D33AF5561BEC07D200B37DB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D33AF55B1BEC07D200B37DB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D33AF5741BEC07D200B37DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D33AF5751BEC07D200B37DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D33AF5771BEC07D200B37DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = opticAMD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Med-AppJam-2015-Team9.opticAMD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D33AF5781BEC07D200B37DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = opticAMD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Med-AppJam-2015-Team9.opticAMD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D33AF57A1BEC07D200B37DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = opticAMDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Med-AppJam-2015-Team9.opticAMDTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/opticAMD.app/opticAMD";
+			};
+			name = Debug;
+		};
+		D33AF57B1BEC07D200B37DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = opticAMDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Med-AppJam-2015-Team9.opticAMDTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/opticAMD.app/opticAMD";
+			};
+			name = Release;
+		};
+		D33AF57D1BEC07D200B37DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = opticAMDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Med-AppJam-2015-Team9.opticAMDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = opticAMD;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D33AF57E1BEC07D200B37DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = opticAMDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Med-AppJam-2015-Team9.opticAMDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = opticAMD;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D33AF5491BEC07D200B37DB1 /* Build configuration list for PBXProject "opticAMD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33AF5741BEC07D200B37DB1 /* Debug */,
+				D33AF5751BEC07D200B37DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D33AF5761BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33AF5771BEC07D200B37DB1 /* Debug */,
+				D33AF5781BEC07D200B37DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D33AF5791BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33AF57A1BEC07D200B37DB1 /* Debug */,
+				D33AF57B1BEC07D200B37DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D33AF57C1BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33AF57D1BEC07D200B37DB1 /* Debug */,
+				D33AF57E1BEC07D200B37DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D33AF5461BEC07D200B37DB1 /* Project object */;
+}
