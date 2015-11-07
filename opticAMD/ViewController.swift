@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     var blue:       CGFloat = 255
     var opacity:    CGFloat = 1
     
+
+    override func viewDidLoad() {
+        mainImageView.image = UIImage(named: "cat")
+    }
     
     
     // MARK: Methods
