@@ -19,30 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puw-a2-Ia5">
-                                <rect key="frame" x="20" y="147" width="560" height="433"/>
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpticAMD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exf-Xa-G2K">
-                                <rect key="frame" x="20" y="20" width="560" height="39"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-FC-9iZ">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="puw-a2-Ia5" firstAttribute="trailing" secondItem="exf-Xa-G2K" secondAttribute="trailing" id="Hch-pK-Qzi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="exf-Xa-G2K" secondAttribute="trailing" id="U4j-vA-veQ"/>
-                            <constraint firstItem="puw-a2-Ia5" firstAttribute="top" secondItem="exf-Xa-G2K" secondAttribute="bottom" constant="88" id="gt8-mA-Adv"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="exf-Xa-G2K" secondAttribute="leading" id="h1z-MR-98e"/>
-                            <constraint firstItem="exf-Xa-G2K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iRU-rG-FQY"/>
-                            <constraint firstAttribute="bottom" secondItem="puw-a2-Ia5" secondAttribute="bottom" constant="20" symbolic="YES" id="sta-7k-E5N"/>
-                            <constraint firstItem="puw-a2-Ia5" firstAttribute="leading" secondItem="exf-Xa-G2K" secondAttribute="leading" id="x4s-pC-wA8"/>
+                            <constraint firstItem="puw-a2-Ia5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7xP-4B-oMQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aBb-FC-9iZ" secondAttribute="leading" id="Bym-z5-qA9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aBb-FC-9iZ" secondAttribute="trailing" id="G85-2u-lnD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="puw-a2-Ia5" secondAttribute="bottom" constant="20" id="Ium-J0-iUF"/>
+                            <constraint firstItem="aBb-FC-9iZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KlU-AS-8VS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aBb-FC-9iZ" secondAttribute="bottom" constant="20" id="eZo-gS-RPc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="puw-a2-Ia5" secondAttribute="trailing" id="jxu-Hd-YWq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="puw-a2-Ia5" secondAttribute="leading" id="mnA-k3-dxH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainImageView" destination="puw-a2-Ia5" id="jKP-Jv-HXN"/>
+                        <outlet property="tempImageView" destination="aBb-FC-9iZ" id="0qQ-r3-bYm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
