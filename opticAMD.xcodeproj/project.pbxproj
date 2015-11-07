@@ -97,12 +97,9 @@
 		D33AF5501BEC07D200B37DB1 /* opticAMD */ = {
 			isa = PBXGroup;
 			children = (
-				D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */,
+				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 				D33AF5531BEC07D200B37DB1 /* ViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
-				D33AF5581BEC07D200B37DB1 /* Assets.xcassets */,
-				D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */,
-				D33AF55D1BEC07D200B37DB1 /* Info.plist */,
 			);
 			path = opticAMD;
 			sourceTree = "<group>";
@@ -123,6 +120,17 @@
 				D33AF5731BEC07D200B37DB1 /* Info.plist */,
 			);
 			path = opticAMDUITests;
+			sourceTree = "<group>";
+		};
+		ED188BFE1BED7FB100D163A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */,
+				D33AF5581BEC07D200B37DB1 /* Assets.xcassets */,
+				D33AF55D1BEC07D200B37DB1 /* Info.plist */,
+				D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +492,7 @@
 				D33AF5781BEC07D200B37DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D33AF5791BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMDTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				D33AF57B1BEC07D200B37DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D33AF57C1BEC07D200B37DB1 /* Build configuration list for PBXNativeTarget "opticAMDUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				D33AF57E1BEC07D200B37DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
