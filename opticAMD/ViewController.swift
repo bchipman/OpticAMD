@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     
 
     override func viewDidLoad() {
-        mainImageView.image = UIImage(named: "cat")
+//        mainImageView.image = UIImage(named: "cat")
+        mainImageView.image = UIImage(named: "amslerGrid")
     }
     
     
