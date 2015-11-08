@@ -13,24 +13,20 @@ class ViewController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var tempImageView: UIImageView!
-    
     var lastPoint = CGPoint.zero    // last point drawn on canvas
     var lineWidth: CGFloat = 5      // width of line to draw
     var swiped = false              // true if stroke is continuous
-    
     var red:        CGFloat = 0
     var green:      CGFloat = 0
     var blue:       CGFloat = 255
     var opacity:    CGFloat = 1
     
 
+    // MARK: Overriden Methods
     override func viewDidLoad() {
-//        mainImageView.image = UIImage(named: "cat")
-        mainImageView.image = UIImage(named: "amslerGrid")
+        setOrResetView()
     }
     
-    
-    // MARK: Methods
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Called when one or more fingers touch down in a view or window
         
@@ -62,38 +58,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
-        // Called by touchesMoved to draw a line between two points
-        // mainImageView: drawing except for the line currently being drawn
-        // tempImageView: line currently drawing
-        
-        // 1
-        UIGraphicsBeginImageContext(tempImageView.frame.size)
-        let context = UIGraphicsGetCurrentContext()
-        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.frame.size.width, height: tempImageView.frame.size.height))
-        
-        // 2
-        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
-        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
-        
-        // 3
-        CGContextSetLineCap(context, CGLineCap.Round)
-        CGContextSetLineWidth(context, lineWidth)
-        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
-        CGContextSetBlendMode(context, CGBlendMode.Normal)
-        
-        // 4
-        CGContextStrokePath(context)
-        
-        // 5
-        tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        tempImageView.alpha = opacity
-        UIGraphicsEndImageContext()
-        
-        
-    }
-    
+
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Called when one or more fingers are raised from a view or window
         
@@ -126,6 +91,47 @@ class ViewController: UIViewController {
         tempImageView.image = nil
     }
     
+
+    
+    // MARK: Actions
+    @IBAction func reset(sender: UIButton) {
+        setOrResetView()
+    }
+    
+    
+    // MARK: Helper Methods
+    func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
+        // Called by touchesMoved to draw a line between two points
+        // mainImageView: drawing except for the line currently being drawn
+        // tempImageView: line currently drawing
+        
+        // 1
+        UIGraphicsBeginImageContext(tempImageView.frame.size)
+        let context = UIGraphicsGetCurrentContext()
+        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.frame.size.width, height: tempImageView.frame.size.height))
+        
+        // 2
+        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
+        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        
+        // 3
+        CGContextSetLineCap(context, CGLineCap.Round)
+        CGContextSetLineWidth(context, lineWidth)
+        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
+        CGContextSetBlendMode(context, CGBlendMode.Normal)
+        
+        // 4
+        CGContextStrokePath(context)
+        
+        // 5
+        tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        tempImageView.alpha = opacity
+        UIGraphicsEndImageContext()
+    }
+    
+    func setOrResetView() {
+        mainImageView.image = UIImage(named: "amslerGrid")
+    }
 
 }
 
