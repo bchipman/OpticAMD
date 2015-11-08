@@ -94,10 +94,13 @@ class ViewController: UIViewController {
 
     
     // MARK: Actions
-    @IBAction func reset(sender: UIButton) {
+    @IBAction func reset(sender:UIButton) {
         setOrResetView()
     }
-    
+    @IBAction func reset2(sender: UIBarButtonItem) {
+        setOrResetView()
+    }
+
     
     // MARK: Helper Methods
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
