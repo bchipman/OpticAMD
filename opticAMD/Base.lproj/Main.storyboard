@@ -149,7 +149,6 @@
         <!--Previous Tests-->
         <scene sceneID="H1I-0a-ghq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="f56-VO-2Kg" customClass="TestResultTableViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="IeJ-7P-LRS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -192,6 +191,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Previous Tests" id="5oz-Vp-wYz"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="683"/>
         </scene>

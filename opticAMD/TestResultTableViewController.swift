@@ -16,8 +16,14 @@ class TestResultTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load the sample data.
-        loadSampleTestResults()
+        // Load any saved testResults, otherwise load sample data.
+        if let savedTestResults = loadTestResults() {
+            testResults += savedTestResults
+        }
+        else {
+            // Load the sample data.
+            loadSampleTestResults()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,7 +40,6 @@ class TestResultTableViewController: UITableViewController {
         let testResult2 = TestResult(name: "My First Test Result", image: image2)!
         
         testResults += [testResult1, testResult2]
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,16 +83,42 @@ class TestResultTableViewController: UITableViewController {
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+
         if editingStyle == .Delete {
+        
             // Delete the row from the data source
             testResults.removeAtIndex(indexPath.row)
+
+            // Save the testResults array whenever a testResult is deleted.
+            saveTestResults()
+            
+            // Delete the row from the view.
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
+        }
+        
+        else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+        
     }
     
+    
+    // MARK: NSCoding
+    func saveTestResults() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(testResults, toFile: TestResult.ArchiveURL.path!)
+        if isSuccessfulSave {
+            print("Successfully saved testResults.")
+        }
+        else {
+            print("Failed to save testResults...")
+        }
+    }
+    
+    func loadTestResults() -> [TestResult]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(TestResult.ArchiveURL.path!) as? [TestResult]
+    }
 
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
