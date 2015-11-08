@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */; };
-		D33AF5541BEC07D200B37DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5531BEC07D200B37DB1 /* ViewController.swift */; };
+		D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */; };
 		D33AF5571BEC07D200B37DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33AF5551BEC07D200B37DB1 /* Main.storyboard */; };
 		D33AF5591BEC07D200B37DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33AF5581BEC07D200B37DB1 /* Assets.xcassets */; };
 		D33AF55C1BEC07D200B37DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		D33AF54E1BEC07D200B37DB1 /* opticAMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opticAMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D33AF5531BEC07D200B37DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestViewController.swift; sourceTree = "<group>"; };
 		D33AF5561BEC07D200B37DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D33AF5581BEC07D200B37DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D33AF55B1BEC07D200B37DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
 				D37F997C1BEFE722006EBB84 /* TestResultTableViewCell.swift */,
 				D37F997E1BEFEE34006EBB84 /* TestResultTableViewController.swift */,
-				D33AF5531BEC07D200B37DB1 /* ViewController.swift */,
+				D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 			);
@@ -276,7 +276,7 @@
 				D37F997F1BEFEE34006EBB84 /* TestResultTableViewController.swift in Sources */,
 				D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */,
 				D37F997D1BEFE722006EBB84 /* TestResultTableViewCell.swift in Sources */,
-				D33AF5541BEC07D200B37DB1 /* ViewController.swift in Sources */,
+				D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

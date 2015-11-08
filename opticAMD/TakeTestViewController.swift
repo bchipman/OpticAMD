@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TakeTestViewController.swift
 //  opticAMD
 //
 //  Created by Brian on 11/5/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TakeTestViewController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak var mainImageView: UIImageView!

@@ -83,7 +83,7 @@
         <!--Amsler Grid Test-->
         <scene sceneID="nVk-7P-BAB">
             <objects>
-                <viewController id="GLd-MA-8hi" customClass="ViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GLd-MA-8hi" customClass="TakeTestViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2mD-GO-Vhi"/>
                         <viewControllerLayoutGuide type="bottom" id="YkV-mb-uKk"/>
