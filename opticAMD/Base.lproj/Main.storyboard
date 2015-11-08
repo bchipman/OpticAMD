@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e78-bF-OcF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Amsler Grid Test-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puw-a2-Ia5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="puw-a2-Ia5">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.58498049519999995" green="0.48065197230000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-FC-9iZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-FC-9iZ">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <animations/>
                             </imageView>
@@ -41,6 +41,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="puw-a2-Ia5" secondAttribute="leading" id="mnA-k3-dxH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Amsler Grid Test" id="Ae1-rP-AJI"/>
                     <connections>
                         <outlet property="mainImageView" destination="puw-a2-Ia5" id="jKP-Jv-HXN"/>
                         <outlet property="tempImageView" destination="aBb-FC-9iZ" id="0qQ-r3-bYm"/>
@@ -48,7 +49,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="400"/>
+            <point key="canvasLocation" x="174" y="34"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3wT-PV-eTG">
+            <objects>
+                <navigationController id="e78-bF-OcF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nel-Tx-1HU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yjm-bz-7dJ" kind="relationship" relationship="rootViewController" id="1JG-Io-zix"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zg-9j-pxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1294" y="306"/>
+        </scene>
+        <!--Optic AMD-->
+        <scene sceneID="xUd-tR-TOO">
+            <objects>
+                <viewController id="yjm-bz-7dJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qJK-vR-cBc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qoo-JT-9SI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7BS-gO-5rd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-nc-rO6">
+                                <rect key="frame" x="28" y="336" width="544" height="256"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Previous Tests">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JU0-Pe-A3F" kind="show" id="nWI-Ic-qam"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM3-Ob-tMW">
+                                <rect key="frame" x="28" y="72" width="544" height="256"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Begin Test">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="tND-rE-baM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IM3-Ob-tMW" firstAttribute="leading" secondItem="7BS-gO-5rd" secondAttribute="leadingMargin" constant="8" id="B9k-bm-de4"/>
+                            <constraint firstItem="IM3-Ob-tMW" firstAttribute="top" secondItem="qJK-vR-cBc" secondAttribute="bottom" constant="8" id="Dhs-u0-Gc0"/>
+                            <constraint firstItem="Qoo-JT-9SI" firstAttribute="top" secondItem="mUb-nc-rO6" secondAttribute="bottom" constant="8" id="GbU-at-fcG"/>
+                            <constraint firstItem="mUb-nc-rO6" firstAttribute="leading" secondItem="7BS-gO-5rd" secondAttribute="leadingMargin" constant="8" id="K87-ih-Y2B"/>
+                            <constraint firstItem="mUb-nc-rO6" firstAttribute="top" secondItem="IM3-Ob-tMW" secondAttribute="bottom" constant="8" id="O49-mF-VUy"/>
+                            <constraint firstItem="mUb-nc-rO6" firstAttribute="width" secondItem="IM3-Ob-tMW" secondAttribute="width" id="VBY-Nd-ssK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mUb-nc-rO6" secondAttribute="trailing" constant="8" id="qyj-NX-8Cw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IM3-Ob-tMW" secondAttribute="trailing" constant="8" id="ru0-Sg-y3F"/>
+                            <constraint firstItem="mUb-nc-rO6" firstAttribute="height" secondItem="IM3-Ob-tMW" secondAttribute="height" id="v69-Ym-SBw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Optic AMD" id="sNR-EQ-fL6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5IN-FL-Fdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-560" y="306"/>
+        </scene>
+        <!--Previous Tests-->
+        <scene sceneID="fSM-8C-tqq">
+            <objects>
+                <viewController id="JU0-Pe-A3F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j0p-ei-jb8"/>
+                        <viewControllerLayoutGuide type="bottom" id="UlE-jz-DWg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="INd-2C-rGb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Previous Tests" id="9TF-QP-j7W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0w-lR-sNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="840"/>
         </scene>
     </scenes>
 </document>
