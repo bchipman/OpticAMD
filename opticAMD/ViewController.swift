@@ -92,6 +92,7 @@ class ViewController: UIViewController {
     }
 
     
+    
     // MARK: Actions
     @IBAction func reset(sender: UIBarButtonItem) {
         setOrResetView()
@@ -132,5 +133,8 @@ class ViewController: UIViewController {
         mainImageView.image = UIImage(named: "amslerGrid")
     }
 
+    
+    // MARK: NSCoding
+    
 }
 

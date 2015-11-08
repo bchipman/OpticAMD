@@ -14,6 +14,8 @@
 		D33AF55C1BEC07D200B37DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */; };
 		D33AF5671BEC07D200B37DB1 /* opticAMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5661BEC07D200B37DB1 /* opticAMDTests.swift */; };
 		D33AF5721BEC07D200B37DB1 /* opticAMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5711BEC07D200B37DB1 /* opticAMDUITests.swift */; };
+		D37F99771BEFD9BD006EBB84 /* SavedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F99761BEFD9BD006EBB84 /* SavedImage.swift */; };
+		D37F997D1BEFE722006EBB84 /* SavedImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F997C1BEFE722006EBB84 /* SavedImageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D33AF56D1BEC07D200B37DB1 /* opticAMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opticAMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33AF5711BEC07D200B37DB1 /* opticAMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opticAMDUITests.swift; sourceTree = "<group>"; };
 		D33AF5731BEC07D200B37DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D37F99761BEFD9BD006EBB84 /* SavedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedImage.swift; sourceTree = "<group>"; };
+		D37F997C1BEFE722006EBB84 /* SavedImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedImageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 		D33AF5501BEC07D200B37DB1 /* opticAMD */ = {
 			isa = PBXGroup;
 			children = (
-				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
+				D37F99761BEFD9BD006EBB84 /* SavedImage.swift */,
+				D37F997C1BEFE722006EBB84 /* SavedImageTableViewCell.swift */,
 				D33AF5531BEC07D200B37DB1 /* ViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
+				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 			);
 			path = opticAMD;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D37F99771BEFD9BD006EBB84 /* SavedImage.swift in Sources */,
+				D37F997D1BEFE722006EBB84 /* SavedImageTableViewCell.swift in Sources */,
 				D33AF5541BEC07D200B37DB1 /* ViewController.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
 			);
