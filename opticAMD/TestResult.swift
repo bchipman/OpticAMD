@@ -1,5 +1,5 @@
 //
-//  SavedImage.swift
+//  TestResult.swift
 //  opticAMD
 //
 //  Created by Brian on 11/8/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SavedImage {
+class TestResult {
     
     // MARK: Properties
     var name: String

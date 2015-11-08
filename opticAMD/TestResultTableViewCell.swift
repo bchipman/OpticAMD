@@ -1,5 +1,5 @@
 //
-//  SavedImageTableViewCell.swift
+//  TestResultTableViewCell.swift
 //  opticAMD
 //
 //  Created by Brian on 11/8/15.
@@ -8,8 +8,14 @@
 
 import UIKit
 
-class SavedImageTableViewCell: UITableViewCell {
+class TestResultTableViewCell: UITableViewCell {
 
+    // MARK: Properties
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var resultImageView: UIImageView!
+
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

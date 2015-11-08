@@ -149,14 +149,15 @@
         <!--Previous Tests-->
         <scene sceneID="H1I-0a-ghq">
             <objects>
-                <tableViewController id="f56-VO-2Kg" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="f56-VO-2Kg" customClass="TestResultTableViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="IeJ-7P-LRS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LEu-GE-KJE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TestResultTableViewCell" rowHeight="90" id="LEu-GE-KJE" customClass="TestResultTableViewCell" customModule="opticAMD" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LEu-GE-KJE" id="M02-s2-1K1">
@@ -178,6 +179,10 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="g4r-9r-SCg" id="AWO-Ho-BaL"/>
+                                    <outlet property="resultImageView" destination="KCx-hX-6hH" id="MVM-5F-wnH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -187,7 +192,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Previous Tests" id="5oz-Vp-wYz"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="683"/>
         </scene>
