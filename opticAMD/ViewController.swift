@@ -90,14 +90,10 @@ class ViewController: UIViewController {
         
         tempImageView.image = nil
     }
-    
 
     
     // MARK: Actions
-    @IBAction func reset(sender:UIButton) {
-        setOrResetView()
-    }
-    @IBAction func reset2(sender: UIBarButtonItem) {
+    @IBAction func reset(sender: UIBarButtonItem) {
         setOrResetView()
     }
 
