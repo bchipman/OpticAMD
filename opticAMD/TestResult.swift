@@ -11,7 +11,7 @@ import UIKit
 class TestResult: NSObject, NSCoding {
     
     // MARK: Properties
-    var name: String
+    var date: NSDate?
     var image: UIImage?
     
     // MARK: Archiving Paths
@@ -20,21 +20,21 @@ class TestResult: NSObject, NSCoding {
     
     // MARK: Types
     struct PropertyKey {
-        static let nameKey = "name"
+        static let dateKey = "date"
         static let imageKey = "image"
     }
     
     // MARK: Initialization
-    init?(name: String, image: UIImage?) {
+    init?(date: NSDate?, image: UIImage?) {
     
         // Initalize stored properties.
-        self.name = name
+        self.date = date
         self.image = image
         
         super.init()
         
-        // Initialization should fail if there is no name or image.
-        if name.isEmpty || image == nil {
+        // Initialization should fail if there is no date or image.
+        if date == nil || image == nil {
             return nil
         }
     }
@@ -42,17 +42,16 @@ class TestResult: NSObject, NSCoding {
     
     // MARK: NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
+        aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
         aCoder.encodeObject(image, forKey: PropertyKey.imageKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
+        let date = aDecoder.decodeObjectForKey(PropertyKey.dateKey) as? NSDate
         let image = aDecoder.decodeObjectForKey(PropertyKey.imageKey) as? UIImage
         
         // Must call designated initializer.
-        self.init(name: name, image: image)
+        self.init(date: date, image: image)
     }
 
-    
 }

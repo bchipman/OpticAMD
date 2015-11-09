@@ -27,8 +27,8 @@ class SavedTestResults {
     }
     
     private func loadSampleTestResults() {
-        let testResult1 = TestResult(name: "Grumpy Cat", image: UIImage(named: "cat")!)!
-        let testResult2 = TestResult(name: "My First Test Result", image: UIImage(named: "amslerGrid")!)!
+        let testResult1 = TestResult(date: NSDate(), image: UIImage(named: "cat")!)!
+        let testResult2 = TestResult(date: NSDate(), image: UIImage(named: "amslerGrid")!)!
         testResults += [testResult1, testResult2]
     }
     

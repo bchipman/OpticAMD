@@ -11,8 +11,8 @@ import UIKit
 class TakeTestViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var tempImageView: UIImageView!
+    @IBOutlet weak var mainImageView: UIImageView! // Contains drawing except for the line currently being drawn
+    @IBOutlet weak var tempImageView: UIImageView! // Contains line currently being drawn
     var lastPoint = CGPoint.zero    // last point drawn on canvas
     var lineWidth: CGFloat = 5      // width of line to draw
     var swiped = false              // true if stroke is continuous
@@ -100,15 +100,13 @@ class TakeTestViewController: UIViewController {
     }
 
     @IBAction func save(sender: UIBarButtonItem) {
-        savedTestResults.add(TestResult(name: "something", image: mainImageView.image)!)
+        savedTestResults.add(TestResult(date: NSDate(), image: mainImageView.image)!)
         savedTestResults.save()
     }
     
     // MARK: Helper Methods
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
         // Called by touchesMoved to draw a line between two points
-        // mainImageView: drawing except for the line currently being drawn
-        // tempImageView: line currently drawing
         
         // 1
         UIGraphicsBeginImageContext(tempImageView.frame.size)

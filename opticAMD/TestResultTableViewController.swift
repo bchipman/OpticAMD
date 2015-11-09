@@ -39,9 +39,15 @@ class TestResultTableViewController: UITableViewController {
         // Fetches the appropriate testResult for the data source layout.
         let testResult = savedTestResults.get(indexPath.row)
         
-        cell.nameLabel.text = testResult.name
+        // Convert NSDate to String
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        formatter.timeStyle = .ShortStyle
+        let dateString = testResult.date != nil ? formatter.stringFromDate(testResult.date!) : "???"
+
+        // Assign testResult data to cell and return cell
+        cell.nameLabel.text = dateString
         cell.resultImageView.image = testResult.image
-        
         return cell
     }
 
