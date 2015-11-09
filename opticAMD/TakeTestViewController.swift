@@ -20,6 +20,7 @@ class TakeTestViewController: UIViewController {
     var green:      CGFloat = 0
     var blue:       CGFloat = 255
     var opacity:    CGFloat = 1
+    var savedTestResults = SavedTestResults()
     
 
     // MARK: Overriden Methods
@@ -98,6 +99,10 @@ class TakeTestViewController: UIViewController {
         setOrResetView()
     }
 
+    @IBAction func save(sender: UIBarButtonItem) {
+        savedTestResults.add(TestResult(name: "something", image: mainImageView.image)!)
+        savedTestResults.save()
+    }
     
     // MARK: Helper Methods
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
@@ -134,7 +139,7 @@ class TakeTestViewController: UIViewController {
     }
 
     
-    // MARK: NSCoding
+    
     
 }
 

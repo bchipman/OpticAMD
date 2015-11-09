@@ -112,6 +112,12 @@
                                             <action selector="reset:" destination="GLd-MA-8hi" id="G6M-8R-tzz"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mK5-Fs-aK3"/>
+                                    <barButtonItem title="Save" id="5TB-4w-qdc">
+                                        <connections>
+                                            <action selector="save:" destination="GLd-MA-8hi" id="zEi-Uq-UOp"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

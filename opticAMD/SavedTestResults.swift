@@ -44,6 +44,10 @@ class SavedTestResults {
         testResults.removeAtIndex(row)
     }
     
+    func add(testResult: TestResult) {
+        testResults.append(testResult)
+    }
+    
     
     // MARK: NSCoding
     func save() {
