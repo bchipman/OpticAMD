@@ -21,11 +21,19 @@ class TakeTestViewController: UIViewController {
     var blue:       CGFloat = 255
     var opacity:    CGFloat = 1
     var savedTestResults = SavedTestResults()
-    
+    var alertController: UIAlertController?
+
 
     // MARK: Overriden Methods
     override func viewDidLoad() {
         setOrResetView()
+        
+        // Create and configure alert controller to be used later (when save is tapped)
+        alertController = UIAlertController(title: "Your test was saved", message: nil, preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
+            print("OK was pressed")
+        }
+        alertController?.addAction(alertAction)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -102,7 +110,9 @@ class TakeTestViewController: UIViewController {
     @IBAction func save(sender: UIBarButtonItem) {
         savedTestResults.add(TestResult(date: NSDate(), image: mainImageView.image)!)
         savedTestResults.save()
+        self.presentViewController(alertController!, animated: true, completion: nil)
     }
+    
     
     // MARK: Helper Methods
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
