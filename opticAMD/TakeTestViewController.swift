@@ -23,15 +23,15 @@ class TakeTestViewController: UIViewController {
     var savedTestResults = SavedTestResults()
     var alertController: UIAlertController?
     
-    var gridLineWidth: CGFloat = 10
-    var squareSize: CGFloat = 50
+    var gridLineWidth: CGFloat = 50
+    var squareSize: CGFloat = 100
     var colorX: UIColor = UIColor.blueColor()
     var colorY: UIColor = UIColor.redColor()
 
     
     // MARK: Overriden Methods
     override func viewDidLoad() {
-        setOrResetView()
+//        setOrResetView()
         
         // Create and configure alert controller to be used later (when save is tapped)
         alertController = UIAlertController(title: "Your test was saved", message: nil, preferredStyle: .Alert)
@@ -86,7 +86,7 @@ class TakeTestViewController: UIViewController {
         UIGraphicsBeginImageContext(mainImageView.frame.size)
         
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
-        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.frame.size.width, height: tempImageView.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
+        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.frame.size.width, height: tempImageView.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
         
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -144,66 +144,81 @@ class TakeTestViewController: UIViewController {
         
         var xPos : CGFloat
         var yPos : CGFloat
-
+        var context: CGContext?
+        
+        
+        // TEST
+//        UIGraphicsEndImageContext()
         UIGraphicsBeginImageContext(mainImageView.frame.size)
-        var context = UIGraphicsGetCurrentContext()
-        mainImageView.image?.drawInRect(CGRect(x: getLeftPosSoGridCentered(), y: getTopPosSoGridCentered(), width: mainImageView.frame.size.width, height: tempImageView.frame.size.height))
+        context = UIGraphicsGetCurrentContext()
+        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
         
-
-        
-        // BLUE
-        xPos = getLeftPosSoGridCentered() + (gridLineWidth / 2)
-        yPos = getTopPosSoGridCentered()
-        for _ in 1...numLines() {
-            CGContextMoveToPoint(context, xPos, yPos)
-            CGContextAddLineToPoint(context, xPos, yPos + gridSize())
-            xPos += squareSize + gridLineWidth
-        }
-        
+        CGContextMoveToPoint(context, 0, 0)
+        CGContextAddLineToPoint(context, mainImageView.frame.size.width, 0)
+        CGContextAddLineToPoint(context, mainImageView.frame.size.width, mainImageView.frame.size.height)
+        CGContextAddLineToPoint(context, 0, mainImageView.frame.size.height)
+        CGContextAddLineToPoint(context, 0, 0)
         
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetLineWidth(context, gridLineWidth)
-        CGContextSetRGBStrokeColor(context, 0, 1, 0, 1.0)
+        CGContextSetRGBStrokeColor(context, 0, 1, 1, 1.0)
         CGContextSetBlendMode(context, CGBlendMode.Normal)
-
+        
         CGContextStrokePath(context)
-
+        
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        mainImageView.alpha = opacity
+        mainImageView.alpha = 1
         UIGraphicsEndImageContext()
         
         
+        // BLUE
+        print(mainImageView.frame.size)
+        print(mainImageView.frame.width)
+        print(mainImageView.bounds)
+        print(mainImageView.bounds.width)
         
-//        // RED
-//        xPos = getLeftPosSoGridCentered()
-//        yPos = getTopPosSoGridCentered() + (gridLineWidth / 2)
-//        for _ in 1...numLines() {
-//            myPathY.moveToPoint(CGPoint(x: xPos, y: yPos))
-//            myPathY.addLineToPoint(CGPoint(x: xPos + gridSize() , y: yPos))
-//            yPos += squareSize + gridLineWidth
-//        }
-//        colorY.set()
-//        myPathY.stroke()
-//        
-//        
-//        
-//        gridSize()
-//        getLeftPosSoGridCentered()
-//        getTopPosSoGridCentered()
-
         UIGraphicsBeginImageContext(mainImageView.frame.size)
         context = UIGraphicsGetCurrentContext()
-        mainImageView.image?.drawInRect(CGRect(x: getLeftPosSoGridCentered(), y: getTopPosSoGridCentered(), width: mainImageView.frame.size.width, height: tempImageView.frame.size.height))
+        
+        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
+        xPos = getLeftPosSoGridCentered() + (gridLineWidth / 2)
+        yPos = getTopPosSoGridCentered() + (gridLineWidth / 2)
+        print("mainImageView.frame.size: \(mainImageView.frame.size)")
+        print("gridLineWidth: \(gridLineWidth)")
+        print("squareSize:    \(squareSize)")
+        print("numSquares():  \(numSquares())")
+        print("numLines():    \(numLines())")
+        print("gridSize():    \(gridSize())")
+        print("leftTop:       \(getLeftPosSoGridCentered()), \(getTopPosSoGridCentered()) ")
+        for _ in 1...numLines() {
+            print("    (\(xPos), \(yPos))    ->    (\(xPos), \(yPos + gridSize())) ")
+            CGContextMoveToPoint(context, xPos, yPos)
+            CGContextAddLineToPoint(context, xPos, getTopPosSoGridCentered() + gridSize() - (gridLineWidth / 2) )
+            xPos += squareSize + gridLineWidth
+        }
+        
+        CGContextSetLineCap(context, CGLineCap.Round)
+        CGContextSetLineWidth(context, gridLineWidth)
+        CGContextSetRGBStrokeColor(context, 0, 0, 1, 1.0)
+        CGContextSetBlendMode(context, CGBlendMode.Normal)
+        CGContextStrokePath(context)
+        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        mainImageView.alpha = 1
+        UIGraphicsEndImageContext()
         
         
-        
+
         // RED
         
-        xPos = getLeftPosSoGridCentered()
+        UIGraphicsBeginImageContext(mainImageView.frame.size)
+        context = UIGraphicsGetCurrentContext()
+        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
+        xPos = getLeftPosSoGridCentered() + (gridLineWidth / 2)
         yPos = getTopPosSoGridCentered() + (gridLineWidth / 2)
         for _ in 1...numLines() {
             CGContextMoveToPoint(context, xPos, yPos)
-            CGContextAddLineToPoint(context, xPos + gridSize(), yPos)
+//            CGContextAddLineToPoint(context, xPos + gridSize(), yPos)
+            CGContextAddLineToPoint(context, getLeftPosSoGridCentered() + gridSize() - (gridLineWidth / 2), yPos)
             yPos += squareSize + gridLineWidth
         }
         
@@ -216,12 +231,17 @@ class TakeTestViewController: UIViewController {
         CGContextStrokePath(context)
         
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        mainImageView.alpha = opacity
+        mainImageView.alpha = 1
+        
         UIGraphicsEndImageContext()
+
+        
+        
     }
     
     func numSquares() -> Int {
         let ans1 = (min(mainImageView.frame.size.width, mainImageView.frame.size.height) - gridLineWidth) / (gridLineWidth + squareSize)
+//        print(ans1)
         let ans2 = floor(ans1)
         return Int(ans2)
     }
