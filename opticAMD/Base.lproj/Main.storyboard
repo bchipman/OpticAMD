@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e78-bF-OcF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e78-bF-OcF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zg-9j-pxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1294" y="306"/>
+            <point key="canvasLocation" x="-1362" y="306"/>
         </scene>
         <!--Optic AMD-->
         <scene sceneID="xUd-tR-TOO">
@@ -166,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LEu-GE-KJE" id="M02-s2-1K1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCx-hX-6hH">
@@ -196,10 +196,45 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Previous Tests" id="5oz-Vp-wYz"/>
+                    <connections>
+                        <segue destination="x7E-Em-8hn" kind="show" identifier="showDetail" id="OIe-Ge-rEH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="683"/>
+        </scene>
+        <!--Test Result Detail View Controller-->
+        <scene sceneID="aBI-78-s0n">
+            <objects>
+                <viewController id="x7E-Em-8hn" customClass="TestResultDetailViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uyQ-6k-M9y"/>
+                        <viewControllerLayoutGuide type="bottom" id="uU8-NV-KqR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HWX-Ib-cnH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kei-TX-TVl">
+                                <rect key="frame" x="20" y="72" width="560" height="520"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kei-TX-TVl" firstAttribute="top" secondItem="uyQ-6k-M9y" secondAttribute="bottom" constant="8" id="LJu-JA-rLg"/>
+                            <constraint firstItem="uU8-NV-KqR" firstAttribute="top" secondItem="kei-TX-TVl" secondAttribute="bottom" constant="8" id="dMQ-tw-28w"/>
+                            <constraint firstItem="kei-TX-TVl" firstAttribute="leading" secondItem="HWX-Ib-cnH" secondAttribute="leadingMargin" id="jfL-UQ-gMf"/>
+                            <constraint firstItem="kei-TX-TVl" firstAttribute="trailing" secondItem="HWX-Ib-cnH" secondAttribute="trailingMargin" id="lgz-Sf-KK1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testResultImageView" destination="kei-TX-TVl" id="Msg-Dn-vk5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLb-2y-Edi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="683"/>
         </scene>
     </scenes>
 </document>

@@ -18,6 +18,7 @@ class TestResultTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         savedTestResults.load()
+        tableView.reloadData()
     }
 
     
@@ -51,6 +52,25 @@ class TestResultTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Hello")
+        self.performSegueWithIdentifier("showDetail", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showDetail" {
+            print("Hello")
+            let index = self.tableView.indexPathForSelectedRow! as NSIndexPath
+            
+            let vc = segue.destinationViewController as! TestResultDetailViewController
+            
+            vc.testResult = savedTestResults.get(index.row)
+            
+            self.tableView.deselectRowAtIndexPath(index, animated: true)
+        }
+    }
+    
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
