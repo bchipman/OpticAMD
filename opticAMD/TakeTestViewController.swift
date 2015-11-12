@@ -22,8 +22,13 @@ class TakeTestViewController: UIViewController {
     var opacity:    CGFloat = 1
     var savedTestResults = SavedTestResults()
     var alertController: UIAlertController?
+    
+    var gridLineWidth: CGFloat = 10
+    var squareSize: CGFloat = 50
+    var colorX: UIColor = UIColor.blueColor()
+    var colorY: UIColor = UIColor.redColor()
 
-
+    
     // MARK: Overriden Methods
     override func viewDidLoad() {
         setOrResetView()
@@ -34,6 +39,7 @@ class TakeTestViewController: UIViewController {
             print("OK was pressed")
         }
         alertController?.addAction(alertAction)
+        drawNewGrid()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -78,18 +84,6 @@ class TakeTestViewController: UIViewController {
         
         // Merge tempImageView into mainImageView
         UIGraphicsBeginImageContext(mainImageView.frame.size)
-
-        print("view")
-        print(view.frame.origin)
-        print(view.frame.size)
-        
-        print("mainImageView")
-        print(mainImageView.frame.origin)
-        print(mainImageView.frame.size)
-        
-        print("tempImageView")
-        print(tempImageView.frame.origin)
-        print(tempImageView.frame.size)
         
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.frame.size.width, height: tempImageView.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
@@ -130,7 +124,7 @@ class TakeTestViewController: UIViewController {
         // 3
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetLineWidth(context, lineWidth)
-        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
+        CGContextSetRGBStrokeColor(context, red, 0.5, blue, 1.0)
         CGContextSetBlendMode(context, CGBlendMode.Normal)
         
         // 4
@@ -146,6 +140,101 @@ class TakeTestViewController: UIViewController {
         mainImageView.image = UIImage(named: "amslerGrid")
     }
 
+    func drawNewGrid() {
+//        print("MyView's drawRect()")
+        
+        UIGraphicsBeginImageContext(mainImageView.frame.size)
+        let context = UIGraphicsGetCurrentContext()
+        mainImageView.image?.drawInRect(CGRect(x: getLeftPosSoGridCentered(), y: getTopPosSoGridCentered(), width: mainImageView.frame.size.width, height: tempImageView.frame.size.height))
+        
+//        let myPathX = UIBezierPath()
+//        myPathX.lineWidth = gridLineWidth
+//        
+//        let myPathY = UIBezierPath()
+//        myPathY.lineWidth = gridLineWidth
+        
+//        print("")
+//        print("width: \(bounds.width)")
+//        print("height: \(bounds.height)")
+        
+        
+        var xPos : CGFloat
+        var yPos : CGFloat
+        
+        
+        
+        // BLUE
+        xPos = getLeftPosSoGridCentered() + (gridLineWidth / 2)
+        yPos = getTopPosSoGridCentered()
+        for _ in 1...numLines() {
+//            myPathX.moveToPoint(CGPoint(x: xPos, y: yPos))
+//            myPathX.addLineToPoint(CGPoint(x: xPos, y: yPos + gridSize()))
+            CGContextMoveToPoint(context, xPos, yPos)
+            CGContextAddLineToPoint(context, xPos, yPos + gridSize())
+            xPos += squareSize + gridLineWidth
+        }
+        
+//        colorX.set()
+//        myPathX.stroke()
+        
+        CGContextSetLineCap(context, CGLineCap.Round)
+        CGContextSetLineWidth(context, gridLineWidth)
+        CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
+        CGContextSetBlendMode(context, CGBlendMode.Normal)
+
+        CGContextStrokePath(context)
+
+        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        mainImageView.alpha = opacity
+        UIGraphicsEndImageContext()
+        
+        
+//        // RED
+//        xPos = getLeftPosSoGridCentered()
+//        yPos = getTopPosSoGridCentered() + (gridLineWidth / 2)
+//        for _ in 1...numLines() {
+//            myPathY.moveToPoint(CGPoint(x: xPos, y: yPos))
+//            myPathY.addLineToPoint(CGPoint(x: xPos + gridSize() , y: yPos))
+//            yPos += squareSize + gridLineWidth
+//        }
+//        colorY.set()
+//        myPathY.stroke()
+//        
+//        
+//        
+//        gridSize()
+//        getLeftPosSoGridCentered()
+//        getTopPosSoGridCentered()
+    }
+    
+    func numSquares() -> Int {
+        let ans1 = (min(mainImageView.frame.size.width, mainImageView.frame.size.height) - gridLineWidth) / (gridLineWidth + squareSize)
+        let ans2 = floor(ans1)
+        return Int(ans2)
+    }
+    
+    func numLines() -> Int {
+        return numSquares() + 1
+    }
+    
+    func gridSize() -> CGFloat {
+        let ans1 = CGFloat(numSquares()) * (squareSize + gridLineWidth)
+        let ans2 = ans1 + (gridLineWidth / 2)
+        let ans3 = ans2 + (gridLineWidth / 2)
+        return ans3
+    }
+    
+    func getLeftPosSoGridCentered() -> CGFloat {
+        var x = (mainImageView.frame.width - gridSize()) / 2
+        x = floor(x)
+        return x
+    }
+    
+    func getTopPosSoGridCentered() -> CGFloat {
+        var y = (mainImageView.frame.height - gridSize()) / 2
+        y = floor(y)
+        return y
+    }
     
     
     
