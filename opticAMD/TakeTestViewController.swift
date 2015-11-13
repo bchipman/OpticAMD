@@ -44,59 +44,57 @@ class TakeTestViewController: UIViewController {
     }
 
     
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        // Called when one or more fingers touch down in a view or window
-//        
-//        print("mainImageView.frame.origin: \(mainImageView.frame.origin)")
-//        // Reset swiped boolean
-//        swiped = false
-//        
-//        // Save touch location in lastPoint
-//        if let touch = touches.first as UITouch! {
-//            print (touch.locationInView(self.view))
-//            lastPoint = touch.locationInView(self.view)
-//            lastPoint.x -= mainImageView.frame.origin.x
-//            lastPoint.y -= mainImageView.frame.origin.y
-//        }
-//        
-//    }
-//    
-//    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        // Called when one or more fingers associated with an event move within a view or window
-//        
-//        // 6
-//        swiped = true
-//        if let touch = touches.first as UITouch! {
-//            var currentPoint = touch.locationInView(view)
-//            currentPoint.x -= mainImageView.frame.origin.x
-//            currentPoint.y -= mainImageView.frame.origin.y
-//            drawLineFrom(lastPoint, toPoint: currentPoint)
-//            
-//            // 7
-//            lastPoint = currentPoint
-//        }
-//        
-//    }
-//
-//    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        // Called when one or more fingers are raised from a view or window
-//        
-//        if !swiped {
-//            // draw a single point
-//            drawLineFrom(lastPoint, toPoint: lastPoint)
-//        }
-//        
-//        // Merge tempImageView into mainImageView
-//        UIGraphicsBeginImageContext(mainImageView.frame.size)
-//        
-//        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: mainImageView.frame.size.width, height: mainImageView.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
-//        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.frame.size.width, height: tempImageView.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
-//        
-//        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        
-//        tempImageView.image = nil
-//    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // Called when one or more fingers touch down in a view or window
+        
+        // Reset swiped boolean
+        swiped = false
+        
+        // Save touch location in lastPoint
+        if let touch = touches.first as UITouch! {
+            print(touch.locationInView(self.view))
+            lastPoint = touch.locationInView(self.view)
+            lastPoint.x -= mainImageView.superview!.frame.origin.x
+            lastPoint.y -= mainImageView.superview!.frame.origin.y
+        }
+        
+    }
+
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // Called when one or more fingers associated with an event move within a view or window
+        
+        // 6
+        swiped = true
+        if let touch = touches.first as UITouch! {
+            var currentPoint = touch.locationInView(view)
+            currentPoint.x -= mainImageView.superview!.frame.origin.x
+            currentPoint.y -= mainImageView.superview!.frame.origin.y
+            drawLineFrom(lastPoint, toPoint: currentPoint)
+            
+            // 7
+            lastPoint = currentPoint
+        }
+        
+    }
+
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // Called when one or more fingers are raised from a view or window
+        
+        if !swiped {
+            // draw a single point
+            drawLineFrom(lastPoint, toPoint: lastPoint)
+        }
+        
+        // Merge tempImageView into mainImageView
+        UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
+        
+        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: mainImageView.superview!.frame.size.width, height: mainImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
+        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
+        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        tempImageView.image = nil
+    }
 
     
     
@@ -112,42 +110,42 @@ class TakeTestViewController: UIViewController {
     }
     
     @IBAction func button1(sender: UIBarButtonItem) {
-        drawNewGrid()
     }
     
     @IBAction func button2(sender: UIBarButtonItem) {
     }
-//    // MARK: Helper Methods
-//    func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
-//        // Called by touchesMoved to draw a line between two points
-//        
-//        // 1
-//        UIGraphicsBeginImageContext(tempImageView.frame.size)
-//        let context = UIGraphicsGetCurrentContext()
-//        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.frame.size.width, height: tempImageView.frame.size.height))
-//        
-//        // 2
-//        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
-//        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
-//        
-//        // 3
-//        CGContextSetLineCap(context, CGLineCap.Round)
-//        CGContextSetLineWidth(context, lineWidth)
-//        CGContextSetRGBStrokeColor(context, red, 0.5, blue, 1.0)
-//        CGContextSetBlendMode(context, CGBlendMode.Normal)
-//        
-//        // 4
-//        CGContextStrokePath(context)
-//        
-//        // 5
-//        tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-//        tempImageView.alpha = opacity
-//        UIGraphicsEndImageContext()
-//    }
+    // MARK: Helper Methods
+    func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
+        // Called by touchesMoved to draw a line between two points
+        
+        // 1
+        UIGraphicsBeginImageContext(tempImageView.superview!.frame.size)
+        let context = UIGraphicsGetCurrentContext()
+        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height))
+        
+        // 2
+        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
+        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        
+        // 3
+        CGContextSetLineCap(context, CGLineCap.Round)
+        CGContextSetLineWidth(context, lineWidth)
+        CGContextSetRGBStrokeColor(context, red, 0.5, blue, 1.0)
+        CGContextSetBlendMode(context, CGBlendMode.Normal)
+        
+        // 4
+        CGContextStrokePath(context)
+        
+        // 5
+        tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        tempImageView.alpha = opacity
+        UIGraphicsEndImageContext()
+    }
     
     func setOrResetView() {
         mainImageView.image = nil
         tempImageView.image = nil
+        drawNewGrid()
     }
 
     func drawNewGrid() {
@@ -232,7 +230,6 @@ class TakeTestViewController: UIViewController {
     }
     
     func getLeftPosSoGridCentered() -> CGFloat {
-//        var x = (mainImageView.frame.width - gridSize()) / 2
         var x = (mainImageView.superview!.frame.width - gridSize()) / 2
         x = floor(x)
         return x
