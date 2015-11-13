@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		576F58811BF5DBF400322150 /* TestResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F58801BF5DBF400322150 /* TestResultDetailViewController.swift */; };
+		5737D4131BF4D5F6005AE92B /* TestResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737D4121BF4D5F6005AE92B /* TestResultDetailViewController.swift */; };
 		D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */; };
 		D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */; };
 		D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		576F58801BF5DBF400322150 /* TestResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultDetailViewController.swift; sourceTree = "<group>"; };
+		5737D4121BF4D5F6005AE92B /* TestResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultDetailViewController.swift; sourceTree = "<group>"; };
 		D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTestResults.swift; sourceTree = "<group>"; };
 		D33AF54E1BEC07D200B37DB1 /* opticAMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opticAMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,11 +107,19 @@
 		D33AF5501BEC07D200B37DB1 /* opticAMD */ = {
 			isa = PBXGroup;
 			children = (
-				576F58801BF5DBF400322150 /* TestResultDetailViewController.swift */,
+<<<<<<< HEAD
+				5737D4121BF4D5F6005AE92B /* TestResultDetailViewController.swift */,
+				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
+=======
+>>>>>>> upstream/master
 				D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */,
+				D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */,
 				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
 				D37F997C1BEFE722006EBB84 /* TestResultTableViewCell.swift */,
+<<<<<<< HEAD
 				D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */,
+=======
+>>>>>>> upstream/master
 				D37F997E1BEFEE34006EBB84 /* TestResultTableViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
@@ -279,9 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576F58811BF5DBF400322150 /* TestResultDetailViewController.swift in Sources */,
 				D37F997F1BEFEE34006EBB84 /* TestResultTableViewController.swift in Sources */,
 				D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */,
+				5737D4131BF4D5F6005AE92B /* TestResultDetailViewController.swift in Sources */,
 				D37F997D1BEFE722006EBB84 /* TestResultTableViewCell.swift in Sources */,
 				D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */,
 				D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */,

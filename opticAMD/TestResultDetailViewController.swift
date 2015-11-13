@@ -20,7 +20,7 @@ class TestResultDetailViewController: UIViewController {
         if (testResult == nil) {
             testResultImageView?.image = UIImage(named: "cat")
         } else {
-            testResultImageView?.image = testResult.image
+            testResultImageView?.image = testResult.leftImage
         }
         // Do any additional setup after loading the view.
     }

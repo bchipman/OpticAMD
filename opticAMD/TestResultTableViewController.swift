@@ -53,7 +53,7 @@ class TestResultTableViewController: UITableViewController, UISplitViewControlle
 
         // Assign testResult data to cell and return cell
         cell.nameLabel.text = dateString
-        cell.resultImageView.image = testResult.image
+        cell.resultImageView.image = testResult.leftImage
         return cell
     }
 

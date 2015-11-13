@@ -49,24 +49,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM3-Ob-tMW">
-                                <rect key="frame" x="28" y="72" width="544" height="256"/>
+                                <rect key="frame" x="20" y="502" width="560" height="41"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="Begin Test">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="GLd-MA-8hi" kind="show" id="vly-T7-jMR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-nc-rO6">
-                                <rect key="frame" x="28" y="336" width="544" height="256"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnk-GA-zYL">
+                                <rect key="frame" x="20" y="72" width="560" height="422"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-nc-rO6">
+                                <rect key="frame" x="20" y="551" width="560" height="41"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="Previous Tests">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="FgI-W3-uq1" kind="show" id="bwS-jB-UVv"/>
@@ -76,18 +81,20 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IM3-Ob-tMW" firstAttribute="leading" secondItem="7BS-gO-5rd" secondAttribute="leadingMargin" constant="8" id="B9k-bm-de4"/>
-                            <constraint firstItem="IM3-Ob-tMW" firstAttribute="top" secondItem="qJK-vR-cBc" secondAttribute="bottom" constant="8" id="Dhs-u0-Gc0"/>
-                            <constraint firstItem="Qoo-JT-9SI" firstAttribute="top" secondItem="mUb-nc-rO6" secondAttribute="bottom" constant="8" id="GbU-at-fcG"/>
-                            <constraint firstItem="mUb-nc-rO6" firstAttribute="leading" secondItem="7BS-gO-5rd" secondAttribute="leadingMargin" constant="8" id="K87-ih-Y2B"/>
-                            <constraint firstItem="mUb-nc-rO6" firstAttribute="top" secondItem="IM3-Ob-tMW" secondAttribute="bottom" constant="8" id="O49-mF-VUy"/>
-                            <constraint firstItem="mUb-nc-rO6" firstAttribute="width" secondItem="IM3-Ob-tMW" secondAttribute="width" id="VBY-Nd-ssK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mUb-nc-rO6" secondAttribute="trailing" constant="8" id="qyj-NX-8Cw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IM3-Ob-tMW" secondAttribute="trailing" constant="8" id="ru0-Sg-y3F"/>
-                            <constraint firstItem="mUb-nc-rO6" firstAttribute="height" secondItem="IM3-Ob-tMW" secondAttribute="height" id="v69-Ym-SBw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mUb-nc-rO6" secondAttribute="trailing" id="1rq-Lm-2X1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IM3-Ob-tMW" secondAttribute="trailing" id="cXd-q2-QfA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lnk-GA-zYL" secondAttribute="trailing" id="fhR-rw-Hsp"/>
+                            <constraint firstItem="IM3-Ob-tMW" firstAttribute="top" secondItem="lnk-GA-zYL" secondAttribute="bottom" constant="8" symbolic="YES" id="h0V-VE-frX"/>
+                            <constraint firstItem="lnk-GA-zYL" firstAttribute="leading" secondItem="7BS-gO-5rd" secondAttribute="leadingMargin" id="inM-V5-bmi"/>
+                            <constraint firstItem="Qoo-JT-9SI" firstAttribute="top" secondItem="mUb-nc-rO6" secondAttribute="bottom" constant="8" symbolic="YES" id="p6U-no-vI5"/>
+                            <constraint firstItem="IM3-Ob-tMW" firstAttribute="leading" secondItem="7BS-gO-5rd" secondAttribute="leadingMargin" id="uGF-TN-JbZ"/>
+                            <constraint firstItem="lnk-GA-zYL" firstAttribute="top" secondItem="qJK-vR-cBc" secondAttribute="bottom" constant="8" symbolic="YES" id="vsI-cd-Vip"/>
+                            <constraint firstItem="mUb-nc-rO6" firstAttribute="leading" secondItem="7BS-gO-5rd" secondAttribute="leadingMargin" id="vyF-bJ-QT6"/>
+                            <constraint firstItem="mUb-nc-rO6" firstAttribute="top" secondItem="IM3-Ob-tMW" secondAttribute="bottom" constant="8" symbolic="YES" id="xvH-lO-tlW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Optic AMD" id="sNR-EQ-fL6"/>
+                    <keyCommands/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5IN-FL-Fdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,11 +112,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXM-Ix-2cG">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXM-Ix-2cG">
                                 <rect key="frame" x="20" y="64" width="560" height="492"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VrG-bX-QIF">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VrG-bX-QIF">
                                 <rect key="frame" x="20" y="64" width="560" height="492"/>
                                 <animations/>
                             </imageView>
@@ -238,7 +245,7 @@
                                             <rect key="frame" x="97" y="8" width="495" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -277,8 +284,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kei-TX-TVl">
-                                <rect key="frame" x="20" y="72" width="560" height="520"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kei-TX-TVl">
+                                <rect key="frame" x="20" y="52" width="560" height="540"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
