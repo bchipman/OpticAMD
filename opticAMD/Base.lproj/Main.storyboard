@@ -92,7 +92,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXM-Ix-2cG">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXM-Ix-2cG">
                                 <rect key="frame" x="20" y="64" width="560" height="492"/>
                                 <animations/>
                             </imageView>
@@ -108,6 +108,16 @@
                                             <action selector="reset:" destination="GLd-MA-8hi" id="G6M-8R-tzz"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="1" id="ceu-b0-10u">
+                                        <connections>
+                                            <action selector="button1:" destination="GLd-MA-8hi" id="iej-Wm-qhe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="2" id="iU1-0o-oA8">
+                                        <connections>
+                                            <action selector="button2:" destination="GLd-MA-8hi" id="A6a-IZ-Ner"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mK5-Fs-aK3"/>
                                     <barButtonItem title="Save" id="5TB-4w-qdc">
                                         <connections>
@@ -116,7 +126,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VrG-bX-QIF">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VrG-bX-QIF">
                                 <rect key="frame" x="20" y="64" width="560" height="492"/>
                                 <animations/>
                             </imageView>
