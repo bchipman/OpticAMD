@@ -17,8 +17,11 @@ class TestResultDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Test Result"
-        testResultImageView?.image = testResult.image
-                
+        if (testResult == nil) {
+            testResultImageView?.image = UIImage(named: "cat")
+        } else {
+            testResultImageView?.image = testResult.image
+        }
         // Do any additional setup after loading the view.
     }
 

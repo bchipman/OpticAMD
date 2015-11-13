@@ -23,6 +23,19 @@
             </objects>
             <point key="canvasLocation" x="-1362" y="306"/>
         </scene>
+        <!--Split View Controller-->
+        <scene sceneID="kLh-w3-tbU">
+            <objects>
+                <splitViewController id="Tjo-Qo-kbK" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="ZOt-3y-JVC" kind="relationship" relationship="detailViewController" id="OZN-Tp-FPG"/>
+                        <segue destination="C6H-Zu-Vng" kind="relationship" relationship="masterViewController" id="xpr-Aq-CFs"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kF3-8Z-1rP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="704"/>
+        </scene>
         <!--Optic AMD-->
         <scene sceneID="xUd-tR-TOO">
             <objects>
@@ -56,7 +69,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f56-VO-2Kg" kind="show" id="0rT-oW-Eg8"/>
+                                    <segue destination="FgI-W3-uq1" kind="show" id="bwS-jB-UVv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,6 +165,54 @@
             </objects>
             <point key="canvasLocation" x="174" y="-80"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kJ5-5Y-RgQ">
+            <objects>
+                <viewController id="FgI-W3-uq1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wGz-3i-XxF"/>
+                        <viewControllerLayoutGuide type="bottom" id="oKv-oI-mZt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oHL-1U-Sax">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7x-h3-cvG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <connections>
+                                    <segue destination="Tjo-Qo-kbK" kind="embed" id="6Sa-Hu-ZqW"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E7x-h3-cvG" firstAttribute="leading" secondItem="oHL-1U-Sax" secondAttribute="leading" id="C8L-CJ-bbE"/>
+                            <constraint firstItem="E7x-h3-cvG" firstAttribute="top" secondItem="wGz-3i-XxF" secondAttribute="bottom" id="LMX-Og-hcP"/>
+                            <constraint firstItem="oKv-oI-mZt" firstAttribute="top" secondItem="E7x-h3-cvG" secondAttribute="bottom" id="Xcw-ue-PvB"/>
+                            <constraint firstAttribute="trailing" secondItem="E7x-h3-cvG" secondAttribute="trailing" id="dgH-qr-J9O"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6KN-Ii-Fq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-560" y="1081"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xe0-hI-2Cy">
+            <objects>
+                <navigationController id="C6H-Zu-Vng" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rPW-qB-HOn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f56-VO-2Kg" kind="relationship" relationship="rootViewController" id="rzC-MJ-1mg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VV3-pR-G0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="625"/>
+        </scene>
         <!--Previous Tests-->
         <scene sceneID="H1I-0a-ghq">
             <objects>
@@ -163,7 +224,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TestResultTableViewCell" rowHeight="90" id="LEu-GE-KJE" customClass="TestResultTableViewCell" customModule="opticAMD" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LEu-GE-KJE" id="M02-s2-1K1">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
@@ -197,12 +258,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Previous Tests" id="5oz-Vp-wYz"/>
                     <connections>
-                        <segue destination="x7E-Em-8hn" kind="show" identifier="showDetail" id="OIe-Ge-rEH"/>
+                        <segue destination="ZOt-3y-JVC" kind="showDetail" identifier="showDetail" id="Bgs-aO-BrR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="683"/>
+            <point key="canvasLocation" x="1784" y="618"/>
         </scene>
         <!--Test Result Detail View Controller-->
         <scene sceneID="aBI-78-s0n">
@@ -216,7 +277,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kei-TX-TVl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kei-TX-TVl">
                                 <rect key="frame" x="20" y="72" width="560" height="520"/>
                             </imageView>
                         </subviews>
@@ -228,13 +289,35 @@
                             <constraint firstItem="kei-TX-TVl" firstAttribute="trailing" secondItem="HWX-Ib-cnH" secondAttribute="trailingMargin" id="lgz-Sf-KK1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jUm-tU-NC9"/>
                     <connections>
                         <outlet property="testResultImageView" destination="kei-TX-TVl" id="Msg-Dn-vk5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLb-2y-Edi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="683"/>
+            <point key="canvasLocation" x="1386" y="1495"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0j1-s3-ykk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOt-3y-JVC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lb3-u5-fMR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x7E-Em-8hn" kind="relationship" relationship="rootViewController" id="fbV-Na-Hzu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXi-Yb-2mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="1495"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OZN-Tp-FPG"/>
+    </inferredMetricsTieBreakers>
 </document>

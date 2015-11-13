@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestResultTableViewController: UITableViewController {
+class TestResultTableViewController: UITableViewController, UISplitViewControllerDelegate {
     
     
     // MARK: Properties
@@ -19,6 +19,11 @@ class TestResultTableViewController: UITableViewController {
         super.viewDidLoad()
         savedTestResults.load()
         tableView.reloadData()
+        
+        // Sets delegate
+        splitViewController?.delegate = self
+        
+        self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
     }
 
     
@@ -53,17 +58,17 @@ class TestResultTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Hello")
         self.performSegueWithIdentifier("showDetail", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "showDetail" {
-            print("Hello")
             let index = self.tableView.indexPathForSelectedRow! as NSIndexPath
             
-            let vc = segue.destinationViewController as! TestResultDetailViewController
+            let nav = segue.destinationViewController as! UINavigationController
+            
+            let vc = nav.viewControllers[0] as! TestResultDetailViewController
             
             vc.testResult = savedTestResults.get(index.row)
             
@@ -99,5 +104,8 @@ class TestResultTableViewController: UITableViewController {
         }
         
     }
+}
 
+func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+    return true
 }
