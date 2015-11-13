@@ -106,14 +106,9 @@ class TakeTestViewController: UIViewController {
     @IBAction func save(sender: UIBarButtonItem) {
 
         // Create rectangle from middle of current image
-//        let cropRect = CGRectMake(mainImageView.image!.size.width / 4, mainImageView.image!.size.height / 4 , (mainImageView.image!.size.width / 2), (mainImageView.image!.size.height / 2));
         let cropRect = CGRectMake(getLeftPosSoGridCentered() - (gridLineWidth / 2), getTopPosSoGridCentered() - (gridLineWidth / 2) , gridSize() + (gridLineWidth / 2), gridSize() + (gridLineWidth / 2)) ;
         let imageRef = CGImageCreateWithImageInRect(mainImageView.image?.CGImage, cropRect)
-        
         let croppedImage = UIImage(CGImage: imageRef!)
-        
-        savedTestResults.add(TestResult(date: NSDate(), image: mainImageView.image)!)
-        savedTestResults.save()
         savedTestResults.add(TestResult(date: NSDate(), image: croppedImage)!)
         savedTestResults.save()
         
@@ -138,6 +133,7 @@ class TakeTestViewController: UIViewController {
         CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
         
+        
         // 3
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetLineWidth(context, lineWidth)
@@ -146,6 +142,10 @@ class TakeTestViewController: UIViewController {
         
         // 4
         CGContextStrokePath(context)
+    
+        CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
+        CGContextFillRect(context, CGRect(x: 0, y: 0, width: mainImageView.superview!.frame.size.width, height: getTopPosSoGridCentered()))
+        CGContextFillRect(context, CGRect(x: 0, y: getTopPosSoGridCentered() + gridSize() , width: mainImageView.superview!.frame.size.width, height: getTopPosSoGridCentered() ))
         
         // 5
         tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
