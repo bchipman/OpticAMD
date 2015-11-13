@@ -105,11 +105,11 @@
 		D33AF5501BEC07D200B37DB1 /* opticAMD */ = {
 			isa = PBXGroup;
 			children = (
-				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
 				D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */,
+				D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */,
+				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
 				D37F997C1BEFE722006EBB84 /* TestResultTableViewCell.swift */,
 				D37F997E1BEFEE34006EBB84 /* TestResultTableViewController.swift */,
-				D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 			);

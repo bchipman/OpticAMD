@@ -60,6 +60,6 @@ class SavedTestResults {
     }
     
     func load() -> [TestResult]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(TestResult.ArchiveURL.path!) as? [TestResult]
+        return (NSKeyedUnarchiver.unarchiveObjectWithFile(TestResult.ArchiveURL.path!) as? [TestResult])!.reverse()
     }
 }
