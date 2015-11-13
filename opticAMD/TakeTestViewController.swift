@@ -104,8 +104,19 @@ class TakeTestViewController: UIViewController {
     }
 
     @IBAction func save(sender: UIBarButtonItem) {
+
+        // Create rectangle from middle of current image
+//        let cropRect = CGRectMake(mainImageView.image!.size.width / 4, mainImageView.image!.size.height / 4 , (mainImageView.image!.size.width / 2), (mainImageView.image!.size.height / 2));
+        let cropRect = CGRectMake(getLeftPosSoGridCentered() - (gridLineWidth / 2), getTopPosSoGridCentered() - (gridLineWidth / 2) , gridSize() + (gridLineWidth / 2), gridSize() + (gridLineWidth / 2)) ;
+        let imageRef = CGImageCreateWithImageInRect(mainImageView.image?.CGImage, cropRect)
+        
+        let croppedImage = UIImage(CGImage: imageRef!)
+        
         savedTestResults.add(TestResult(date: NSDate(), image: mainImageView.image)!)
         savedTestResults.save()
+        savedTestResults.add(TestResult(date: NSDate(), image: croppedImage)!)
+        savedTestResults.save()
+        
         self.presentViewController(alertController!, animated: true, completion: nil)
     }
     
