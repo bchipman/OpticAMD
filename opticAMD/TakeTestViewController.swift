@@ -105,7 +105,7 @@ class TakeTestViewController: UIViewController {
         let cropRect = CGRectMake(gridLeftEdge() - (gridLineWidth / 2), gridTopEdge() - (gridLineWidth / 2) , gridSize() + (gridLineWidth / 2), gridSize() + (gridLineWidth / 2)) ;
         let imageRef = CGImageCreateWithImageInRect(mainImageView.image?.CGImage, cropRect)
         let croppedImage = UIImage(CGImage: imageRef!)
-        savedTestResults.add(TestResult(date: NSDate(), image: croppedImage)!)
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: croppedImage, rightImage: croppedImage)!)
         savedTestResults.save()
         
         self.presentViewController(alertController!, animated: true, completion: nil)

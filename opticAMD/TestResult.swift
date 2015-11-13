@@ -12,7 +12,8 @@ class TestResult: NSObject, NSCoding {
     
     // MARK: Properties
     var date: NSDate?
-    var image: UIImage?
+    var leftImage: UIImage?
+    var rightImage: UIImage?
     
     // MARK: Archiving Paths
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
@@ -21,20 +22,22 @@ class TestResult: NSObject, NSCoding {
     // MARK: Types
     struct PropertyKey {
         static let dateKey = "date"
-        static let imageKey = "image"
+        static let leftImageKey = "leftImage"
+        static let rightImageKey = "rightImage"
     }
     
     // MARK: Initialization
-    init?(date: NSDate?, image: UIImage?) {
+    init?(date: NSDate?, leftImage: UIImage?, rightImage: UIImage?) {
     
         // Initalize stored properties.
         self.date = date
-        self.image = image
+        self.leftImage = leftImage
+        self.rightImage = rightImage
         
         super.init()
         
         // Initialization should fail if there is no date or image.
-        if date == nil || image == nil {
+        if date == nil || leftImage == nil {
             return nil
         }
     }
@@ -43,15 +46,16 @@ class TestResult: NSObject, NSCoding {
     // MARK: NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
-        aCoder.encodeObject(image, forKey: PropertyKey.imageKey)
+        aCoder.encodeObject(leftImage, forKey: PropertyKey.leftImageKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         let date = aDecoder.decodeObjectForKey(PropertyKey.dateKey) as? NSDate
-        let image = aDecoder.decodeObjectForKey(PropertyKey.imageKey) as? UIImage
+        let leftImage = aDecoder.decodeObjectForKey(PropertyKey.leftImageKey) as? UIImage
+        let rightImage = aDecoder.decodeObjectForKey(PropertyKey.rightImageKey) as? UIImage
         
         // Must call designated initializer.
-        self.init(date: date, image: image)
+        self.init(date: date, leftImage: leftImage, rightImage: rightImage)
     }
 
 }
