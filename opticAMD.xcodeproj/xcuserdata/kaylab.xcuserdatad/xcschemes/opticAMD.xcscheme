@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-               BuildableName = "opticAMD.app"
-               BlueprintName = "opticAMD"
-               ReferencedContainer = "container:opticAMD.xcodeproj">
+               BuildableName = "OpticAMD.app"
+               BlueprintName = "OpticAMD"
+               ReferencedContainer = "container:OpticAMD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D33AF5611BEC07D200B37DB1"
-               BuildableName = "opticAMDTests.xctest"
-               BlueprintName = "opticAMDTests"
-               ReferencedContainer = "container:opticAMD.xcodeproj">
+               BuildableName = "OpticAMDTests.xctest"
+               BlueprintName = "OpticAMDTests"
+               ReferencedContainer = "container:OpticAMD.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D33AF56C1BEC07D200B37DB1"
-               BuildableName = "opticAMDUITests.xctest"
-               BlueprintName = "opticAMDUITests"
-               ReferencedContainer = "container:opticAMD.xcodeproj">
+               BuildableName = "OpticAMDUITests.xctest"
+               BlueprintName = "OpticAMDUITests"
+               ReferencedContainer = "container:OpticAMD.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-            BuildableName = "opticAMD.app"
-            BlueprintName = "opticAMD"
-            ReferencedContainer = "container:opticAMD.xcodeproj">
+            BuildableName = "OpticAMD.app"
+            BlueprintName = "OpticAMD"
+            ReferencedContainer = "container:OpticAMD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-            BuildableName = "opticAMD.app"
-            BlueprintName = "opticAMD"
-            ReferencedContainer = "container:opticAMD.xcodeproj">
+            BuildableName = "OpticAMD.app"
+            BlueprintName = "OpticAMD"
+            ReferencedContainer = "container:OpticAMD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-            BuildableName = "opticAMD.app"
-            BlueprintName = "opticAMD"
-            ReferencedContainer = "container:opticAMD.xcodeproj">
+            BuildableName = "OpticAMD.app"
+            BlueprintName = "OpticAMD"
+            ReferencedContainer = "container:OpticAMD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

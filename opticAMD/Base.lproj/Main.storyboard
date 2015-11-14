@@ -89,7 +89,7 @@
         <!--Amsler Grid Test-->
         <scene sceneID="nVk-7P-BAB">
             <objects>
-                <viewController id="GLd-MA-8hi" customClass="TakeTestViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GLd-MA-8hi" customClass="TakeTestViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2mD-GO-Vhi"/>
                         <viewControllerLayoutGuide type="bottom" id="YkV-mb-uKk"/>
@@ -161,7 +161,7 @@
         <!--NEW Previous Tests-->
         <scene sceneID="3BF-c1-zLr">
             <objects>
-                <viewController id="3ba-nc-o0F" customClass="PreviousTestsViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3ba-nc-o0F" customClass="PreviousTestsViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h6W-94-xRo"/>
                         <viewControllerLayoutGuide type="bottom" id="T3k-g2-t3L"/>
@@ -212,8 +212,8 @@
                                     <constraint firstAttribute="height" id="2ib-sG-KQJ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousTestsTableViewCell" rowHeight="90" id="8mz-Ae-ner" customClass="PreviousTestsTableViewCell" customModule="opticAMD" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="560" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousTestsTableViewCell" rowHeight="90" id="8mz-Ae-ner" customClass="PreviousTestsTableViewCell" customModule="OpticAMD" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="560" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8mz-Ae-ner" id="bPP-O9-INa">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="89"/>

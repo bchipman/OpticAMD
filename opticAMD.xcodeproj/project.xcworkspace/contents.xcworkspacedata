@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:opticAMD.xcodeproj">
+      location = "self:/Users/Brian/Desktop/Dropbox/Texts/Xcode/OpticAMD/OpticAMD.xcodeproj">
    </FileRef>
 </Workspace>
