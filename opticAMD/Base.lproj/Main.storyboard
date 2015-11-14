@@ -59,6 +59,14 @@
                                     <segue destination="f56-VO-2Kg" kind="show" id="0rT-oW-Eg8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5he-dB-q6p">
+                                <rect key="frame" x="20" y="436" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="3ba-nc-o0F" kind="show" id="zga-Ki-gXZ"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NfI-dO-sHD">
                                 <rect key="frame" x="20" y="72" width="560" height="422"/>
                                 <animations/>
@@ -175,10 +183,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCx-hX-6hH">
-                                            <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
-                                            <animations/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-9r-SCg">
                                             <rect key="frame" x="97" y="8" width="495" height="21"/>
                                             <animations/>
@@ -186,6 +190,10 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCx-hX-6hH">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
+                                            <animations/>
+                                        </imageView>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -206,6 +214,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="683"/>
+        </scene>
+        <!--NEW Previous Tests-->
+        <scene sceneID="3BF-c1-zLr">
+            <objects>
+                <viewController id="3ba-nc-o0F" customClass="PreviousTestsViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h6W-94-xRo"/>
+                        <viewControllerLayoutGuide type="bottom" id="T3k-g2-t3L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fXH-qi-CfI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6T-td-n1S">
+                                <rect key="frame" x="20" y="336" width="560" height="256"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hG9-zr-G29">
+                                <rect key="frame" x="20" y="72" width="560" height="256"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="2ib-sG-KQJ"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PreviousTestsTableViewCell" rowHeight="90" id="8mz-Ae-ner" customClass="PreviousTestsTableViewCell" customModule="opticAMD" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="560" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8mz-Ae-ner" id="bPP-O9-INa">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xe-Tz-7Fd">
+                                                    <rect key="frame" x="97" y="8" width="177" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-RE-907">
+                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="7xe-Tz-7Fd" id="IZu-2Q-l2v"/>
+                                            <outlet property="resultImageView" destination="FHr-RE-907" id="u7A-4C-ClE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2ib-sG-KQJ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="fXH-qi-CfI" id="D5f-f0-0yk"/>
+                                    <outlet property="delegate" destination="fXH-qi-CfI" id="HeP-Ti-fdl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hG9-zr-G29" firstAttribute="height" secondItem="L6T-td-n1S" secondAttribute="height" id="6oI-B2-4D4"/>
+                            <constraint firstItem="hG9-zr-G29" firstAttribute="top" secondItem="h6W-94-xRo" secondAttribute="bottom" constant="8" symbolic="YES" id="7aD-iy-siO"/>
+                            <constraint firstItem="T3k-g2-t3L" firstAttribute="top" secondItem="L6T-td-n1S" secondAttribute="bottom" constant="8" symbolic="YES" id="AmG-jN-U0s"/>
+                            <constraint firstItem="L6T-td-n1S" firstAttribute="top" secondItem="hG9-zr-G29" secondAttribute="bottom" constant="8" symbolic="YES" id="Emi-RS-0De"/>
+                            <constraint firstItem="hG9-zr-G29" firstAttribute="leading" secondItem="fXH-qi-CfI" secondAttribute="leadingMargin" id="I3u-wm-yC7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hG9-zr-G29" secondAttribute="trailing" id="j0v-fY-HVx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L6T-td-n1S" secondAttribute="trailing" id="kNf-XU-gSs"/>
+                            <constraint firstItem="L6T-td-n1S" firstAttribute="leading" secondItem="fXH-qi-CfI" secondAttribute="leadingMargin" id="tye-MB-NqK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NEW Previous Tests" id="IF2-48-sWK"/>
+                    <connections>
+                        <outlet property="previousTestsTableView" destination="hG9-zr-G29" id="Knp-JY-bgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-jz-07O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="1423"/>
         </scene>
     </scenes>
     <resources>

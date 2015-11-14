@@ -15,6 +15,8 @@
 		D33AF55C1BEC07D200B37DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33AF55A1BEC07D200B37DB1 /* LaunchScreen.storyboard */; };
 		D33AF5671BEC07D200B37DB1 /* opticAMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5661BEC07D200B37DB1 /* opticAMDTests.swift */; };
 		D33AF5721BEC07D200B37DB1 /* opticAMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5711BEC07D200B37DB1 /* opticAMDUITests.swift */; };
+		D33DEDF21BF6B71D00CDD5EB /* PreviousTestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */; };
+		D33DEDF41BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */; };
 		D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F99761BEFD9BD006EBB84 /* TestResult.swift */; };
 		D37F997D1BEFE722006EBB84 /* TestResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F997C1BEFE722006EBB84 /* TestResultTableViewCell.swift */; };
 		D37F997F1BEFEE34006EBB84 /* TestResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F997E1BEFEE34006EBB84 /* TestResultTableViewController.swift */; };
@@ -52,6 +54,8 @@
 		D33AF56D1BEC07D200B37DB1 /* opticAMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opticAMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33AF5711BEC07D200B37DB1 /* opticAMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opticAMDUITests.swift; sourceTree = "<group>"; };
 		D33AF5731BEC07D200B37DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTestsViewController.swift; sourceTree = "<group>"; };
+		D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTestsTableViewCell.swift; sourceTree = "<group>"; };
 		D37F99761BEFD9BD006EBB84 /* TestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResult.swift; sourceTree = "<group>"; };
 		D37F997C1BEFE722006EBB84 /* TestResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultTableViewCell.swift; sourceTree = "<group>"; };
 		D37F997E1BEFEE34006EBB84 /* TestResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultTableViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				D37F997C1BEFE722006EBB84 /* TestResultTableViewCell.swift */,
 				D37F997E1BEFEE34006EBB84 /* TestResultTableViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
+				D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */,
+				D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 			);
 			path = opticAMD;
@@ -278,7 +284,9 @@
 			files = (
 				D37F997F1BEFEE34006EBB84 /* TestResultTableViewController.swift in Sources */,
 				D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */,
+				D33DEDF21BF6B71D00CDD5EB /* PreviousTestsViewController.swift in Sources */,
 				D37F997D1BEFE722006EBB84 /* TestResultTableViewCell.swift in Sources */,
+				D33DEDF41BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift in Sources */,
 				D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */,
 				D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
