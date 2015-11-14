@@ -337,6 +337,12 @@
                                             <action selector="save:" destination="HoZ-Vm-zVF" id="PCm-ga-4UV"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZKg-Bl-i5B"/>
+                                    <barButtonItem title="Finish" id="7lY-KF-zbU">
+                                        <connections>
+                                            <segue destination="yjm-bz-7dJ" kind="show" id="mhM-Ux-gvN"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uwR-J9-14A">
@@ -381,4 +387,7 @@
         <image name="amslerGrid" width="267" height="267"/>
         <image name="cat" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mhM-Ux-gvN"/>
+    </inferredMetricsTieBreakers>
 </document>
