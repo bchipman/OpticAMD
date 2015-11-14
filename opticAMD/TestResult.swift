@@ -47,6 +47,7 @@ class TestResult: NSObject, NSCoding {
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
         aCoder.encodeObject(leftImage, forKey: PropertyKey.leftImageKey)
+        aCoder.encodeObject(rightImage, forKey: PropertyKey.rightImageKey)
     }
 
     required convenience init?(coder aDecoder: NSCoder) {

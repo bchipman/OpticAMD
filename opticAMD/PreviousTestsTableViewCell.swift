@@ -10,8 +10,9 @@ import UIKit
 
 class PreviousTestsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var resultImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var leftImageView: UIImageView!
+    @IBOutlet weak var rightImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

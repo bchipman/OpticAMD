@@ -59,7 +59,9 @@ class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITabl
 
         // Assign testResult data to cell and return cell
         cell.nameLabel.text = dateString
-        cell.resultImageView.image = testResult.leftImage
+        cell.leftImageView.image = testResult.leftImage
+//        cell.rightImageView.image = testResult.rightImage
+        cell.rightImageView.image = testResult.leftImage
         return cell
     }
 
