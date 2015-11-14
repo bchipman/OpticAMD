@@ -19,7 +19,7 @@ class SavedTestResults {
     init() {
         // Load any saved testResults, otherwise load sample data.
         if let savedTestResults = load() {
-            testResults += savedTestResults
+            testResults += savedTestResults.reverse()
         } else {
             // Load the sample data.
             loadSampleTestResults()
@@ -60,7 +60,6 @@ class SavedTestResults {
     }
 
     func load() -> [TestResult]? {
-//        return (NSKeyedUnarchiver.unarchiveObjectWithFile(TestResult.ArchiveURL.path!) as? [TestResult])!.reverse()
         return (NSKeyedUnarchiver.unarchiveObjectWithFile(TestResult.ArchiveURL.path!) as? [TestResult])
     }
 }
