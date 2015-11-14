@@ -1,21 +1,18 @@
 //
-//  TestResultTableViewCell.swift
+//  PreviousTestsTableViewCell.swift
 //  opticAMD
 //
-//  Created by Brian on 11/8/15.
+//  Created by Brian on 11/13/15.
 //  Copyright © 2015 Med AppJam 2015 - Team 9. All rights reserved.
 //
 
 import UIKit
 
-class TestResultTableViewCell: UITableViewCell {
+class PreviousTestsTableViewCell: UITableViewCell {
 
-    // MARK: Properties
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var resultImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
 
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
