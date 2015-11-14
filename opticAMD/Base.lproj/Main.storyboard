@@ -269,7 +269,7 @@
                                     <constraint firstAttribute="height" id="2ib-sG-KQJ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PreviousTestsTableViewCell" rowHeight="90" id="8mz-Ae-ner" customClass="PreviousTestsTableViewCell" customModule="opticAMD" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousTestsTableViewCell" rowHeight="90" id="8mz-Ae-ner" customClass="PreviousTestsTableViewCell" customModule="opticAMD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="560" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8mz-Ae-ner" id="bPP-O9-INa">
@@ -336,7 +336,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="NEW Previous Tests" id="IF2-48-sWK"/>
                     <connections>
+                        <outlet property="leftImage" destination="Kme-yZ-KRE" id="4Rg-kq-XFo"/>
                         <outlet property="previousTestsTableView" destination="hG9-zr-G29" id="Knp-JY-bgI"/>
+                        <outlet property="rightImage" destination="Bp4-DK-qnX" id="uHK-e0-ICh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-jz-07O" userLabel="First Responder" sceneMemberID="firstResponder"/>

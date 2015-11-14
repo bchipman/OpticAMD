@@ -11,6 +11,10 @@ import UIKit
 class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var previousTestsTableView: UITableView!
+    
+    @IBOutlet weak var leftImage: UIImageView!
+    @IBOutlet weak var rightImage: UIImageView!
+    
     // MARK: Properties
     var savedTestResults = SavedTestResults()
     
@@ -86,6 +90,12 @@ class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITabl
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
         
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let testResult = savedTestResults.get(indexPath.row)
+        leftImage.image = testResult.leftImage
+        rightImage.image = testResult.leftImage
     }
 
 }
