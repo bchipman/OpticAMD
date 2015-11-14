@@ -47,6 +47,10 @@
                                     <segue destination="GLd-MA-8hi" kind="show" id="vly-T7-jMR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NfI-dO-sHD">
+                                <rect key="frame" x="20" y="72" width="560" height="422"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-nc-rO6">
                                 <rect key="frame" x="20" y="551" width="560" height="41"/>
                                 <animations/>
@@ -56,21 +60,9 @@
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f56-VO-2Kg" kind="show" id="0rT-oW-Eg8"/>
+                                    <segue destination="3ba-nc-o0F" kind="show" id="XvC-3p-onG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5he-dB-q6p">
-                                <rect key="frame" x="20" y="436" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="3ba-nc-o0F" kind="show" id="zga-Ki-gXZ"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NfI-dO-sHD">
-                                <rect key="frame" x="20" y="72" width="560" height="422"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,55 +157,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoG-fR-BBX" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="-80"/>
-        </scene>
-        <!--Previous Tests-->
-        <scene sceneID="H1I-0a-ghq">
-            <objects>
-                <tableViewController id="f56-VO-2Kg" customClass="TestResultTableViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="IeJ-7P-LRS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TestResultTableViewCell" rowHeight="90" id="LEu-GE-KJE" customClass="TestResultTableViewCell" customModule="opticAMD" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LEu-GE-KJE" id="M02-s2-1K1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-9r-SCg">
-                                            <rect key="frame" x="97" y="8" width="495" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCx-hX-6hH">
-                                            <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
-                                            <animations/>
-                                        </imageView>
-                                    </subviews>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <outlet property="nameLabel" destination="g4r-9r-SCg" id="AWO-Ho-BaL"/>
-                                    <outlet property="resultImageView" destination="KCx-hX-6hH" id="MVM-5F-wnH"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="f56-VO-2Kg" id="QiZ-3y-Io3"/>
-                            <outlet property="delegate" destination="f56-VO-2Kg" id="bTg-ah-vkj"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Previous Tests" id="5oz-Vp-wYz"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="174" y="683"/>
         </scene>
         <!--NEW Previous Tests-->
         <scene sceneID="3BF-c1-zLr">
@@ -343,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-jz-07O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="1423"/>
+            <point key="canvasLocation" x="174" y="795"/>
         </scene>
     </scenes>
     <resources>
