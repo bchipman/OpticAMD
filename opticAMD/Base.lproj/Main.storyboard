@@ -26,7 +26,7 @@
         <!--OpticAMD-->
         <scene sceneID="xUd-tR-TOO">
             <objects>
-                <viewController id="yjm-bz-7dJ" sceneMemberID="viewController">
+                <viewController id="yjm-bz-7dJ" customClass="WelcomeViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qJK-vR-cBc"/>
                         <viewControllerLayoutGuide type="bottom" id="Qoo-JT-9SI"/>

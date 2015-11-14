@@ -17,6 +17,7 @@
 		D33AF5721BEC07D200B37DB1 /* OpticAMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5711BEC07D200B37DB1 /* OpticAMDUITests.swift */; };
 		D33DEDF21BF6B71D00CDD5EB /* PreviousTestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */; };
 		D33DEDF41BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */; };
+		D35836ED1BF6FEA200B4D213 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */; };
 		D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F99761BEFD9BD006EBB84 /* TestResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		D33AF5731BEC07D200B37DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTestsViewController.swift; sourceTree = "<group>"; };
 		D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTestsTableViewCell.swift; sourceTree = "<group>"; };
+		D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D37F99761BEFD9BD006EBB84 /* TestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */,
 				D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */,
 				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
+				D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 			);
@@ -282,6 +285,7 @@
 				D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */,
 				D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
+				D35836ED1BF6FEA200B4D213 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
