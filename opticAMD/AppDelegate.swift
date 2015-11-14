@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  opticAMD
+//  OpticAMD
 //
 //  Created by Brian on 11/5/15.
 //  Copyright © 2015 Med AppJam 2015 - Team 9. All rights reserved.

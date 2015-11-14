@@ -1,6 +1,6 @@
 //
 //  TakeTestViewController.swift
-//  opticAMD
+//  OpticAMD
 //
 //  Created by Brian on 11/5/15.
 //  Copyright © 2015 Med AppJam 2015 - Team 9. All rights reserved.
@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class TakeTestViewController: UIViewController {
-    
+
     // MARK: Properties
     @IBOutlet weak var mainImageView: UIImageView! // Contains drawing except for the line currently being drawn
     @IBOutlet weak var tempImageView: UIImageView! // Contains line currently being drawn
@@ -24,11 +24,11 @@ class TakeTestViewController: UIViewController {
     var opacity:    CGFloat = 1
     var savedTestResults = SavedTestResults()
     var alertController: UIAlertController?
-    
+
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
 
-    
+
     // MARK: Overriden Methods
     override func viewDidLoad() {
         // Create and configure alert controller to be used later (when save is tapped)
@@ -36,16 +36,16 @@ class TakeTestViewController: UIViewController {
         let alertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
         }
         alertController?.addAction(alertAction)
-        
+
         drawNewGrid()
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Called when one or more fingers touch down in a view or window
-        
+
         // Reset continuousStroke boolean
         continuousStroke = false
-        
+
         // Save touch location in lastPointDrawn
         if let touch = touches.first as UITouch! {
             print(touch.locationInView(self.view))
@@ -53,12 +53,12 @@ class TakeTestViewController: UIViewController {
             lastPointDrawn.x -= mainImageView.superview!.frame.origin.x
             lastPointDrawn.y -= mainImageView.superview!.frame.origin.y
         }
-        
+
     }
 
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Called when one or more fingers associated with an event move within a view or window
-        
+
         // 6
         continuousStroke = true
         if let touch = touches.first as UITouch! {
@@ -66,34 +66,34 @@ class TakeTestViewController: UIViewController {
             currentPoint.x -= mainImageView.superview!.frame.origin.x
             currentPoint.y -= mainImageView.superview!.frame.origin.y
             drawLineFrom(lastPointDrawn, toPoint: currentPoint)
-            
+
             // 7
             lastPointDrawn = currentPoint
         }
-        
+
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Called when one or more fingers are raised from a view or window
-        
+
         if !continuousStroke {
             // draw a single point
             drawLineFrom(lastPointDrawn, toPoint: lastPointDrawn)
         }
-        
+
         // Merge tempImageView into mainImageView
         UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
-        
+
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: 1.0)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+
         tempImageView.image = nil
     }
 
-    
-    
+
+
     // MARK: Actions
     @IBAction func reset(sender: UIBarButtonItem) {
         setOrResetView()
@@ -107,43 +107,43 @@ class TakeTestViewController: UIViewController {
         let croppedImage = UIImage(CGImage: imageRef!)
         savedTestResults.add(TestResult(date: NSDate(), leftImage: croppedImage, rightImage: croppedImage)!)
         savedTestResults.save()
-        
+
         self.presentViewController(alertController!, animated: true, completion: nil)
     }
-    
+
 
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
         // Called by touchesMoved to draw a line between two points
-        
+
         // 1
         UIGraphicsBeginImageContext(tempImageView.superview!.frame.size)
         let context = UIGraphicsGetCurrentContext()
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height))
-        
+
         // 2
         CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
-        
-        
+
+
         // 3
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetLineWidth(context, brushLineWidth)
         CGContextSetRGBStrokeColor(context, red, 0.5, blue, 1.0)
         CGContextSetBlendMode(context, CGBlendMode.Normal)
-        
+
         // 4
         CGContextStrokePath(context)
-    
+
         CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
         CGContextFillRect(context, CGRect(x: 0, y: 0, width: superviewWidth(), height: gridTopEdge()))
         CGContextFillRect(context, CGRect(x: 0, y: gridTopEdge() + gridSize() , width: superviewWidth(), height: gridTopEdge() ))
-        
+
         // 5
         tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         tempImageView.alpha = opacity
         UIGraphicsEndImageContext()
     }
-    
+
     func setOrResetView() {
         mainImageView.image = nil
         tempImageView.image = nil
@@ -154,11 +154,11 @@ class TakeTestViewController: UIViewController {
         var xPos : CGFloat
         var yPos : CGFloat
         var context: CGContext?
-        
+
         // BORDER
 //        drawGridBorderForDebugging()
-        
-        
+
+
         // Set up for drawing
         UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
         context = UIGraphicsGetCurrentContext()
@@ -177,7 +177,7 @@ class TakeTestViewController: UIViewController {
         }
         CGContextSetRGBStrokeColor(context, 0, 0, 1, 1.0)
         CGContextStrokePath(context)
-        
+
         // RED (Vertical)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
@@ -188,7 +188,7 @@ class TakeTestViewController: UIViewController {
         }
         CGContextSetRGBStrokeColor(context, 1, 0, 0, 1.0)
         CGContextStrokePath(context)
-        
+
         // Finish drawing
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         mainImageView.alpha = 1
@@ -222,7 +222,7 @@ class TakeTestViewController: UIViewController {
     func gridTopDrawingEdge() -> CGFloat {
         return gridTopEdge() + (gridLineWidth / 2)
     }
-    
+
 
     func printDebugInfo1() {
         print("tempImageView.frame.size: \(tempImageView.frame.size)")
@@ -254,6 +254,6 @@ class TakeTestViewController: UIViewController {
         mainImageView.alpha = 1
         UIGraphicsEndImageContext()
     }
-    
+
 }
 

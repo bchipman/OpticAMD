@@ -21,25 +21,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zg-9j-pxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1362" y="306"/>
-        </scene>
-        <!--Split View Controller-->
-        <scene sceneID="kLh-w3-tbU">
-            <objects>
-                <splitViewController id="Tjo-Qo-kbK" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="ZOt-3y-JVC" kind="relationship" relationship="detailViewController" id="OZN-Tp-FPG"/>
-                        <segue destination="C6H-Zu-Vng" kind="relationship" relationship="masterViewController" id="xpr-Aq-CFs"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kF3-8Z-1rP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="174" y="704"/>
+            <point key="canvasLocation" x="-1294" y="306"/>
         </scene>
         <!--OpticAMD-->
         <scene sceneID="xUd-tR-TOO">
             <objects>
-                <viewController id="yjm-bz-7dJ" sceneMemberID="viewController">
+                <viewController id="yjm-bz-7dJ" customClass="WelcomeViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qJK-vR-cBc"/>
                         <viewControllerLayoutGuide type="bottom" id="Qoo-JT-9SI"/>
@@ -63,12 +50,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NfI-dO-sHD">
                                 <rect key="frame" x="20" y="72" width="560" height="422"/>
                                 <animations/>
-<<<<<<< HEAD
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-=======
                             </imageView>
->>>>>>> upstream/master
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-nc-rO6">
                                 <rect key="frame" x="20" y="551" width="560" height="41"/>
                                 <animations/>
@@ -78,11 +60,7 @@
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-<<<<<<< HEAD
-                                    <segue destination="FgI-W3-uq1" kind="show" id="bwS-jB-UVv"/>
-=======
                                     <segue destination="3ba-nc-o0F" kind="show" id="XvC-3p-onG"/>
->>>>>>> upstream/master
                                 </connections>
                             </button>
                         </subviews>
@@ -111,7 +89,7 @@
         <!--Amsler Grid Test-->
         <scene sceneID="nVk-7P-BAB">
             <objects>
-                <viewController id="GLd-MA-8hi" customClass="TakeTestViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GLd-MA-8hi" customClass="TakeTestViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2mD-GO-Vhi"/>
                         <viewControllerLayoutGuide type="bottom" id="YkV-mb-uKk"/>
@@ -180,63 +158,10 @@
             </objects>
             <point key="canvasLocation" x="174" y="-80"/>
         </scene>
-<<<<<<< HEAD
-        <!--View Controller-->
-        <scene sceneID="kJ5-5Y-RgQ">
-            <objects>
-                <viewController id="FgI-W3-uq1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wGz-3i-XxF"/>
-                        <viewControllerLayoutGuide type="bottom" id="oKv-oI-mZt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oHL-1U-Sax">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7x-h3-cvG">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <connections>
-                                    <segue destination="Tjo-Qo-kbK" kind="embed" id="6Sa-Hu-ZqW"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="E7x-h3-cvG" firstAttribute="leading" secondItem="oHL-1U-Sax" secondAttribute="leading" id="C8L-CJ-bbE"/>
-                            <constraint firstItem="E7x-h3-cvG" firstAttribute="top" secondItem="wGz-3i-XxF" secondAttribute="bottom" id="LMX-Og-hcP"/>
-                            <constraint firstItem="oKv-oI-mZt" firstAttribute="top" secondItem="E7x-h3-cvG" secondAttribute="bottom" id="Xcw-ue-PvB"/>
-                            <constraint firstAttribute="trailing" secondItem="E7x-h3-cvG" secondAttribute="trailing" id="dgH-qr-J9O"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6KN-Ii-Fq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-560" y="1081"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xe0-hI-2Cy">
-            <objects>
-                <navigationController id="C6H-Zu-Vng" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rPW-qB-HOn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="f56-VO-2Kg" kind="relationship" relationship="rootViewController" id="rzC-MJ-1mg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VV3-pR-G0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="948" y="625"/>
-        </scene>
-        <!--Previous Tests-->
-        <scene sceneID="H1I-0a-ghq">
-=======
         <!--NEW Previous Tests-->
         <scene sceneID="3BF-c1-zLr">
->>>>>>> upstream/master
             <objects>
-                <viewController id="3ba-nc-o0F" customClass="PreviousTestsViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3ba-nc-o0F" customClass="PreviousTestsViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h6W-94-xRo"/>
                         <viewControllerLayoutGuide type="bottom" id="T3k-g2-t3L"/>
@@ -244,32 +169,6 @@
                     <view key="view" contentMode="scaleToFill" id="fXH-qi-CfI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-<<<<<<< HEAD
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TestResultTableViewCell" rowHeight="90" id="LEu-GE-KJE" customClass="TestResultTableViewCell" customModule="opticAMD" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="600" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LEu-GE-KJE" id="M02-s2-1K1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCx-hX-6hH">
-                                            <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
-                                            <animations/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-9r-SCg">
-                                            <rect key="frame" x="97" y="8" width="495" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                </tableViewCellContentView>
-=======
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6T-td-n1S">
                                 <rect key="frame" x="20" y="336" width="560" height="256"/>
@@ -291,7 +190,6 @@
                                         <animations/>
                                     </imageView>
                                 </subviews>
->>>>>>> upstream/master
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -314,19 +212,20 @@
                                     <constraint firstAttribute="height" id="2ib-sG-KQJ"/>
                                 </constraints>
                                 <prototypes>
+<<<<<<< HEAD
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousTestsTableViewCell" rowHeight="90" id="8mz-Ae-ner" customClass="PreviousTestsTableViewCell" customModule="opticAMD" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="560" height="90"/>
+=======
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousTestsTableViewCell" rowHeight="90" id="8mz-Ae-ner" customClass="PreviousTestsTableViewCell" customModule="OpticAMD" customModuleProvider="target">
+>>>>>>> upstream/master
+                                        <rect key="frame" x="0.0" y="1" width="560" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8mz-Ae-ner" id="bPP-O9-INa">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xe-Tz-7Fd">
-                                                    <rect key="frame" x="97" y="8" width="177" height="21"/>
+                                                    <rect key="frame" x="259" y="34" width="42" height="21"/>
                                                     <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="177" id="ibE-wn-mpp"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -338,20 +237,31 @@
                                                         <constraint firstAttribute="width" constant="89" id="9Da-40-DcU"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6MM-i4-XCb">
+                                                    <rect key="frame" x="471" y="0.0" width="89" height="89"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="89" id="jur-br-Dx9"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="FHr-RE-907" secondAttribute="bottom" id="1qv-iC-Ah0"/>
-                                                <constraint firstItem="7xe-Tz-7Fd" firstAttribute="top" secondItem="bPP-O9-INa" secondAttribute="topMargin" id="5oo-ED-On2"/>
-                                                <constraint firstItem="7xe-Tz-7Fd" firstAttribute="leading" secondItem="FHr-RE-907" secondAttribute="trailing" constant="8" symbolic="YES" id="KoW-dy-duw"/>
+                                                <constraint firstAttribute="bottom" secondItem="6MM-i4-XCb" secondAttribute="bottom" id="74p-fh-5zq"/>
+                                                <constraint firstItem="7xe-Tz-7Fd" firstAttribute="centerY" secondItem="bPP-O9-INa" secondAttribute="centerY" id="HAX-me-gGv"/>
+                                                <constraint firstAttribute="trailing" secondItem="6MM-i4-XCb" secondAttribute="trailing" id="OH5-ZB-4wA"/>
                                                 <constraint firstItem="FHr-RE-907" firstAttribute="top" secondItem="bPP-O9-INa" secondAttribute="top" id="TlE-uo-scA"/>
                                                 <constraint firstItem="FHr-RE-907" firstAttribute="leading" secondItem="bPP-O9-INa" secondAttribute="leading" id="dUL-Wz-H6G"/>
+                                                <constraint firstItem="6MM-i4-XCb" firstAttribute="top" secondItem="bPP-O9-INa" secondAttribute="top" id="qrF-kX-4hb"/>
+                                                <constraint firstItem="7xe-Tz-7Fd" firstAttribute="centerX" secondItem="bPP-O9-INa" secondAttribute="centerX" id="wXN-xO-iOX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
+                                            <outlet property="leftImageView" destination="FHr-RE-907" id="tfG-PK-Sia"/>
                                             <outlet property="nameLabel" destination="7xe-Tz-7Fd" id="IZu-2Q-l2v"/>
-                                            <outlet property="resultImageView" destination="FHr-RE-907" id="u7A-4C-ClE"/>
+                                            <outlet property="rightImageView" destination="6MM-i4-XCb" id="IIZ-SW-66h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -364,79 +274,6 @@
                                     <outlet property="dataSource" destination="fXH-qi-CfI" id="D5f-f0-0yk"/>
                                     <outlet property="delegate" destination="fXH-qi-CfI" id="HeP-Ti-fdl"/>
                                 </connections>
-<<<<<<< HEAD
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="f56-VO-2Kg" id="QiZ-3y-Io3"/>
-                            <outlet property="delegate" destination="f56-VO-2Kg" id="bTg-ah-vkj"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Previous Tests" id="5oz-Vp-wYz"/>
-                    <connections>
-                        <segue destination="ZOt-3y-JVC" kind="showDetail" identifier="showDetail" id="Bgs-aO-BrR"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Bk-9X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1784" y="618"/>
-        </scene>
-        <!--Test Result Detail View Controller-->
-        <scene sceneID="aBI-78-s0n">
-            <objects>
-                <viewController id="x7E-Em-8hn" customClass="TestResultDetailViewController" customModule="opticAMD" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uyQ-6k-M9y"/>
-                        <viewControllerLayoutGuide type="bottom" id="uU8-NV-KqR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HWX-Ib-cnH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kei-TX-TVl">
-                                <rect key="frame" x="20" y="52" width="560" height="540"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="kei-TX-TVl" firstAttribute="top" secondItem="uyQ-6k-M9y" secondAttribute="bottom" constant="8" id="LJu-JA-rLg"/>
-                            <constraint firstItem="uU8-NV-KqR" firstAttribute="top" secondItem="kei-TX-TVl" secondAttribute="bottom" constant="8" id="dMQ-tw-28w"/>
-                            <constraint firstItem="kei-TX-TVl" firstAttribute="leading" secondItem="HWX-Ib-cnH" secondAttribute="leadingMargin" id="jfL-UQ-gMf"/>
-                            <constraint firstItem="kei-TX-TVl" firstAttribute="trailing" secondItem="HWX-Ib-cnH" secondAttribute="trailingMargin" id="lgz-Sf-KK1"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="jUm-tU-NC9"/>
-                    <connections>
-                        <outlet property="testResultImageView" destination="kei-TX-TVl" id="Msg-Dn-vk5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uLb-2y-Edi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1386" y="1495"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="0j1-s3-ykk">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOt-3y-JVC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lb3-u5-fMR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="x7E-Em-8hn" kind="relationship" relationship="rootViewController" id="fbV-Na-Hzu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bXi-Yb-2mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="574" y="1495"/>
-        </scene>
-    </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="OZN-Tp-FPG"/>
-    </inferredMetricsTieBreakers>
-=======
                             </tableView>
                         </subviews>
                         <animations/>
@@ -469,5 +306,4 @@
         <image name="amslerGrid" width="267" height="267"/>
         <image name="cat" width="200" height="200"/>
     </resources>
->>>>>>> upstream/master
 </document>
