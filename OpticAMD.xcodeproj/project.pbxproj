@@ -20,6 +20,7 @@
 		D35836ED1BF6FEA200B4D213 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */; };
 		D35837161BF8580E00B4D213 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35837111BF8578A00B4D213 /* Charts.framework */; };
 		D35837171BF8580E00B4D213 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35837111BF8578A00B4D213 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358371B1BF85B7A00B4D213 /* GraphViewController.swift */; };
 		D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F99761BEFD9BD006EBB84 /* TestResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTestsTableViewCell.swift; sourceTree = "<group>"; };
 		D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D358370A1BF8578A00B4D213 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
+		D358371B1BF85B7A00B4D213 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		D37F99761BEFD9BD006EBB84 /* TestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
 				D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
+				D358371B1BF85B7A00B4D213 /* GraphViewController.swift */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 			);
 			path = OpticAMD;
@@ -374,6 +377,7 @@
 				D33DEDF41BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift in Sources */,
 				D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */,
 				D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */,
+				D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
 				D35836ED1BF6FEA200B4D213 /* WelcomeViewController.swift in Sources */,
 			);

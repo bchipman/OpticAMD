@@ -267,7 +267,7 @@
         <!--Graph-->
         <scene sceneID="O60-XS-2X7">
             <objects>
-                <viewController title="Graph" id="EVr-7s-9ey" sceneMemberID="viewController">
+                <viewController title="Graph" id="EVr-7s-9ey" customClass="GraphViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b8S-cF-vow"/>
                         <viewControllerLayoutGuide type="bottom" id="8xI-XT-4IV"/>
@@ -276,7 +276,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-Ee-kHi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-Ee-kHi" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="20" width="560" height="580"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,6 +291,10 @@
                             <constraint firstItem="8xI-XT-4IV" firstAttribute="top" secondItem="p3g-Ee-kHi" secondAttribute="bottom" id="jtk-Fe-wbj"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="p3g-Ee-kHi" id="VLW-7G-lcV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqj-wC-5mr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
