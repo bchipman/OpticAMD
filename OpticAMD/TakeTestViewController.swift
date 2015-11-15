@@ -208,15 +208,15 @@ class TakeTestViewController: UIViewController {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
 
             // Calculate areas
-            let leftAreaData = calculateAreas(leftImage)
-            let rightAreaData = calculateAreas(rightImage)
+            let leftAreaData = self.calculateAreas(self.leftImage)
+            let rightAreaData = self.calculateAreas(self.rightImage)
 
             print("Left Area Data\n  wavy: \(leftAreaData["wavy"]!)\n  blurry: \(leftAreaData["blurry"]!)\n  blind: \(leftAreaData["blind"]!)\n  dark: \(leftAreaData["dark"]!)\n  total: \(leftAreaData["total"]!)")
             print("\nRight Area Data\n  wavy: \(rightAreaData["wavy"]!)\n  blurry: \(rightAreaData["blurry"]!)\n  blind: \(rightAreaData["blind"]!)\n  dark: \(rightAreaData["dark"]!)\n  total: \(rightAreaData["total"]!)")
 
-            savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
-            savedTestResults.save()
-            self.presentViewController(saveAndFinishAlertController!, animated: true, completion: nil)
+            self.savedTestResults.add(TestResult(date: NSDate(), leftImage: self.leftImage, rightImage: self.rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
+            self.savedTestResults.save()
+            self.presentViewController(self.saveAndFinishAlertController!, animated: true, completion: nil)
 
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 SwiftSpinner.hide()
