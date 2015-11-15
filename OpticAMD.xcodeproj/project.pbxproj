@@ -12,6 +12,7 @@
 		573E5FE51BF87EE900C0114E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FDF1BF87ED900C0114E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		573E5FF41BF87F1400C0114E /* EasyImagy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FEF1BF87F0E00C0114E /* EasyImagy.framework */; };
 		573E5FF51BF87F1400C0114E /* EasyImagy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FEF1BF87F0E00C0114E /* EasyImagy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		577219F51BF91322008545A2 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577219F41BF91322008545A2 /* InstructionsViewController.swift */; };
 		57BE443D1BF85C1E006916AB /* AreaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BE443C1BF85C1E006916AB /* AreaData.swift */; };
 		D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */; };
 		D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */; };
@@ -120,6 +121,7 @@
 		57053E3B1BF8AF8000CF58A2 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		573E5FD81BF87ED900C0114E /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyImagy.xcodeproj; path = EasyImagySource/EasyImagy.xcodeproj; sourceTree = "<group>"; };
+		577219F41BF91322008545A2 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		57BE443C1BF85C1E006916AB /* AreaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AreaData.swift; path = opticAMD/AreaData.swift; sourceTree = SOURCE_ROOT; };
 		D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTestResults.swift; sourceTree = "<group>"; };
 		D33AF54E1BEC07D200B37DB1 /* OpticAMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpticAMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +224,7 @@
 				D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */,
 				D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */,
 				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
+				577219F41BF91322008545A2 /* InstructionsViewController.swift */,
 				D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
@@ -457,6 +460,7 @@
 				D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */,
 				D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
+				577219F51BF91322008545A2 /* InstructionsViewController.swift in Sources */,
 				D35836ED1BF6FEA200B4D213 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +619,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -633,7 +637,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

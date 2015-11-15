@@ -17,7 +17,8 @@ class TakeTestViewController: UIViewController {
     @IBOutlet weak var tempImageView: UIImageView! // Contains line currently being drawn
 
     var lastPointDrawn = CGPoint.zero    // last point drawn on canvas
-    var brushLineWidth: CGFloat = 150      // width of line to draw
+    var brushLineWidth: CGFloat = 50
+    // width of line to draw
     var continuousStroke = false              // true if stroke is continuous
     var red:        CGFloat = 0.1
     var green:      CGFloat = 0.1
