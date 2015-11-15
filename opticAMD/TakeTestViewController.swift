@@ -140,6 +140,9 @@ class TakeTestViewController: UIViewController {
     }
     @IBAction func saveRightAndFinish(sender: UIBarButtonItem) {
         rightImage = createImageFromGrid()
+        if leftImage == nil {
+            leftImage = UIImage(named: "cat")
+        }
         savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
         savedTestResults.save()
         self.presentViewController(finishAlertController!, animated: true, completion: nil)
