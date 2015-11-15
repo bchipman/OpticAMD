@@ -24,20 +24,41 @@ class TakeTestViewController: UIViewController {
     var blue:       CGFloat = 255
     var opacity:    CGFloat = 1
     var savedTestResults = SavedTestResults()
-    var alertController: UIAlertController?
+    var saveAlertController: UIAlertController?
+    var saveAndContinueAlertController: UIAlertController?
+    var finishAlertController: UIAlertController?
+    
+    var leftImage: UIImage?
+    var rightImage: UIImage?
+    
 
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
 
-
+    
     // MARK: Overriden Methods
     override func viewDidLoad() {
+
         // Create and configure alert controller to be used later (when save is tapped)
-        alertController = UIAlertController(title: "Your test was saved", message: nil, preferredStyle: .Alert)
+        saveAlertController = UIAlertController(title: "Your test was saved", message: nil, preferredStyle: .Alert)
         let alertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
         }
-        alertController?.addAction(alertAction)
+        saveAlertController?.addAction(alertAction)
+        
+        // 'Save & Continue' alert controller
+        saveAndContinueAlertController = UIAlertController(title: "Left eye test result saved", message: nil, preferredStyle: .Alert)
+        let saveAndContinueAlertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
+            self.performSegueWithIdentifier("LeftToRightSegue", sender: self)
+        }
+        saveAndContinueAlertController?.addAction(saveAndContinueAlertAction)
 
+        // 'Finish' alert controller
+        finishAlertController = UIAlertController(title: "Right eye test result saved", message: nil, preferredStyle: .Alert)
+        let finishAlertControllerAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
+            self.performSegueWithIdentifier("RightToMainSegue", sender: self)
+        }
+        finishAlertController?.addAction(finishAlertControllerAction)
+        
         drawNewGrid()
     }
 
@@ -100,20 +121,48 @@ class TakeTestViewController: UIViewController {
         setOrResetView()
     }
 
-    @IBAction func save(sender: UIBarButtonItem) {
-
+    @IBAction func saveLeft(sender: UIBarButtonItem) {
+        leftImage = createImageFromGrid()
+        self.presentViewController(saveAlertController!, animated: true, completion: nil)
+    }
+    @IBAction func saveLeftAndContinue(sender: UIBarButtonItem) {
+        leftImage = createImageFromGrid()
+        self.presentViewController(saveAndContinueAlertController!, animated: true, completion: nil)
+    }
+    @IBAction func next(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
+    }
+    
+    @IBAction func saveRight(sender: UIBarButtonItem) {
+        rightImage = createImageFromGrid()
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
+        savedTestResults.save()
+        self.presentViewController(saveAlertController!, animated: true, completion: nil)
+    }
+    @IBAction func saveRightAndFinish(sender: UIBarButtonItem) {
+        rightImage = createImageFromGrid()
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
+        savedTestResults.save()
+        self.presentViewController(finishAlertController!, animated: true, completion: nil)
+    }
+    @IBAction func finish(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("RightToMainSegue", sender: sender)
+    }
+    
+    func createImageFromGrid() -> UIImage {
         // Create rectangle from middle of current image
         let cropRect = CGRectMake(gridLeftEdge() - (gridLineWidth / 2), gridTopEdge() - (gridLineWidth / 2) , gridSize() + (gridLineWidth / 2), gridSize() + (gridLineWidth / 2)) ;
         let imageRef = CGImageCreateWithImageInRect(mainImageView.image?.CGImage, cropRect)
         let croppedImage = UIImage(CGImage: imageRef!)
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: croppedImage, rightImage: croppedImage)!)
-        savedTestResults.save()
-
-        self.presentViewController(alertController!, animated: true, completion: nil)
+        return croppedImage
     }
 
-    @IBAction func next(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "LeftToRightSegue" {
+            if let destinationViewController = segue.destinationViewController as? TakeTestViewController {
+                destinationViewController.leftImage = leftImage
+            }
+        }
     }
 
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
