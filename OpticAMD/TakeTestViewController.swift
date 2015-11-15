@@ -57,8 +57,36 @@ class TakeTestViewController: UIViewController {
         tempImageView.image = nil
         drawNewGrid()
     }
-    
-    
+
+
+    // Color buttons
+    @IBAction func changeColor(sender: UIButton) {
+        let color = sender.titleLabel!.text!
+        print(color)
+        switch color {
+        case "orange":
+            red = 1.0
+            green = 0.5
+            blue = 0.0
+        case "blue":
+            red = 0.0
+            green = 0.5
+            blue = 1.0
+        case "green":
+            red = 0.0
+            green = 0.5
+            blue = 0.0
+        case "grey":
+            red = 0.1
+            green = 0.1
+            blue = 0.1
+        default:
+            break
+        }
+
+    }
+
+
     // MARK: Touch
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Called when one or more fingers touch down in a view or window
@@ -112,37 +140,37 @@ class TakeTestViewController: UIViewController {
     }
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
         // Called by touchesMoved to draw a line between two points
-        
+
         // 1
         UIGraphicsBeginImageContext(tempImageView.superview!.frame.size)
         let context = UIGraphicsGetCurrentContext()
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height))
-        
+
         // 2
         CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
-        
-        
+
+
         // 3
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetLineWidth(context, brushLineWidth)
         CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
         CGContextSetBlendMode(context, CGBlendMode.Normal)
-        
+
         // 4
         CGContextStrokePath(context)
-        
+
         // Fill outside of grid with white (so you can't draw outside of grid)
         CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
         CGContextFillRect(context, CGRect(x: 0, y: 0, width: superviewWidth(), height: gridTopEdge()))
         CGContextFillRect(context, CGRect(x: 0, y: gridTopEdge() + gridSize() , width: superviewWidth(), height: gridTopEdge() ))
-        
+
         // 5
         tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         tempImageView.alpha = opacity
         UIGraphicsEndImageContext()
     }
-    
+
 
     // MARK: Actions
     @IBAction func reset(sender: UIBarButtonItem) {
@@ -160,7 +188,7 @@ class TakeTestViewController: UIViewController {
         if leftImage == nil {
             leftImage = UIImage(named: "cat")
         }
-        
+
         self.presentViewController(saveAndContinueAlertController!, animated: true, completion: nil)
     }
     @IBAction func saveRightAndFinish(sender: UIBarButtonItem) {
@@ -176,16 +204,24 @@ class TakeTestViewController: UIViewController {
             leftImage = UIImage(named: "cat")
         }
 
-        // Calculate areas
-        let leftAreaData = calculateAreas(leftImage)
-        let rightAreaData = calculateAreas(rightImage)
+        SwiftSpinner.show("Saving...")
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
 
-        print("Left Area Data\n  wavy: \(leftAreaData["wavy"]!)\n  blurry: \(leftAreaData["blurry"]!)\n  blind: \(leftAreaData["blind"]!)\n  dark: \(leftAreaData["dark"]!)\n  total: \(leftAreaData["total"]!)")
-        print("\nRight Area Data\n  wavy: \(rightAreaData["wavy"]!)\n  blurry: \(rightAreaData["blurry"]!)\n  blind: \(rightAreaData["blind"]!)\n  dark: \(rightAreaData["dark"]!)\n  total: \(rightAreaData["total"]!)")
+            // Calculate areas
+            let leftAreaData = calculateAreas(leftImage)
+            let rightAreaData = calculateAreas(rightImage)
 
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
-        savedTestResults.save()
-        self.presentViewController(saveAndFinishAlertController!, animated: true, completion: nil)
+            print("Left Area Data\n  wavy: \(leftAreaData["wavy"]!)\n  blurry: \(leftAreaData["blurry"]!)\n  blind: \(leftAreaData["blind"]!)\n  dark: \(leftAreaData["dark"]!)\n  total: \(leftAreaData["total"]!)")
+            print("\nRight Area Data\n  wavy: \(rightAreaData["wavy"]!)\n  blurry: \(rightAreaData["blurry"]!)\n  blind: \(rightAreaData["blind"]!)\n  dark: \(rightAreaData["dark"]!)\n  total: \(rightAreaData["total"]!)")
+
+            savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
+            savedTestResults.save()
+            self.presentViewController(saveAndFinishAlertController!, animated: true, completion: nil)
+
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                SwiftSpinner.hide()
+            })
+        }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "LeftToRightSegue" {
@@ -195,12 +231,12 @@ class TakeTestViewController: UIViewController {
         }
     }
 
-    
+
     // MARK: Area Calculation
     func calculateAreas(image :UIImage?) -> [String: Double] {
         // Attempting to calculate area
         let easyImage = Image(UIImage: image!)!
-        
+
         // Data is stored in the follow order [white, black, orageOverLines, orange,
         // blueOverLines, blue, greenOverLines, green, greyOverLines, grey]
         var imageData: [Int: Int] = [
@@ -215,26 +251,26 @@ class TakeTestViewController: UIViewController {
             141141141:  0,  // grey over lines
             14014014:   0   // grey
         ]
-        
+
         for pixel in easyImage {
             let RGB = Int(pixel.red) * 1000000 + Int(pixel.green) * 1000 + Int(pixel.blue)
             if let count = imageData[RGB] {
                 imageData[RGB] = count + 1
             }
         }
-        
+
         var totalPixelCount = 0.0
         for (_,v) in imageData {
             totalPixelCount += Double(v)
         }
-        
+
         var areaData = [String: Double]()
         areaData["wavy"] = (Double(imageData[128065000]!) + Double(imageData[255192127]!)) / totalPixelCount // orange
         areaData["blurry"] = (Double(imageData[65128]!) + Double(imageData[127192255]!)) / totalPixelCount // blue
         areaData["blind"] = (Double(imageData[65000]!) + Double(imageData[127192127]!)) / totalPixelCount // light grey
         areaData["dark"] = (Double(imageData[141141141]!) + Double(imageData[14014014]!)) / totalPixelCount // dark grey
         areaData["total"] = areaData["wavy"]! + areaData["blurry"]! + areaData["blind"]! + areaData["dark"]!
-        
+
         return areaData
     }
 
@@ -244,10 +280,10 @@ class TakeTestViewController: UIViewController {
         var xPos : CGFloat
         var yPos : CGFloat
         var context: CGContext?
-        
+
         // BORDER
         //        drawGridBorderForDebugging()
-        
+
         // Set up for drawing
         UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
         context = UIGraphicsGetCurrentContext()
@@ -255,11 +291,11 @@ class TakeTestViewController: UIViewController {
         CGContextSetLineWidth(context, gridLineWidth)
         CGContextSetBlendMode(context, CGBlendMode.Normal)
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()))
-        
+
         // WHITE (Background)
         CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
         CGContextFillRect(context, CGRect(x: 0, y: 0, width: mainImageView.superview!.frame.size.width, height: mainImageView.superview!.frame.size.height))
-        
+
         // BLUE (Horizontal)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
@@ -270,7 +306,7 @@ class TakeTestViewController: UIViewController {
         }
         CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
-        
+
         // RED (Vertical)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
@@ -279,10 +315,10 @@ class TakeTestViewController: UIViewController {
             CGContextAddLineToPoint(context, gridLeftEdge() + gridSize() - (gridLineWidth / 2), yPos)
             yPos += squareSize + gridLineWidth
         }
-        
+
         CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
-        
+
         // Finish drawing
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         mainImageView.alpha = 1.0
@@ -323,7 +359,7 @@ class TakeTestViewController: UIViewController {
         return croppedImage
     }
 
-    
+
     // MARK: Debug
     func printDebugInfo1() {
         print("tempImageView.frame.size: \(tempImageView.frame.size)")
