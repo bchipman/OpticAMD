@@ -130,6 +130,12 @@
                                             <action selector="next:" destination="GLd-MA-8hi" id="Oiq-oO-adH"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oYC-eb-lLx"/>
+                                    <barButtonItem title="Save &amp; Continue" id="bN1-Ci-x0J">
+                                        <connections>
+                                            <action selector="saveLeftAndContinue:" destination="GLd-MA-8hi" id="MOL-bM-eFb"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

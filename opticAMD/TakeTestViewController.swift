@@ -24,6 +24,7 @@ class TakeTestViewController: UIViewController {
     var opacity:    CGFloat = 1
     var savedTestResults = SavedTestResults()
     var alertController: UIAlertController?
+    var saveAndContinueAlertController: UIAlertController?
     
     var leftImage: UIImage?
     var rightImage: UIImage?
@@ -35,11 +36,19 @@ class TakeTestViewController: UIViewController {
     
     // MARK: Overriden Methods
     override func viewDidLoad() {
+
         // Create and configure alert controller to be used later (when save is tapped)
         alertController = UIAlertController(title: "Your test was saved", message: nil, preferredStyle: .Alert)
         let alertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
         }
         alertController?.addAction(alertAction)
+        
+        // 'Save & Continue' alert controller
+        saveAndContinueAlertController = UIAlertController(title: "Left eye test result saved", message: nil, preferredStyle: .Alert)
+        let saveAndContinueAlertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
+            self.performSegueWithIdentifier("LeftToRightSegue", sender: self)
+        }
+        saveAndContinueAlertController?.addAction(saveAndContinueAlertAction)
 
         drawNewGrid()
     }
@@ -106,6 +115,10 @@ class TakeTestViewController: UIViewController {
     @IBAction func saveLeft(sender: UIBarButtonItem) {
         leftImage = createImageFromGrid()
         self.presentViewController(alertController!, animated: true, completion: nil)
+    }
+    @IBAction func saveLeftAndContinue(sender: UIBarButtonItem) {
+        leftImage = createImageFromGrid()
+        self.presentViewController(saveAndContinueAlertController!, animated: true, completion: nil)
     }
     @IBAction func saveRight(sender: UIBarButtonItem) {
         rightImage = createImageFromGrid()
