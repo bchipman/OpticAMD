@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57053E3C1BF8AF8000CF58A2 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57053E3B1BF8AF8000CF58A2 /* SwiftSpinner.swift */; };
 		573E5FE41BF87EE900C0114E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FDF1BF87ED900C0114E /* Charts.framework */; };
 		573E5FE51BF87EE900C0114E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FDF1BF87ED900C0114E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		573E5FF41BF87F1400C0114E /* EasyImagy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FEF1BF87F0E00C0114E /* EasyImagy.framework */; };
@@ -116,6 +117,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		57053E3B1BF8AF8000CF58A2 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		573E5FD81BF87ED900C0114E /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyImagy.xcodeproj; path = EasyImagySource/EasyImagy.xcodeproj; sourceTree = "<group>"; };
 		57BE443C1BF85C1E006916AB /* AreaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AreaData.swift; path = opticAMD/AreaData.swift; sourceTree = SOURCE_ROOT; };
@@ -212,6 +214,7 @@
 		D33AF5501BEC07D200B37DB1 /* OpticAMD */ = {
 			isa = PBXGroup;
 			children = (
+				57053E3B1BF8AF8000CF58A2 /* SwiftSpinner.swift */,
 				57BE443C1BF85C1E006916AB /* AreaData.swift */,
 				D358371B1BF85B7A00B4D213 /* GraphViewController.swift */,
 				D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */,
@@ -450,6 +453,7 @@
 				D33DEDF41BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift in Sources */,
 				D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */,
 				57BE443D1BF85C1E006916AB /* AreaData.swift in Sources */,
+				57053E3C1BF8AF8000CF58A2 /* SwiftSpinner.swift in Sources */,
 				D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */,
 				D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,

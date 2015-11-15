@@ -35,6 +35,8 @@ class TakeTestViewController: UIViewController {
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
 
     // MARK: Overriden Methods
     override func viewDidLoad() {
@@ -58,7 +60,7 @@ class TakeTestViewController: UIViewController {
             self.performSegueWithIdentifier("RightToMainSegue", sender: self)
         }
         finishAlertController?.addAction(finishAlertControllerAction)
-
+        
         drawNewGrid()
     }
 
@@ -106,7 +108,7 @@ class TakeTestViewController: UIViewController {
         // Merge tempImageView into mainImageView
         UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
 
-        /*
+/*
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -150,6 +152,7 @@ class TakeTestViewController: UIViewController {
         savedTestResults.save()
         self.presentViewController(saveAlertController!, animated: true, completion: nil)
     }
+    
     @IBAction func saveRightAndFinish(sender: UIBarButtonItem) {
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
@@ -163,16 +166,22 @@ class TakeTestViewController: UIViewController {
         }
 
         // Calculate areas
-        let leftAreaData = calculateAreas(leftImage)
-        let rightAreaData = calculateAreas(rightImage)
-
-        print("Left Area Data\nwavyArea: \(leftAreaData.wavyArea)\nblurryArea: \(leftAreaData.blurryArea)\nblindArea: \(leftAreaData.blindArea)\ndarkSpotArea: \(leftAreaData.darkArea)\ntotalArea: \(leftAreaData.totalAffectedArea)")
-
-        print("Right Area Data\nwavyArea: \(rightAreaData.wavyArea)\nblurryArea: \(rightAreaData.blurryArea)\nblindArea: \(rightAreaData.blindArea)\ndarkSpotArea: \(rightAreaData.darkArea)\ntotalArea: \(rightAreaData.totalAffectedArea)")
-
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
-        savedTestResults.save()
-        self.presentViewController(finishAlertController!, animated: true, completion: nil)
+        SwiftSpinner.show("Saving...")
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            let leftAreaData = self.calculateAreas(self.leftImage)
+            let rightAreaData = self.calculateAreas(self.rightImage)
+            print("Left Area Data\nwavyArea: \(leftAreaData.wavyArea)\nblurryArea: \(leftAreaData.blurryArea)\nblindArea: \(leftAreaData.blindArea)\ndarkSpotArea: \(leftAreaData.darkArea)\ntotalArea: \(leftAreaData.totalAffectedArea)")
+            
+            print("Right Area Data\nwavyArea: \(rightAreaData.wavyArea)\nblurryArea: \(rightAreaData.blurryArea)\nblindArea: \(rightAreaData.blindArea)\ndarkSpotArea: \(rightAreaData.darkArea)\ntotalArea: \(rightAreaData.totalAffectedArea)")
+        
+            self.savedTestResults.add(TestResult(date: NSDate(), leftImage: self.leftImage, rightImage: self.rightImage)!)
+            self.savedTestResults.save()
+            self.presentViewController(self.finishAlertController!, animated: true, completion: nil)
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                SwiftSpinner.hide()
+            })
+        }
     }
 
     @IBAction func finish(sender: UIBarButtonItem) {
@@ -343,8 +352,7 @@ class TakeTestViewController: UIViewController {
         mainImageView.alpha = 1.0
         UIGraphicsEndImageContext()
     }
-
-
+    
     // Area calculation function
     func calculateAreas(image :UIImage?) -> AreaData{
         // Attempting to calculate area
@@ -364,5 +372,6 @@ class TakeTestViewController: UIViewController {
 
         return AreaData(imageData: imageData)
     }
+
 }
 
