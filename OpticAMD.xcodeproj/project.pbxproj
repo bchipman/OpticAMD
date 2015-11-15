@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		573E5FE41BF87EE900C0114E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FDF1BF87ED900C0114E /* Charts.framework */; };
-		573E5FE51BF87EE900C0114E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FDF1BF87ED900C0114E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		573E5FF41BF87F1400C0114E /* EasyImagy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FEF1BF87F0E00C0114E /* EasyImagy.framework */; };
-		573E5FF51BF87F1400C0114E /* EasyImagy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573E5FEF1BF87F0E00C0114E /* EasyImagy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57BE443D1BF85C1E006916AB /* AreaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BE443C1BF85C1E006916AB /* AreaData.swift */; };
 		D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */; };
 		D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */; };
 		D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */; };
@@ -23,67 +18,13 @@
 		D33DEDF21BF6B71D00CDD5EB /* PreviousTestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */; };
 		D33DEDF41BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */; };
 		D35836ED1BF6FEA200B4D213 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */; };
+		D35837161BF8580E00B4D213 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35837111BF8578A00B4D213 /* Charts.framework */; };
+		D35837171BF8580E00B4D213 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35837111BF8578A00B4D213 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358371B1BF85B7A00B4D213 /* GraphViewController.swift */; };
 		D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F99761BEFD9BD006EBB84 /* TestResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		573E5FDE1BF87ED900C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FD81BF87ED900C0114E /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		573E5FE01BF87ED900C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FD81BF87ED900C0114E /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
-			remoteInfo = "Charts-TV";
-		};
-		573E5FE21BF87ED900C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FD81BF87ED900C0114E /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
-			remoteInfo = ChartsTests;
-		};
-		573E5FE61BF87EE900C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FD81BF87ED900C0114E /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		573E5FEE1BF87F0E00C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D65FF0711AFB66C7006CC985;
-			remoteInfo = EasyImagy;
-		};
-		573E5FF01BF87F0E00C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D65FF07C1AFB66C7006CC985;
-			remoteInfo = EasyImagyTests;
-		};
-		573E5FF21BF87F0E00C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D6C2EDF81B031A0900E2B876;
-			remoteInfo = EasyImagySample;
-		};
-		573E5FF61BF87F1400C0114E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D65FF0701AFB66C7006CC985;
-			remoteInfo = EasyImagy;
-		};
 		D33AF5631BEC07D200B37DB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D33AF5461BEC07D200B37DB1 /* Project object */;
@@ -98,6 +39,34 @@
 			remoteGlobalIDString = D33AF54D1BEC07D200B37DB1;
 			remoteInfo = OpticAMD;
 		};
+		D35837101BF8578A00B4D213 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D358370A1BF8578A00B4D213 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		D35837121BF8578A00B4D213 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D358370A1BF8578A00B4D213 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		D35837141BF8578A00B4D213 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D358370A1BF8578A00B4D213 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		D35837181BF8580E00B4D213 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D358370A1BF8578A00B4D213 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,8 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				573E5FF51BF87F1400C0114E /* EasyImagy.framework in Embed Frameworks */,
-				573E5FE51BF87EE900C0114E /* Charts.framework in Embed Frameworks */,
+				D35837171BF8580E00B4D213 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,9 +84,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		573E5FD81BF87ED900C0114E /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
-		573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyImagy.xcodeproj; path = EasyImagySource/EasyImagy.xcodeproj; sourceTree = "<group>"; };
-		57BE443C1BF85C1E006916AB /* AreaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AreaData.swift; path = opticAMD/AreaData.swift; sourceTree = SOURCE_ROOT; };
 		D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTestResults.swift; sourceTree = "<group>"; };
 		D33AF54E1BEC07D200B37DB1 /* OpticAMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpticAMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +101,7 @@
 		D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTestsViewController.swift; sourceTree = "<group>"; };
 		D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousTestsTableViewCell.swift; sourceTree = "<group>"; };
 		D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D358370A1BF8578A00B4D213 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D358371B1BF85B7A00B4D213 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		D37F99761BEFD9BD006EBB84 /* TestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,8 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				573E5FF41BF87F1400C0114E /* EasyImagy.framework in Frameworks */,
-				573E5FE41BF87EE900C0114E /* Charts.framework in Frameworks */,
+				D35837161BF8580E00B4D213 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,32 +132,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		573E5FD91BF87ED900C0114E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				573E5FDF1BF87ED900C0114E /* Charts.framework */,
-				573E5FE11BF87ED900C0114E /* Charts.framework */,
-				573E5FE31BF87ED900C0114E /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		573E5FE91BF87F0E00C0114E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				573E5FEF1BF87F0E00C0114E /* EasyImagy.framework */,
-				573E5FF11BF87F0E00C0114E /* EasyImagyTests.xctest */,
-				573E5FF31BF87F0E00C0114E /* EasyImagySample.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D33AF5451BEC07D200B37DB1 = {
 			isa = PBXGroup;
 			children = (
-				573E5FD81BF87ED900C0114E /* Charts.xcodeproj */,
-				573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */,
 				D33AF5501BEC07D200B37DB1 /* OpticAMD */,
+				D358370A1BF8578A00B4D213 /* Charts.xcodeproj */,
 				D33AF5651BEC07D200B37DB1 /* OpticAMDTests */,
 				D33AF5701BEC07D200B37DB1 /* OpticAMDUITests */,
 				D33AF54F1BEC07D200B37DB1 /* Products */,
@@ -212,8 +156,6 @@
 		D33AF5501BEC07D200B37DB1 /* OpticAMD */ = {
 			isa = PBXGroup;
 			children = (
-				57BE443C1BF85C1E006916AB /* AreaData.swift */,
-				D358371B1BF85B7A00B4D213 /* GraphViewController.swift */,
 				D33DEDF31BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift */,
 				D33DEDF11BF6B71D00CDD5EB /* PreviousTestsViewController.swift */,
 				D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */,
@@ -221,6 +163,7 @@
 				D37F99761BEFD9BD006EBB84 /* TestResult.swift */,
 				D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
+				D358371B1BF85B7A00B4D213 /* GraphViewController.swift */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
 			);
 			path = OpticAMD;
@@ -242,6 +185,16 @@
 				D33AF5731BEC07D200B37DB1 /* Info.plist */,
 			);
 			path = OpticAMDUITests;
+			sourceTree = "<group>";
+		};
+		D358370B1BF8578A00B4D213 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D35837111BF8578A00B4D213 /* Charts.framework */,
+				D35837131BF8578A00B4D213 /* Charts.framework */,
+				D35837151BF8578A00B4D213 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		ED188BFE1BED7FB100D163A1 /* Supporting Files */ = {
@@ -270,8 +223,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				573E5FE71BF87EE900C0114E /* PBXTargetDependency */,
-				573E5FF71BF87F1400C0114E /* PBXTargetDependency */,
+				D35837191BF8580E00B4D213 /* PBXTargetDependency */,
 			);
 			name = OpticAMD;
 			productName = OpticAMD;
@@ -326,7 +278,7 @@
 				TargetAttributes = {
 					D33AF54D1BEC07D200B37DB1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 93T24DY4F9;
+						DevelopmentTeam = VVJK67NYH4;
 					};
 					D33AF5611BEC07D200B37DB1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -351,12 +303,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 573E5FD91BF87ED900C0114E /* Products */;
-					ProjectRef = 573E5FD81BF87ED900C0114E /* Charts.xcodeproj */;
-				},
-				{
-					ProductGroup = 573E5FE91BF87F0E00C0114E /* Products */;
-					ProjectRef = 573E5FE81BF87F0E00C0114E /* EasyImagy.xcodeproj */;
+					ProductGroup = D358370B1BF8578A00B4D213 /* Products */;
+					ProjectRef = D358370A1BF8578A00B4D213 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -369,46 +317,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		573E5FDF1BF87ED900C0114E /* Charts.framework */ = {
+		D35837111BF8578A00B4D213 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 573E5FDE1BF87ED900C0114E /* PBXContainerItemProxy */;
+			remoteRef = D35837101BF8578A00B4D213 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		573E5FE11BF87ED900C0114E /* Charts.framework */ = {
+		D35837131BF8578A00B4D213 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 573E5FE01BF87ED900C0114E /* PBXContainerItemProxy */;
+			remoteRef = D35837121BF8578A00B4D213 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		573E5FE31BF87ED900C0114E /* ChartsTests.xctest */ = {
+		D35837151BF8578A00B4D213 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 573E5FE21BF87ED900C0114E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		573E5FEF1BF87F0E00C0114E /* EasyImagy.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EasyImagy.framework;
-			remoteRef = 573E5FEE1BF87F0E00C0114E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		573E5FF11BF87F0E00C0114E /* EasyImagyTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EasyImagyTests.xctest;
-			remoteRef = 573E5FF01BF87F0E00C0114E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		573E5FF31BF87F0E00C0114E /* EasyImagySample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = EasyImagySample.app;
-			remoteRef = 573E5FF21BF87F0E00C0114E /* PBXContainerItemProxy */;
+			remoteRef = D35837141BF8578A00B4D213 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -449,7 +376,6 @@
 				D33DEDF21BF6B71D00CDD5EB /* PreviousTestsViewController.swift in Sources */,
 				D33DEDF41BF6BB7A00CDD5EB /* PreviousTestsTableViewCell.swift in Sources */,
 				D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */,
-				57BE443D1BF85C1E006916AB /* AreaData.swift in Sources */,
 				D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */,
 				D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
@@ -476,16 +402,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		573E5FE71BF87EE900C0114E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = 573E5FE61BF87EE900C0114E /* PBXContainerItemProxy */;
-		};
-		573E5FF71BF87F1400C0114E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EasyImagy;
-			targetProxy = 573E5FF61BF87F1400C0114E /* PBXContainerItemProxy */;
-		};
 		D33AF5641BEC07D200B37DB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D33AF54D1BEC07D200B37DB1 /* OpticAMD */;
@@ -495,6 +411,11 @@
 			isa = PBXTargetDependency;
 			target = D33AF54D1BEC07D200B37DB1 /* OpticAMD */;
 			targetProxy = D33AF56E1BEC07D200B37DB1 /* PBXContainerItemProxy */;
+		};
+		D35837191BF8580E00B4D213 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = D35837181BF8580E00B4D213 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,7 +531,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 			};
@@ -625,7 +546,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 			};
