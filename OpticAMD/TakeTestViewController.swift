@@ -27,15 +27,15 @@ class TakeTestViewController: UIViewController {
     var saveAlertController: UIAlertController?
     var saveAndContinueAlertController: UIAlertController?
     var finishAlertController: UIAlertController?
-    
+
     var leftImage: UIImage?
     var rightImage: UIImage?
-    
+
 
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
 
-    
+
     // MARK: Overriden Methods
     override func viewDidLoad() {
 
@@ -44,7 +44,7 @@ class TakeTestViewController: UIViewController {
         let alertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
         }
         saveAlertController?.addAction(alertAction)
-        
+
         // 'Save & Continue' alert controller
         saveAndContinueAlertController = UIAlertController(title: "Left eye test result saved", message: nil, preferredStyle: .Alert)
         let saveAndContinueAlertAction = UIAlertAction(title: "OK", style: .Default) { (ACTION) -> Void in
@@ -58,7 +58,7 @@ class TakeTestViewController: UIViewController {
             self.performSegueWithIdentifier("RightToMainSegue", sender: self)
         }
         finishAlertController?.addAction(finishAlertControllerAction)
-        
+
         drawNewGrid()
     }
 
@@ -124,7 +124,7 @@ class TakeTestViewController: UIViewController {
 
     @IBAction func saveLeft(sender: UIBarButtonItem) {
         leftImage = createImageFromGrid()
-        
+
         self.presentViewController(saveAlertController!, animated: true, completion: nil)
     }
     @IBAction func saveLeftAndContinue(sender: UIBarButtonItem) {
@@ -133,14 +133,14 @@ class TakeTestViewController: UIViewController {
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         tempImageView.image = nil
-        
+
         leftImage = createImageFromGrid()
         self.presentViewController(saveAndContinueAlertController!, animated: true, completion: nil)
     }
     @IBAction func next(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
     }
-    
+
     @IBAction func saveRight(sender: UIBarButtonItem) {
         rightImage = createImageFromGrid()
         if leftImage == nil {
@@ -156,29 +156,29 @@ class TakeTestViewController: UIViewController {
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         tempImageView.image = nil
-        
+
         rightImage = createImageFromGrid()
         if leftImage == nil {
             leftImage = UIImage(named: "cat")
         }
-        
+
         // Calculate areas
         let leftAreaData = calculateAreas(leftImage)
         let rightAreaData = calculateAreas(rightImage)
-        
+
         print("Left Area Data\nwavyArea: \(leftAreaData.wavyArea)\nblurryArea: \(leftAreaData.blurryArea)\nblindArea: \(leftAreaData.blindArea)\ndarkSpotArea: \(leftAreaData.darkArea)\ntotalArea: \(leftAreaData.totalAffectedArea)")
-        
+
         print("Right Area Data\nwavyArea: \(rightAreaData.wavyArea)\nblurryArea: \(rightAreaData.blurryArea)\nblindArea: \(rightAreaData.blindArea)\ndarkSpotArea: \(rightAreaData.darkArea)\ntotalArea: \(rightAreaData.totalAffectedArea)")
-        
+
         savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
         savedTestResults.save()
         self.presentViewController(finishAlertController!, animated: true, completion: nil)
     }
-    
+
     @IBAction func finish(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("RightToMainSegue", sender: sender)
     }
-    
+
     func createImageFromGrid() -> UIImage {
         // Create rectangle from middle of current image
         let cropRect = CGRectMake(gridLeftEdge() - (gridLineWidth / 2), gridTopEdge() - (gridLineWidth / 2) , gridSize() + (gridLineWidth / 2), gridSize() + (gridLineWidth / 2)) ;
@@ -253,7 +253,7 @@ class TakeTestViewController: UIViewController {
         // WHITE (Background)
         CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
         CGContextFillRect(context, CGRect(x: 0, y: 0, width: mainImageView.superview!.frame.size.width, height: mainImageView.superview!.frame.size.height))
-        
+
         // BLUE (Horizontal)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
@@ -265,7 +265,7 @@ class TakeTestViewController: UIViewController {
         CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
 
-        // RED (Vertical)
+        // RED (Vertical)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
         for _ in 1...gridNumLines() {
@@ -273,6 +273,7 @@ class TakeTestViewController: UIViewController {
             CGContextAddLineToPoint(context, gridLeftEdge() + gridSize() - (gridLineWidth / 2), yPos)
             yPos += squareSize + gridLineWidth
         }
+
         CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
 
@@ -320,7 +321,7 @@ class TakeTestViewController: UIViewController {
         print("gridSize():    \(gridSize())")
         print("leftTop:       \(gridLeftEdge()), \(gridTopEdge()) ")
     }
-    
+
     func drawGridBorderForDebugging() {
         var context: CGContext?
         UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
@@ -342,25 +343,25 @@ class TakeTestViewController: UIViewController {
         mainImageView.alpha = 1.0
         UIGraphicsEndImageContext()
     }
-    
-    
+
+
     // Area calculation function
     func calculateAreas(image :UIImage?) -> AreaData{
         // Attempting to calculate area
         let easyImage = Image(UIImage: image!)!
-        
-        // Data is stored in the follow order [white, black, orageOverLines, orange, 
+
+        // Data is stored in the follow order [white, black, orageOverLines, orange,
         // blueOverLines, blue, greenOverLines, green, greyOverLines, grey]
         var imageData: [Int: Int] = [255255255: 0, 0: 0, 128065000: 0, 255192127: 0,
         65128: 0, 127192255: 0, 65000: 0, 127192127: 0, 141141141: 0, 14014014: 0]
-        
+
         for pixel in easyImage {
             let RGB = Int(pixel.red) * 1000000 + Int(pixel.green) * 1000 + Int(pixel.blue)
             if let count = imageData[RGB] {
                 imageData[RGB] = count + 1
             }
         }
-        
+
         return AreaData(imageData: imageData)
     }
 }
