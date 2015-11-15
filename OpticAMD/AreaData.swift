@@ -30,10 +30,10 @@ struct AreaData {
             totalPixelCount += Double(v)
         }
         
-        wavyArea = (Double(imageData[128065000]!) + Double(imageData[255192127]!)) / totalPixelCount
-        blurryArea = (Double(imageData[65128]!) + Double(imageData[127192255]!)) / totalPixelCount
-        blindArea = (Double(imageData[65000]!) + Double(imageData[127192127]!)) / totalPixelCount
-        darkArea = (Double(imageData[141141141]!) + Double(imageData[14014014]!)) / totalPixelCount
+        wavyArea = (Double(imageData[128065000]!) + Double(imageData[255192127]!)) / totalPixelCount // orange
+        blurryArea = (Double(imageData[65128]!) + Double(imageData[127192255]!)) / totalPixelCount // blue
+        blindArea = (Double(imageData[65000]!) + Double(imageData[127192127]!)) / totalPixelCount // light grey
+        darkArea = (Double(imageData[141141141]!) + Double(imageData[14014014]!)) / totalPixelCount // dark grey
         totalAffectedArea = wavyArea + blurryArea + blindArea + darkArea
     }
 }

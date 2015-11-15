@@ -128,6 +128,7 @@ class TakeTestViewController: UIViewController {
         self.presentViewController(saveAlertController!, animated: true, completion: nil)
     }
     @IBAction func saveLeftAndContinue(sender: UIBarButtonItem) {
+        // merge main and temp
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -151,6 +152,7 @@ class TakeTestViewController: UIViewController {
         self.presentViewController(saveAlertController!, animated: true, completion: nil)
     }
     @IBAction func saveRightAndFinish(sender: UIBarButtonItem) {
+        // merge main and temp
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -352,8 +354,18 @@ class TakeTestViewController: UIViewController {
 
         // Data is stored in the follow order [white, black, orageOverLines, orange,
         // blueOverLines, blue, greenOverLines, green, greyOverLines, grey]
-        var imageData: [Int: Int] = [255255255: 0, 0: 0, 128065000: 0, 255192127: 0,
-        65128: 0, 127192255: 0, 65000: 0, 127192127: 0, 141141141: 0, 14014014: 0]
+        var imageData: [Int: Int] = [
+            255255255:  0,  // white
+            0:          0,  // black
+            128065000:  0,  // orange over lines
+            255192127:  0,  // orange
+            65128:      0,  // blue over lines
+            127192255:  0,  // blue
+            65000:      0,  // green over lines
+            127192127:  0,  // green
+            141141141:  0,  // grey over lines
+            14014014:   0   // grey
+        ]
 
         for pixel in easyImage {
             let RGB = Int(pixel.red) * 1000000 + Int(pixel.green) * 1000 + Int(pixel.blue)
