@@ -24,6 +24,10 @@ class TakeTestViewController: UIViewController {
     var opacity:    CGFloat = 1
     var savedTestResults = SavedTestResults()
     var alertController: UIAlertController?
+    
+    var leftImage: UIImage?
+    var rightImage: UIImage?
+    
 
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
@@ -100,14 +104,14 @@ class TakeTestViewController: UIViewController {
     }
 
     @IBAction func saveLeft(sender: UIBarButtonItem) {
-        let croppedImage = createImageFromGrid()
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: croppedImage, rightImage: croppedImage)!)
+        leftImage = createImageFromGrid()
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: leftImage)!)
         savedTestResults.save()
         self.presentViewController(alertController!, animated: true, completion: nil)
     }
     @IBAction func saveRight(sender: UIBarButtonItem) {
-        let croppedImage = createImageFromGrid()
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: croppedImage, rightImage: croppedImage)!)
+        rightImage = createImageFromGrid()
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: rightImage, rightImage: rightImage)!)
         savedTestResults.save()
         self.presentViewController(alertController!, animated: true, completion: nil)
     }
