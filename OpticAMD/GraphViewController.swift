@@ -23,7 +23,7 @@ class GraphViewController: UIViewController {
         savedTestResults.load()
 //        setExampleGraph()
         setupMyTestGraph()
-        debug()
+//        debug()
     }
     
     // MARK: Debug
@@ -66,12 +66,33 @@ class GraphViewController: UIViewController {
             dataEntries2.append(dataEntry)
         }
         
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Blue")
-        let lineChartDataSet2 = LineChartDataSet(yVals: dataEntries2, label: "Orange")
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Orange")
+        lineChartDataSet.colors = [UIColor(red: 15/255, green: 117/255, blue: 188/255, alpha: 1)]
+        lineChartDataSet.circleColors = [UIColor(red: 15/255, green: 117/255, blue: 188/255, alpha: 1)]
+        lineChartDataSet.circleHoleColor = UIColor(red: 15/255, green: 117/255, blue: 188/255, alpha: 1)
+        lineChartDataSet.lineWidth = 2.5
+        lineChartDataSet.circleRadius = 4.0
+
+        let lineChartDataSet2 = LineChartDataSet(yVals: dataEntries2, label: "Blue")
+        lineChartDataSet2.colors = [UIColor(red: 251/255, green: 176/255, blue: 76/255, alpha: 1)]
+        lineChartDataSet2.circleColors = [UIColor(red: 251/255, green: 176/255, blue: 76/255, alpha: 1)]
+        lineChartDataSet2.circleHoleColor = UIColor(red: 251/255, green: 176/255, blue: 76/255, alpha: 1)
+        lineChartDataSet2.lineWidth = 2.5
+        lineChartDataSet2.circleRadius = 4.0
         
+
         let allLineChartData = LineChartData(xVals: dates, dataSets: [lineChartDataSet, lineChartDataSet2])
 
         lineChartView.data = allLineChartData
+        print(lineChartView.xAxis.limitLines)
+        print(allLineChartData.getYMax())
+        print(allLineChartData.getYMin())
+        print(allLineChartData.yMin)
+        print(allLineChartData.yMax)
+        print(lineChartView.chartYMin)
+        print(lineChartView.chartYMax)
+        print(lineChartView.extraBottomOffset)
+        print(lineChartView.extraTopOffset)
         lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
     
