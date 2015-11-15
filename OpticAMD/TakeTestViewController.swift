@@ -238,7 +238,8 @@ class TakeTestViewController: UIViewController {
             CGContextAddLineToPoint(context, xPos, gridTopEdge() + gridSize() - (gridLineWidth / 2) )
             xPos += squareSize + gridLineWidth
         }
-        CGContextSetRGBStrokeColor(context, 0, 0, 1, 1.0)
+//        CGContextSetRGBStrokeColor(context, 0, 0, 1, 1.0)
+        CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
 
         // RED (Vertical)
@@ -249,7 +250,8 @@ class TakeTestViewController: UIViewController {
             CGContextAddLineToPoint(context, gridLeftEdge() + gridSize() - (gridLineWidth / 2), yPos)
             yPos += squareSize + gridLineWidth
         }
-        CGContextSetRGBStrokeColor(context, 1, 0, 0, 1.0)
+//        CGContextSetRGBStrokeColor(context, 1, 0, 0, 1.0)
+        CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
 
         // Finish drawing
