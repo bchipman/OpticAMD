@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EasyImagy
 
 @IBDesignable
 class TakeTestViewController: UIViewController {
@@ -114,7 +115,6 @@ class TakeTestViewController: UIViewController {
     @IBAction func next(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
     }
-
 
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
         // Called by touchesMoved to draw a line between two points

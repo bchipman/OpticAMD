@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572EDE371BF8196B00F1A286 /* EasyImagy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572EDE321BF8196400F1A286 /* EasyImagy.framework */; };
 		D30AA5291BF0721800FE0EDE /* SavedTestResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */; };
 		D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */; };
 		D33AF5541BEC07D200B37DB1 /* TakeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33AF5531BEC07D200B37DB1 /* TakeTestViewController.swift */; };
@@ -22,6 +23,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		572EDE311BF8196400F1A286 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572EDE2B1BF8196400F1A286 /* EasyImagy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D65FF0711AFB66C7006CC985;
+			remoteInfo = EasyImagy;
+		};
+		572EDE331BF8196400F1A286 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572EDE2B1BF8196400F1A286 /* EasyImagy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D65FF07C1AFB66C7006CC985;
+			remoteInfo = EasyImagyTests;
+		};
+		572EDE351BF8196400F1A286 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572EDE2B1BF8196400F1A286 /* EasyImagy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D6C2EDF81B031A0900E2B876;
+			remoteInfo = EasyImagySample;
+		};
 		D33AF5631BEC07D200B37DB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D33AF5461BEC07D200B37DB1 /* Project object */;
@@ -39,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		572EDE2B1BF8196400F1A286 /* EasyImagy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyImagy.xcodeproj; path = EasyImagy/EasyImagy.xcodeproj; sourceTree = "<group>"; };
 		D30AA5281BF0721800FE0EDE /* SavedTestResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTestResults.swift; sourceTree = "<group>"; };
 		D33AF54E1BEC07D200B37DB1 /* OpticAMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpticAMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33AF5511BEC07D200B37DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572EDE371BF8196B00F1A286 /* EasyImagy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +108,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		572EDE2C1BF8196400F1A286 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				572EDE321BF8196400F1A286 /* EasyImagy.framework */,
+				572EDE341BF8196400F1A286 /* EasyImagyTests.xctest */,
+				572EDE361BF8196400F1A286 /* EasyImagySample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D33AF5451BEC07D200B37DB1 = {
 			isa = PBXGroup;
 			children = (
+				572EDE2B1BF8196400F1A286 /* EasyImagy.xcodeproj */,
 				D33AF5501BEC07D200B37DB1 /* OpticAMD */,
 				D33AF5651BEC07D200B37DB1 /* OpticAMDTests */,
 				D33AF5701BEC07D200B37DB1 /* OpticAMDUITests */,
@@ -228,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D33AF5491BEC07D200B37DB1 /* Build configuration list for PBXProject "OpticAMD" */;
+			buildConfigurationList = D33AF5491BEC07D200B37DB1 /* Build configuration list for PBXProject "opticAMD" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,6 +274,12 @@
 			mainGroup = D33AF5451BEC07D200B37DB1;
 			productRefGroup = D33AF54F1BEC07D200B37DB1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 572EDE2C1BF8196400F1A286 /* Products */;
+					ProjectRef = 572EDE2B1BF8196400F1A286 /* EasyImagy.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D33AF54D1BEC07D200B37DB1 /* OpticAMD */,
@@ -247,6 +288,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		572EDE321BF8196400F1A286 /* EasyImagy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyImagy.framework;
+			remoteRef = 572EDE311BF8196400F1A286 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		572EDE341BF8196400F1A286 /* EasyImagyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EasyImagyTests.xctest;
+			remoteRef = 572EDE331BF8196400F1A286 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		572EDE361BF8196400F1A286 /* EasyImagySample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = EasyImagySample.app;
+			remoteRef = 572EDE351BF8196400F1A286 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D33AF54C1BEC07D200B37DB1 /* Resources */ = {
@@ -503,7 +568,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D33AF5491BEC07D200B37DB1 /* Build configuration list for PBXProject "OpticAMD" */ = {
+		D33AF5491BEC07D200B37DB1 /* Build configuration list for PBXProject "opticAMD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D33AF5741BEC07D200B37DB1 /* Debug */,
