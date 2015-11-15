@@ -192,6 +192,7 @@ class TakeTestViewController: UIViewController {
         // 4
         CGContextStrokePath(context)
 
+        // Fill outside of grid with white (so you can't draw outside of grid)
         CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
         CGContextFillRect(context, CGRect(x: 0, y: 0, width: superviewWidth(), height: gridTopEdge()))
         CGContextFillRect(context, CGRect(x: 0, y: gridTopEdge() + gridSize() , width: superviewWidth(), height: gridTopEdge() ))
@@ -225,6 +226,10 @@ class TakeTestViewController: UIViewController {
         CGContextSetBlendMode(context, CGBlendMode.Normal)
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()))
 
+        // WHITE (Background)
+        CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
+        CGContextFillRect(context, CGRect(x: 0, y: 0, width: mainImageView.superview!.frame.size.width, height: mainImageView.superview!.frame.size.height))
+        
         // BLUE (Horizontal)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
