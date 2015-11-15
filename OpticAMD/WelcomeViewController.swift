@@ -12,6 +12,8 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red:0.05, green:0.43, blue:0.70, alpha:1.0)
+
     }
 
     override func didReceiveMemoryWarning() {

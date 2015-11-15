@@ -35,9 +35,6 @@ class TakeTestViewController: UIViewController {
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
 
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
-
     // MARK: Overriden Methods
     override func viewDidLoad() {
 
@@ -64,6 +61,35 @@ class TakeTestViewController: UIViewController {
         drawNewGrid()
     }
 
+    // Color buttons
+    
+    @IBAction func changeColor(sender: UIButton) {
+        let color = sender.titleLabel!.text!
+        print(color)
+        switch color {
+        case "orange":
+            red = 1.0
+            green = 0.5
+            blue = 0.0
+        case "blue":
+            red = 0.0
+            green = 0.5
+            blue = 1.0
+        case "green":
+            red = 0.0
+            green = 0.5
+            blue = 0.0
+        case "grey":
+            red = 0.1
+            green = 0.1
+            blue = 0.1
+        default:
+            break
+        }
+        
+    }
+    
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Called when one or more fingers touch down in a view or window
 

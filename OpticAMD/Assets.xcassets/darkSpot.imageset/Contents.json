@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "AppLogo-Large.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "darkspot.png",
       "scale" : "2x"
     },
     {
