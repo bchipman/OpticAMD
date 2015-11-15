@@ -21,6 +21,8 @@
 		D35837161BF8580E00B4D213 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35837111BF8578A00B4D213 /* Charts.framework */; };
 		D35837171BF8580E00B4D213 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35837111BF8578A00B4D213 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358371B1BF85B7A00B4D213 /* GraphViewController.swift */; };
+		D36FE7491BF91647009466F2 /* EasyImagy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36FE7441BF91616009466F2 /* EasyImagy.framework */; };
+		D36FE74A1BF91647009466F2 /* EasyImagy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D36FE7441BF91616009466F2 /* EasyImagy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F99761BEFD9BD006EBB84 /* TestResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,34 @@
 			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
 			remoteInfo = "Charts-iOS";
 		};
+		D36FE7431BF91616009466F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D65FF0711AFB66C7006CC985;
+			remoteInfo = EasyImagy;
+		};
+		D36FE7451BF91616009466F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D65FF07C1AFB66C7006CC985;
+			remoteInfo = EasyImagyTests;
+		};
+		D36FE7471BF91616009466F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D6C2EDF81B031A0900E2B876;
+			remoteInfo = EasyImagySample;
+		};
+		D36FE74B1BF91647009466F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D65FF0701AFB66C7006CC985;
+			remoteInfo = EasyImagy;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +106,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D36FE74A1BF91647009466F2 /* EasyImagy.framework in Embed Frameworks */,
 				D35837171BF8580E00B4D213 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -103,6 +134,7 @@
 		D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D358370A1BF8578A00B4D213 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D358371B1BF85B7A00B4D213 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyImagy.xcodeproj; path = EasyImagy/EasyImagy.xcodeproj; sourceTree = "<group>"; };
 		D37F99761BEFD9BD006EBB84 /* TestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36FE7491BF91647009466F2 /* EasyImagy.framework in Frameworks */,
 				D35837161BF8580E00B4D213 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +168,9 @@
 		D33AF5451BEC07D200B37DB1 = {
 			isa = PBXGroup;
 			children = (
-				D33AF5501BEC07D200B37DB1 /* OpticAMD */,
 				D358370A1BF8578A00B4D213 /* Charts.xcodeproj */,
+				D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */,
+				D33AF5501BEC07D200B37DB1 /* OpticAMD */,
 				D33AF5651BEC07D200B37DB1 /* OpticAMDTests */,
 				D33AF5701BEC07D200B37DB1 /* OpticAMDUITests */,
 				D33AF54F1BEC07D200B37DB1 /* Products */,
@@ -197,6 +231,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D36FE73E1BF91616009466F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D36FE7441BF91616009466F2 /* EasyImagy.framework */,
+				D36FE7461BF91616009466F2 /* EasyImagyTests.xctest */,
+				D36FE7481BF91616009466F2 /* EasyImagySample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ED188BFE1BED7FB100D163A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +268,7 @@
 			);
 			dependencies = (
 				D35837191BF8580E00B4D213 /* PBXTargetDependency */,
+				D36FE74C1BF91647009466F2 /* PBXTargetDependency */,
 			);
 			name = OpticAMD;
 			productName = OpticAMD;
@@ -306,6 +351,10 @@
 					ProductGroup = D358370B1BF8578A00B4D213 /* Products */;
 					ProjectRef = D358370A1BF8578A00B4D213 /* Charts.xcodeproj */;
 				},
+				{
+					ProductGroup = D36FE73E1BF91616009466F2 /* Products */;
+					ProjectRef = D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -336,6 +385,27 @@
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
 			remoteRef = D35837141BF8578A00B4D213 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D36FE7441BF91616009466F2 /* EasyImagy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyImagy.framework;
+			remoteRef = D36FE7431BF91616009466F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D36FE7461BF91616009466F2 /* EasyImagyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EasyImagyTests.xctest;
+			remoteRef = D36FE7451BF91616009466F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D36FE7481BF91616009466F2 /* EasyImagySample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = EasyImagySample.app;
+			remoteRef = D36FE7471BF91616009466F2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -416,6 +486,11 @@
 			isa = PBXTargetDependency;
 			name = "Charts-iOS";
 			targetProxy = D35837181BF8580E00B4D213 /* PBXContainerItemProxy */;
+		};
+		D36FE74C1BF91647009466F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyImagy;
+			targetProxy = D36FE74B1BF91647009466F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
