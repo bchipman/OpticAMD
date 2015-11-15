@@ -32,7 +32,7 @@ class TakeTestViewController: UIViewController {
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
 
-
+    
     // MARK: Overriden Methods
     override func viewDidLoad() {
         // Create and configure alert controller to be used later (when save is tapped)
@@ -105,13 +105,11 @@ class TakeTestViewController: UIViewController {
 
     @IBAction func saveLeft(sender: UIBarButtonItem) {
         leftImage = createImageFromGrid()
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: leftImage)!)
-        savedTestResults.save()
         self.presentViewController(alertController!, animated: true, completion: nil)
     }
     @IBAction func saveRight(sender: UIBarButtonItem) {
         rightImage = createImageFromGrid()
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: rightImage, rightImage: rightImage)!)
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
         savedTestResults.save()
         self.presentViewController(alertController!, animated: true, completion: nil)
     }
@@ -127,6 +125,13 @@ class TakeTestViewController: UIViewController {
         self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "LeftToRightSegue" {
+            if let destinationViewController = segue.destinationViewController as? TakeTestViewController {
+                destinationViewController.leftImage = leftImage
+            }
+        }
+    }
 
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
         // Called by touchesMoved to draw a line between two points
