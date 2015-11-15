@@ -96,7 +96,7 @@ class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let testResult = savedTestResults.get(indexPath.row)
         leftImage.image = testResult.leftImage
-        rightImage.image = testResult.leftImage
+        rightImage.image = testResult.rightImage
     }
 
 }
