@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "710D04A73E2E723A005BD2755EBF8B5580E5D0BA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8C4332F51E42CE69D36721BF0C4CEE4FE29C4C34" : 0,
+    "710D04A73E2E723A005BD2755EBF8B5580E5D0BA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5C969339-4BB4-49AC-AE3A-1192898B7E32",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8C4332F51E42CE69D36721BF0C4CEE4FE29C4C34" : "opticAMD\/EasyImagy\/",
+    "710D04A73E2E723A005BD2755EBF8B5580E5D0BA" : "opticAMD\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "opticAMD",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "opticAMD.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vnie\/opticAMD",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "710D04A73E2E723A005BD2755EBF8B5580E5D0BA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/koher\/EasyImagy",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8C4332F51E42CE69D36721BF0C4CEE4FE29C4C34"
+    }
+  ]
+}

@@ -4,30 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Charts-TV.xcscheme_^#shared#^_</key>
+		<key>opticAMD.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Charts-iOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06AEE7A11BDC3F8B009875AE</key>
+		<key>D33AF54D1BEC07D200B37DB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BA8EC3F1A9D14DC00CE82E1</key>
+		<key>D33AF5611BEC07D200B37DB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A52C5C361BAC5CA400594CDD</key>
+		<key>D33AF56C1BEC07D200B37DB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
