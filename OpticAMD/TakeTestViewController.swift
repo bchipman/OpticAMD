@@ -155,11 +155,19 @@ class TakeTestViewController: UIViewController {
     }
 
     @IBAction func saveRight(sender: UIBarButtonItem) {
+        if leftImage == nil {
+            leftImage = UIImage(named: "cat")
+        }
         rightImage = createImageFromGrid()
         if leftImage == nil {
             leftImage = UIImage(named: "cat")
         }
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
+        
+        // Calculate areas
+        let leftAreaData = calculateAreas(leftImage)
+        let rightAreaData = calculateAreas(rightImage)
+        
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
         savedTestResults.save()
         self.presentViewController(saveAlertController!, animated: true, completion: nil)
     }
@@ -183,7 +191,7 @@ class TakeTestViewController: UIViewController {
         print("Left Area Data\n  wavy: \(leftAreaData["wavy"]!)\n  blurry: \(leftAreaData["blurry"]!)\n  blind: \(leftAreaData["blind"]!)\n  dark: \(leftAreaData["dark"]!)\n  total: \(leftAreaData["total"]!)")
         print("\nRight Area Data\n  wavy: \(rightAreaData["wavy"]!)\n  blurry: \(rightAreaData["blurry"]!)\n  blind: \(rightAreaData["blind"]!)\n  dark: \(rightAreaData["dark"]!)\n  total: \(rightAreaData["total"]!)")
 
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage)!)
+        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
         savedTestResults.save()
         self.presentViewController(finishAlertController!, animated: true, completion: nil)
     }
