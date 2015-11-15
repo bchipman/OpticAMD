@@ -120,21 +120,6 @@ class TakeTestViewController: UIViewController {
     @IBAction func reset(sender: UIBarButtonItem) {
         setOrResetView()
     }
-
-    @IBAction func saveLeft(sender: UIBarButtonItem) {
-        // merge main and temp
-        mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
-        tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
-        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        tempImageView.image = nil
-        
-        leftImage = createImageFromGrid()
-        if leftImage == nil {
-            leftImage = UIImage(named: "cat")
-        }
-        self.presentViewController(saveAlertController!, animated: true, completion: nil)
-    }
     @IBAction func saveLeftAndContinue(sender: UIBarButtonItem) {
         // merge main and temp
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
@@ -149,27 +134,6 @@ class TakeTestViewController: UIViewController {
         }
         
         self.presentViewController(saveAndContinueAlertController!, animated: true, completion: nil)
-    }
-    @IBAction func next(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
-    }
-
-    @IBAction func saveRight(sender: UIBarButtonItem) {
-        if leftImage == nil {
-            leftImage = UIImage(named: "cat")
-        }
-        rightImage = createImageFromGrid()
-        if leftImage == nil {
-            leftImage = UIImage(named: "cat")
-        }
-        
-        // Calculate areas
-        let leftAreaData = calculateAreas(leftImage)
-        let rightAreaData = calculateAreas(rightImage)
-        
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
-        savedTestResults.save()
-        self.presentViewController(saveAlertController!, animated: true, completion: nil)
     }
     @IBAction func saveRightAndFinish(sender: UIBarButtonItem) {
         // merge main and temp
@@ -194,10 +158,6 @@ class TakeTestViewController: UIViewController {
         savedTestResults.add(TestResult(date: NSDate(), leftImage: leftImage, rightImage: rightImage, leftImageAreaData: leftAreaData, rightImageAreaData: rightAreaData)!)
         savedTestResults.save()
         self.presentViewController(finishAlertController!, animated: true, completion: nil)
-    }
-
-    @IBAction func finish(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("RightToMainSegue", sender: sender)
     }
 
     func createImageFromGrid() -> UIImage {
