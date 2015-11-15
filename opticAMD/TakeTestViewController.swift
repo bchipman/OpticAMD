@@ -99,17 +99,24 @@ class TakeTestViewController: UIViewController {
         setOrResetView()
     }
 
-    @IBAction func save(sender: UIBarButtonItem) {
-
+    @IBAction func saveLeft(sender: UIBarButtonItem) {
+    }
+    @IBAction func saveRight(sender: UIBarButtonItem) {
+    }
+    func createImageFromGrid() -> UIImage {
         // Create rectangle from middle of current image
         let cropRect = CGRectMake(gridLeftEdge() - (gridLineWidth / 2), gridTopEdge() - (gridLineWidth / 2) , gridSize() + (gridLineWidth / 2), gridSize() + (gridLineWidth / 2)) ;
         let imageRef = CGImageCreateWithImageInRect(mainImageView.image?.CGImage, cropRect)
         let croppedImage = UIImage(CGImage: imageRef!)
-        savedTestResults.add(TestResult(date: NSDate(), leftImage: croppedImage, rightImage: croppedImage)!)
-        savedTestResults.save()
-
-        self.presentViewController(alertController!, animated: true, completion: nil)
+        return croppedImage
     }
+//    @IBAction func save(sender: UIBarButtonItem) {
+
+//        savedTestResults.add(TestResult(date: NSDate(), leftImage: croppedImage, rightImage: croppedImage)!)
+//        savedTestResults.save()
+
+//        self.presentViewController(alertController!, animated: true, completion: nil)
+//    }
 
     @IBAction func next(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
