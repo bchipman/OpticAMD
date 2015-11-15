@@ -111,6 +111,10 @@ class TakeTestViewController: UIViewController {
         self.presentViewController(alertController!, animated: true, completion: nil)
     }
 
+    @IBAction func next(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("LeftToRightSegue", sender: sender)
+    }
+
 
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
         // Called by touchesMoved to draw a line between two points

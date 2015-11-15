@@ -86,9 +86,10 @@
             </objects>
             <point key="canvasLocation" x="-560" y="306"/>
         </scene>
-        <!--Amsler Grid Test-->
+        <!--Left Eye-->
         <scene sceneID="nVk-7P-BAB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QoG-fR-BBX" sceneMemberID="firstResponder"/>
                 <viewController id="GLd-MA-8hi" customClass="TakeTestViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2mD-GO-Vhi"/>
@@ -124,6 +125,12 @@
                                             <action selector="save:" destination="GLd-MA-8hi" id="zEi-Uq-UOp"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0wS-Dc-0vt"/>
+                                    <barButtonItem title="Continue" id="7Yx-0j-WBd">
+                                        <connections>
+                                            <action selector="next:" destination="GLd-MA-8hi" id="Oiq-oO-adH"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -148,13 +155,13 @@
                             <constraint firstItem="KXM-Ix-2cG" firstAttribute="top" secondItem="VrG-bX-QIF" secondAttribute="top" id="xe7-RC-dRN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Amsler Grid Test" id="heo-Jw-8cP"/>
+                    <navigationItem key="navigationItem" title="Left Eye" id="heo-Jw-8cP"/>
                     <connections>
                         <outlet property="mainImageView" destination="KXM-Ix-2cG" id="xvn-1v-PV5"/>
                         <outlet property="tempImageView" destination="VrG-bX-QIF" id="yWq-88-K6F"/>
+                        <segue destination="HoZ-Vm-zVF" kind="show" identifier="LeftToRightSegue" id="inR-sl-XAS"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QoG-fR-BBX" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="-80"/>
         </scene>
@@ -296,10 +303,91 @@
             </objects>
             <point key="canvasLocation" x="174" y="795"/>
         </scene>
+        <!--Right Eye-->
+        <scene sceneID="lxb-1x-nB6">
+            <objects>
+                <viewController id="HoZ-Vm-zVF" customClass="TakeTestViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p5p-7u-Nip"/>
+                        <viewControllerLayoutGuide type="bottom" id="rU4-4v-TIK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RSf-0d-hwk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFm-Wh-BhQ">
+                                <rect key="frame" x="20" y="64" width="560" height="492"/>
+                                <animations/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0c-e7-drX">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="M8r-FT-24q"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Reset" id="lgY-Tw-dOi">
+                                        <connections>
+                                            <action selector="reset:" destination="HoZ-Vm-zVF" id="H7R-ir-9F0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DkI-sr-uKJ"/>
+                                    <barButtonItem title="Save" id="sL1-B4-VNa">
+                                        <connections>
+                                            <action selector="save:" destination="HoZ-Vm-zVF" id="PCm-ga-4UV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZKg-Bl-i5B"/>
+                                    <barButtonItem title="Finish" id="7lY-KF-zbU">
+                                        <connections>
+                                            <segue destination="yjm-bz-7dJ" kind="show" id="mhM-Ux-gvN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uwR-J9-14A">
+                                <rect key="frame" x="20" y="64" width="560" height="492"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t0c-e7-drX" firstAttribute="leading" secondItem="RSf-0d-hwk" secondAttribute="leadingMargin" constant="-20" id="2rD-8N-CxY"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="leading" secondItem="RSf-0d-hwk" secondAttribute="leadingMargin" id="3Gf-aw-viI"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="trailing" secondItem="RSf-0d-hwk" secondAttribute="trailingMargin" id="4X9-5G-smY"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="bottom" secondItem="uwR-J9-14A" secondAttribute="bottom" id="5rV-uN-9ML"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="leading" secondItem="RSf-0d-hwk" secondAttribute="leadingMargin" id="6Tq-Kc-gGR"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="top" secondItem="uwR-J9-14A" secondAttribute="top" id="6c4-Mv-YL6"/>
+                            <constraint firstItem="rU4-4v-TIK" firstAttribute="top" secondItem="t0c-e7-drX" secondAttribute="bottom" id="Dpa-2s-Vmh"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="top" secondItem="p5p-7u-Nip" secondAttribute="bottom" id="FFB-1y-Y2q"/>
+                            <constraint firstItem="uwR-J9-14A" firstAttribute="top" secondItem="p5p-7u-Nip" secondAttribute="bottom" id="GLG-oF-m6A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t0c-e7-drX" secondAttribute="trailing" constant="-20" id="a0K-f0-FQD"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="leading" secondItem="uwR-J9-14A" secondAttribute="leading" id="f0I-cL-bkc"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="top" secondItem="p5p-7u-Nip" secondAttribute="bottom" id="kOE-uC-Rdt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jFm-Wh-BhQ" secondAttribute="trailing" id="qEw-kZ-EHl"/>
+                            <constraint firstItem="jFm-Wh-BhQ" firstAttribute="bottom" secondItem="t0c-e7-drX" secondAttribute="top" id="ry7-ld-k5H"/>
+                            <constraint firstItem="uwR-J9-14A" firstAttribute="leading" secondItem="RSf-0d-hwk" secondAttribute="leadingMargin" id="t1S-wK-tAt"/>
+                            <constraint firstItem="uwR-J9-14A" firstAttribute="trailing" secondItem="RSf-0d-hwk" secondAttribute="trailingMargin" id="zDw-HO-gSu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Right Eye" id="e6R-Tq-EnA"/>
+                    <connections>
+                        <outlet property="mainImageView" destination="jFm-Wh-BhQ" id="Sop-mg-f4C"/>
+                        <outlet property="tempImageView" destination="uwR-J9-14A" id="6fk-Ex-fqj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPr-aK-yGY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="-80"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AppLogo" width="682" height="512"/>
         <image name="amslerGrid" width="267" height="267"/>
         <image name="cat" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mhM-Ux-gvN"/>
+    </inferredMetricsTieBreakers>
 </document>
