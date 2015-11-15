@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-               BuildableName = "OpticAMD.app"
-               BlueprintName = "OpticAMD"
-               ReferencedContainer = "container:opticAMD.xcodeproj">
+               BlueprintIdentifier = "D6C2EDF71B031A0900E2B876"
+               BuildableName = "EasyImagySample.app"
+               BlueprintName = "EasyImagySample"
+               ReferencedContainer = "container:EasyImagy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D33AF5611BEC07D200B37DB1"
-               BuildableName = "OpticAMD.xctest"
-               BlueprintName = "OpticAMDTests"
-               ReferencedContainer = "container:opticAMD.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D33AF56C1BEC07D200B37DB1"
-               BuildableName = "OpticAMD.xctest"
-               BlueprintName = "OpticAMDUITests"
-               ReferencedContainer = "container:opticAMD.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-            BuildableName = "OpticAMD.app"
-            BlueprintName = "OpticAMD"
-            ReferencedContainer = "container:opticAMD.xcodeproj">
+            BlueprintIdentifier = "D6C2EDF71B031A0900E2B876"
+            BuildableName = "EasyImagySample.app"
+            BlueprintName = "EasyImagySample"
+            ReferencedContainer = "container:EasyImagy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-            BuildableName = "OpticAMD.app"
-            BlueprintName = "OpticAMD"
-            ReferencedContainer = "container:opticAMD.xcodeproj">
+            BlueprintIdentifier = "D6C2EDF71B031A0900E2B876"
+            BuildableName = "EasyImagySample.app"
+            BlueprintName = "EasyImagySample"
+            ReferencedContainer = "container:EasyImagy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D33AF54D1BEC07D200B37DB1"
-            BuildableName = "OpticAMD.app"
-            BlueprintName = "OpticAMD"
-            ReferencedContainer = "container:opticAMD.xcodeproj">
+            BlueprintIdentifier = "D6C2EDF71B031A0900E2B876"
+            BuildableName = "EasyImagySample.app"
+            BlueprintName = "EasyImagySample"
+            ReferencedContainer = "container:EasyImagy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
