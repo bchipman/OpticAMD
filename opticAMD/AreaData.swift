@@ -15,6 +15,15 @@ struct AreaData {
     var darkArea: Double
     var totalAffectedArea: Double
     
+    init() {
+        wavyArea = 0.0
+        blurryArea = 0.0
+        blindArea = 0.0
+        darkArea = 0.0
+        darkArea = 0.0
+        totalAffectedArea = 0.0
+    }
+    
     init(imageData: [Int: Int]) {
         var totalPixelCount = 0.0
         for (_,v) in imageData {
