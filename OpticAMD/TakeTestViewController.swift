@@ -126,11 +126,11 @@ class TakeTestViewController: UIViewController {
             // draw a single point
             drawLineFrom(lastPointDrawn, toPoint: lastPointDrawn)
         }
-
+/*
         // Merge tempImageView into mainImageView
         UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
 
-        /*
+        
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -178,6 +178,8 @@ class TakeTestViewController: UIViewController {
     }
     @IBAction func saveLeftAndContinue(sender: UIBarButtonItem) {
         // merge main and temp
+        UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
+
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -193,6 +195,7 @@ class TakeTestViewController: UIViewController {
     }
     @IBAction func saveRightAndFinish(sender: UIBarButtonItem) {
         // merge main and temp
+        UIGraphicsBeginImageContext(mainImageView.superview!.frame.size)
         mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: superviewWidth(), height: superviewHeight()), blendMode: CGBlendMode.Normal, alpha: 1.0)
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: tempImageView.superview!.frame.size.width, height: tempImageView.superview!.frame.size.height), blendMode: CGBlendMode.Normal, alpha: opacity)
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
