@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -316,7 +315,7 @@
         <!--About Us-->
         <scene sceneID="HDa-0u-wCm">
             <objects>
-                <viewController title="About Us" id="LrF-ga-KfL" sceneMemberID="viewController">
+                <viewController title="About Us" id="LrF-ga-KfL" customClass="AboutUsViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ng1-Wl-vU8"/>
                         <viewControllerLayoutGuide type="bottom" id="XNk-bh-rmQ"/>
@@ -325,78 +324,181 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RbI-Jd-bDr">
-                                <rect key="frame" x="20" y="28" width="560" height="183"/>
-                                <animations/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5j-CD-snd">
-                                <rect key="frame" x="20" y="592" width="276" height="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPK-ey-nl6">
+                                <rect key="frame" x="20" y="28" width="560" height="135"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="aVD-Wl-9V9">
-                                        <rect key="frame" x="-20" y="-592" width="843" height="843"/>
-                                        <animations/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T83-pt-yBz">
-                                        <rect key="frame" x="-20" y="-592" width="42" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j25-Up-cR2">
-                                <rect key="frame" x="304" y="592" width="276" height="0.0"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9m-qN-wlL">
-                                        <rect key="frame" x="-304" y="-592" width="42" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="kaS-R4-P63">
-                                        <rect key="frame" x="-304" y="-592" width="512" height="512"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="lif-rd-Vjz">
+                                        <rect key="frame" x="20" y="20" width="520" height="95"/>
                                         <animations/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lif-rd-Vjz" firstAttribute="top" secondItem="xPK-ey-nl6" secondAttribute="top" constant="20" symbolic="YES" id="Eqm-Tk-Wro"/>
+                                    <constraint firstAttribute="trailing" secondItem="lif-rd-Vjz" secondAttribute="trailing" constant="20" symbolic="YES" id="McU-Fx-WFK"/>
+                                    <constraint firstItem="lif-rd-Vjz" firstAttribute="leading" secondItem="xPK-ey-nl6" secondAttribute="leading" constant="20" symbolic="YES" id="P0Z-ZI-PoL"/>
+                                    <constraint firstAttribute="bottom" secondItem="lif-rd-Vjz" secondAttribute="bottom" constant="20" symbolic="YES" id="Y8y-7K-tZs"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="yft-pO-PJV">
-                                <rect key="frame" x="20" y="219" width="560" height="365"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-5S-njQ">
+                                <rect key="frame" x="20" y="171" width="560" height="135"/>
                                 <animations/>
-                                <string key="text">Smartphones and tablets have drastically changed healthcare and it has empowered everyday people to take control of their own health. Thousands of health applications (apps) currently exist. There are apps to help people remember when and what medications to take, apps to assess sleeping patterns, apps to track sugar levels for diabetics, and even apps to store health information. Yet even with the seemingly endless number of apps available, apps designed for those with eye conditions are surprisingly lacking. And so, we created OpticAMD. Our team, formerly known as team 9 of the 2015 MedAppJam, is comprised of four ambitious students from UC Irvine who have worked diligently to create an app that will change the way patients living with age related macular degeneration (AMD) manage their condition. Our goal is to provide users a simple, yet effective, method of monitoring changes in their vision.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIF-8H-aM2">
+                                <rect key="frame" x="20" y="314" width="560" height="135"/>
+                                <animations/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="16" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-9f-1fl">
+                                <rect key="frame" x="20" y="171" width="560" height="278"/>
+                                <animations/>
+                                <mutableString key="text">Smartphones and tablets have drastically changed healthcare and it has empowered everyday people to take control of their own health.  Thousands of health applications (apps) currently exist.  There are apps to help people remember when and what medications to take, apps to assess sleeping patterns, apps to track sugar levels for diabetics, and even apps to store health information.  Yet even with the seemingly endless number of apps available, apps designed for those with eye conditions are surprisingly lacking.  And so, we created OpticAMD.  Our team, formerly known as Team 9 of the 2015 Med AppJam, is comprised of four ambitious students from UC Irvine who have worked diligently to create an app that will change the way patients living with age related macular degeneration (AMD) manage their condition.  Our goal is to provide users a simple, yet effective, method of monitoring changes in their vision.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                </variation>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuU-A2-nEp">
+                                <rect key="frame" x="20" y="457" width="560" height="135"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHB-XK-AyX">
+                                        <rect key="frame" x="284" y="0.0" width="276" height="135"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="OEg-Zk-jis">
+                                                <rect key="frame" x="0.0" y="20" width="96" height="96"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="CJQ-T1-F2m"/>
+                                                    <constraint firstAttribute="width" constant="96" id="nb7-uE-x7l"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyp-Ub-fpl">
+                                                <rect key="frame" x="96" y="47" width="180" height="41"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="fb.com/OpticAMD"/>
+                                                <connections>
+                                                    <action selector="facebookButton:" destination="LrF-ga-KfL" eventType="touchUpInside" id="74J-0F-Ell"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="lyp-Ub-fpl" firstAttribute="centerY" secondItem="OHB-XK-AyX" secondAttribute="centerY" id="EQq-5f-OZ3"/>
+                                            <constraint firstAttribute="trailing" secondItem="lyp-Ub-fpl" secondAttribute="trailing" constant="85" id="GcP-Hf-Hdb"/>
+                                            <constraint firstItem="lyp-Ub-fpl" firstAttribute="leading" secondItem="OEg-Zk-jis" secondAttribute="trailing" id="LQj-T1-97f"/>
+                                            <constraint firstItem="OEg-Zk-jis" firstAttribute="top" secondItem="OHB-XK-AyX" secondAttribute="top" constant="20" id="Lth-mR-WqC"/>
+                                            <constraint firstItem="lyp-Ub-fpl" firstAttribute="leading" secondItem="OEg-Zk-jis" secondAttribute="trailing" constant="49" id="RPz-NR-TQT"/>
+                                            <constraint firstAttribute="trailing" secondItem="lyp-Ub-fpl" secondAttribute="trailing" id="e0X-fL-9f6"/>
+                                            <constraint firstItem="OEg-Zk-jis" firstAttribute="leading" secondItem="OHB-XK-AyX" secondAttribute="leading" id="iuL-1p-5Dx"/>
+                                            <constraint firstAttribute="bottom" secondItem="OEg-Zk-jis" secondAttribute="bottom" constant="19" id="t1U-az-ahE"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="GcP-Hf-Hdb"/>
+                                                <exclude reference="RPz-NR-TQT"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0J0-pr-fAl">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="135"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="hvX-fg-UUr">
+                                                <rect key="frame" x="0.0" y="20" width="96" height="96"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="5yj-Lm-dnK"/>
+                                                    <constraint firstAttribute="width" constant="96" id="E5b-h9-mN8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSQ-Rz-6L8">
+                                                <rect key="frame" x="96" y="47" width="180" height="41"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="@OpticAMDapp"/>
+                                                <connections>
+                                                    <action selector="twitterButton:" destination="LrF-ga-KfL" eventType="touchUpInside" id="7WL-Qh-q2i"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="hvX-fg-UUr" firstAttribute="leading" secondItem="0J0-pr-fAl" secondAttribute="leading" id="95E-24-uXu"/>
+                                            <constraint firstAttribute="bottom" secondItem="hvX-fg-UUr" secondAttribute="bottom" constant="19" id="9iK-mr-LAQ"/>
+                                            <constraint firstItem="hvX-fg-UUr" firstAttribute="top" secondItem="0J0-pr-fAl" secondAttribute="top" constant="20" id="AB2-s3-xe5"/>
+                                            <constraint firstItem="pSQ-Rz-6L8" firstAttribute="centerY" secondItem="0J0-pr-fAl" secondAttribute="centerY" id="NgA-Du-PkU"/>
+                                            <constraint firstAttribute="trailing" secondItem="pSQ-Rz-6L8" secondAttribute="trailing" constant="126" id="QzN-KD-Pnr"/>
+                                            <constraint firstAttribute="trailing" secondItem="pSQ-Rz-6L8" secondAttribute="trailing" id="gEd-KB-g7O"/>
+                                            <constraint firstItem="pSQ-Rz-6L8" firstAttribute="leading" secondItem="hvX-fg-UUr" secondAttribute="trailing" id="mGO-1c-1tm"/>
+                                            <constraint firstItem="pSQ-Rz-6L8" firstAttribute="leading" secondItem="hvX-fg-UUr" secondAttribute="trailing" constant="8" id="sO3-J4-Wl0"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QzN-KD-Pnr"/>
+                                                <exclude reference="sO3-J4-Wl0"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="OHB-XK-AyX" firstAttribute="leading" secondItem="0J0-pr-fAl" secondAttribute="trailing" constant="8" symbolic="YES" id="85W-so-N9A"/>
+                                    <constraint firstAttribute="bottom" secondItem="OHB-XK-AyX" secondAttribute="bottom" id="Cad-6Y-df2"/>
+                                    <constraint firstItem="0J0-pr-fAl" firstAttribute="width" secondItem="OHB-XK-AyX" secondAttribute="width" id="LH6-4q-0uB"/>
+                                    <constraint firstAttribute="bottom" secondItem="OHB-XK-AyX" secondAttribute="bottom" constant="20" symbolic="YES" id="LuK-cx-Pbl"/>
+                                    <constraint firstItem="0J0-pr-fAl" firstAttribute="leading" secondItem="tuU-A2-nEp" secondAttribute="leading" id="RNT-CN-NNP"/>
+                                    <constraint firstItem="OHB-XK-AyX" firstAttribute="height" secondItem="0J0-pr-fAl" secondAttribute="height" id="XOU-Bz-QD5"/>
+                                    <constraint firstItem="0J0-pr-fAl" firstAttribute="top" secondItem="tuU-A2-nEp" secondAttribute="top" id="Xed-g4-wSN"/>
+                                    <constraint firstItem="OHB-XK-AyX" firstAttribute="top" secondItem="tuU-A2-nEp" secondAttribute="top" id="Z9g-Fo-qVI"/>
+                                    <constraint firstItem="0J0-pr-fAl" firstAttribute="top" secondItem="tuU-A2-nEp" secondAttribute="top" constant="20" symbolic="YES" id="oz8-Ki-wwo"/>
+                                    <constraint firstAttribute="bottom" secondItem="0J0-pr-fAl" secondAttribute="bottom" constant="20" symbolic="YES" id="rwB-Fr-7N8"/>
+                                    <constraint firstAttribute="bottom" secondItem="0J0-pr-fAl" secondAttribute="bottom" id="v2q-QF-9af"/>
+                                    <constraint firstItem="OHB-XK-AyX" firstAttribute="top" secondItem="tuU-A2-nEp" secondAttribute="top" constant="20" symbolic="YES" id="yei-xg-2lh"/>
+                                    <constraint firstAttribute="trailing" secondItem="OHB-XK-AyX" secondAttribute="trailing" id="zei-vg-KnZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oz8-Ki-wwo"/>
+                                        <exclude reference="rwB-Fr-7N8"/>
+                                        <exclude reference="LuK-cx-Pbl"/>
+                                        <exclude reference="yei-xg-2lh"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="j5j-CD-snd" secondAttribute="leading" id="0De-EX-uO1"/>
-                            <constraint firstItem="RbI-Jd-bDr" firstAttribute="height" relation="lessThanOrEqual" secondItem="yft-pO-PJV" secondAttribute="height" multiplier="0.5" id="2EQ-9P-MtU"/>
-                            <constraint firstItem="XNk-bh-rmQ" firstAttribute="top" secondItem="j25-Up-cR2" secondAttribute="bottom" constant="8" symbolic="YES" id="5VC-vz-Ztp"/>
-                            <constraint firstItem="yft-pO-PJV" firstAttribute="top" secondItem="RbI-Jd-bDr" secondAttribute="bottom" constant="8" symbolic="YES" id="6wu-rz-N8F"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="RbI-Jd-bDr" secondAttribute="leading" id="78i-i1-cCv"/>
-                            <constraint firstItem="RbI-Jd-bDr" firstAttribute="top" secondItem="Ng1-Wl-vU8" secondAttribute="bottom" constant="8" symbolic="YES" id="DR4-rC-Jdh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="j25-Up-cR2" secondAttribute="trailing" id="I0p-iN-rQT"/>
-                            <constraint firstItem="j25-Up-cR2" firstAttribute="leading" secondItem="j5j-CD-snd" secondAttribute="trailing" constant="8" symbolic="YES" id="Ljt-9C-bU7"/>
-                            <constraint firstItem="j5j-CD-snd" firstAttribute="height" secondItem="j25-Up-cR2" secondAttribute="height" id="RGb-i8-saw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RbI-Jd-bDr" secondAttribute="trailing" id="YgR-YU-asn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yft-pO-PJV" secondAttribute="trailing" id="evg-3f-fwm"/>
-                            <constraint firstItem="j5j-CD-snd" firstAttribute="width" secondItem="j25-Up-cR2" secondAttribute="width" id="jLq-UQ-3r6"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="yft-pO-PJV" secondAttribute="leading" id="jVJ-LF-zsc"/>
-                            <constraint firstItem="XNk-bh-rmQ" firstAttribute="top" secondItem="j5j-CD-snd" secondAttribute="bottom" constant="8" symbolic="YES" id="p8x-oN-DnM"/>
-                            <constraint firstItem="j5j-CD-snd" firstAttribute="top" secondItem="yft-pO-PJV" secondAttribute="bottom" constant="8" symbolic="YES" id="pm2-v5-fw4"/>
-                            <constraint firstItem="j25-Up-cR2" firstAttribute="top" secondItem="yft-pO-PJV" secondAttribute="bottom" constant="8" symbolic="YES" id="zw9-y5-bPN"/>
+                            <constraint firstItem="Vbu-5S-njQ" firstAttribute="trailing" secondItem="ZJs-1N-caR" secondAttribute="trailingMargin" id="0sk-Dg-hAO"/>
+                            <constraint firstItem="iIo-9f-1fl" firstAttribute="leading" secondItem="Vbu-5S-njQ" secondAttribute="leading" id="3z1-RW-VJC"/>
+                            <constraint firstItem="tuU-A2-nEp" firstAttribute="width" secondItem="xPK-ey-nl6" secondAttribute="width" id="7aa-cR-CAd"/>
+                            <constraint firstItem="tuU-A2-nEp" firstAttribute="top" secondItem="pIF-8H-aM2" secondAttribute="bottom" constant="8" symbolic="YES" id="HdR-Lk-3mX"/>
+                            <constraint firstItem="iIo-9f-1fl" firstAttribute="top" secondItem="Vbu-5S-njQ" secondAttribute="top" id="HxO-DM-JYG"/>
+                            <constraint firstItem="xPK-ey-nl6" firstAttribute="top" secondItem="Ng1-Wl-vU8" secondAttribute="bottom" constant="8" symbolic="YES" id="K7C-SB-rSf"/>
+                            <constraint firstItem="tuU-A2-nEp" firstAttribute="trailing" secondItem="ZJs-1N-caR" secondAttribute="trailingMargin" id="K8P-zy-pFf"/>
+                            <constraint firstItem="iIo-9f-1fl" firstAttribute="bottom" secondItem="pIF-8H-aM2" secondAttribute="bottom" id="KCf-YT-yMH"/>
+                            <constraint firstItem="pIF-8H-aM2" firstAttribute="leading" secondItem="ZJs-1N-caR" secondAttribute="leadingMargin" id="KX1-de-Mef"/>
+                            <constraint firstItem="XNk-bh-rmQ" firstAttribute="top" secondItem="tuU-A2-nEp" secondAttribute="bottom" constant="8" id="L7O-eb-A2a"/>
+                            <constraint firstItem="pIF-8H-aM2" firstAttribute="height" secondItem="xPK-ey-nl6" secondAttribute="height" id="LDI-rV-sdj"/>
+                            <constraint firstItem="tuU-A2-nEp" firstAttribute="height" secondItem="xPK-ey-nl6" secondAttribute="height" id="Le8-RS-Q0y"/>
+                            <constraint firstItem="Vbu-5S-njQ" firstAttribute="width" secondItem="xPK-ey-nl6" secondAttribute="width" id="Lp1-gK-yW9"/>
+                            <constraint firstItem="Vbu-5S-njQ" firstAttribute="leading" secondItem="ZJs-1N-caR" secondAttribute="leadingMargin" id="Tyj-36-mDC"/>
+                            <constraint firstItem="pIF-8H-aM2" firstAttribute="trailing" secondItem="ZJs-1N-caR" secondAttribute="trailingMargin" id="bBe-sL-jLO"/>
+                            <constraint firstItem="xPK-ey-nl6" firstAttribute="trailing" secondItem="ZJs-1N-caR" secondAttribute="trailingMargin" id="bMM-Uq-9HH"/>
+                            <constraint firstItem="pIF-8H-aM2" firstAttribute="width" secondItem="xPK-ey-nl6" secondAttribute="width" id="dLi-kn-f4X"/>
+                            <constraint firstItem="iIo-9f-1fl" firstAttribute="trailing" secondItem="Vbu-5S-njQ" secondAttribute="trailing" id="i0A-N6-hCI"/>
+                            <constraint firstItem="tuU-A2-nEp" firstAttribute="leading" secondItem="ZJs-1N-caR" secondAttribute="leadingMargin" id="j4Y-lo-1Tj"/>
+                            <constraint firstItem="xPK-ey-nl6" firstAttribute="leading" secondItem="ZJs-1N-caR" secondAttribute="leadingMargin" id="n6Z-Yw-yk6"/>
+                            <constraint firstItem="pIF-8H-aM2" firstAttribute="top" secondItem="Vbu-5S-njQ" secondAttribute="bottom" constant="8" symbolic="YES" id="pea-VZ-hkU"/>
+                            <constraint firstItem="Vbu-5S-njQ" firstAttribute="height" secondItem="xPK-ey-nl6" secondAttribute="height" id="qW4-6Q-9Cz"/>
+                            <constraint firstItem="Vbu-5S-njQ" firstAttribute="centerY" secondItem="ZJs-1N-caR" secondAttribute="centerY" id="vC1-bK-h4m"/>
+                            <constraint firstItem="tuU-A2-nEp" firstAttribute="height" secondItem="xPK-ey-nl6" secondAttribute="height" id="yWU-OO-qan"/>
+                            <constraint firstItem="Vbu-5S-njQ" firstAttribute="top" secondItem="xPK-ey-nl6" secondAttribute="bottom" constant="8" symbolic="YES" id="zUJ-lU-V3T"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vC1-bK-h4m"/>
+                                <exclude reference="yWU-OO-qan"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tri-Mb-jcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
