@@ -14,6 +14,7 @@ class GraphViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var someLabel: UILabel!
+
     
     // MARK: Properties
     var savedTestResults = SavedTestResults()
@@ -161,6 +162,7 @@ class GraphViewController: UIViewController {
 
     
     // MARK: Actions
+
     @IBAction func segmentedControl(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 { // WEEK
             someLabel.text = "C E R O !!!"
@@ -168,11 +170,16 @@ class GraphViewController: UIViewController {
         else if sender.selectedSegmentIndex == 1 { // MONTH
             for _ in 1...100 {
                 lineChartDataSet.removeFirst()
-                lineChartView.notifyDataSetChanged()
-                lineChartView.invalidateIntrinsicContentSize()
-                lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-                lineChartView.setNeedsDisplay()
             }
+            lineChartView.autoresizesSubviews = true
+            lineChartView.autoScaleMinMaxEnabled = true
+            lineChartView.scaleXEnabled = true
+            lineChartView.scaleYEnabled = true
+//            lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+            lineChartView.invalidateIntrinsicContentSize()
+            lineChartView.setNeedsDisplay()
+            lineChartView.notifyDataSetChanged()
+//            lineChartView.sizeToFit()
         }
         else { // YEAR
             someLabel.text = "D O S !!!!!"

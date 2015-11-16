@@ -618,7 +618,17 @@
                                             <segment title="Month"/>
                                             <segment title="Year"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmentedControl:" destination="EVr-7s-9ey" eventType="valueChanged" id="A3c-Nv-IhP"/>
+                                        </connections>
                                     </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1u-l8-8eS">
+                                        <rect key="frame" x="65" y="214" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -640,6 +650,7 @@
                     <navigationItem key="navigationItem" id="xGk-lE-ozT"/>
                     <connections>
                         <outlet property="lineChartView" destination="p3g-Ee-kHi" id="VLW-7G-lcV"/>
+                        <outlet property="someLabel" destination="d1u-l8-8eS" id="Qi7-2c-12X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqj-wC-5mr" userLabel="First Responder" sceneMemberID="firstResponder"/>
