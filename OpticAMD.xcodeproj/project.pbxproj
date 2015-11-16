@@ -614,7 +614,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 			};
@@ -629,7 +629,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 			};

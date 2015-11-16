@@ -56,11 +56,11 @@ class GraphViewController: UIViewController {
     
     func generateSampleData() -> [Double] {
         var data = [Double]()
-        for i in 1...365 {
+        for i in 1...150 {
             let r1 = Int(arc4random_uniform(UInt32(1000)))
             let r2 = (Double(r1) / 1000000.0)
             let r3 = r2*([-1,1][Int(arc4random_uniform(UInt32(2)))])
-            let r4 = (0.01 * Double(i)) + (r3*1000)
+            let r4 = (0.01 * Double(i)) + (r3*100)
             data.append(r4)
         }
         return data
@@ -115,7 +115,7 @@ class GraphViewController: UIViewController {
     func setupMyTestGraph2() {
         
         var dates = [Int]()
-        for i in 1...365 {
+        for i in 1...150 {
             dates.append(i)
         }
         let areas = generateSampleData()

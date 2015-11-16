@@ -19,7 +19,7 @@ class TakeTestViewController: UIViewController {
     // MARK: Properties
     var lastPointDrawn = CGPoint.zero    // last point drawn on canvas
     var continuousStroke = false              // true if stroke is continuous
-    var brushLineWidth: CGFloat = 150      // width of line to draw
+    var brushLineWidth: CGFloat = 50      // width of line to draw
     var gridLineWidth: CGFloat = 5
     var squareSize: CGFloat = 25
     var red:        CGFloat = 0.1

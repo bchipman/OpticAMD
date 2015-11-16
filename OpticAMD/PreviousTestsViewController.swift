@@ -22,6 +22,11 @@ class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         savedTestResults.load()
+        
+        let testResult = savedTestResults.get(0)
+        leftImage.image = testResult.leftImage
+        rightImage.image = testResult.rightImage
+        
         previousTestsTableView.delegate = self
         previousTestsTableView.dataSource = self
     }
