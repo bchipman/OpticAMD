@@ -155,7 +155,7 @@ class GraphViewController: UIViewController {
         lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Sold")
         lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
         lineChartView.data = lineChartData
-        lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+
         
         lineChartDataSet.circleColors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
     }

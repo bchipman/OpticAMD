@@ -332,7 +332,7 @@
 				TargetAttributes = {
 					D33AF54D1BEC07D200B37DB1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 93T24DY4F9;
+						DevelopmentTeam = VVJK67NYH4;
 					};
 					D33AF5611BEC07D200B37DB1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -618,7 +618,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 			};
@@ -633,7 +633,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = OpticAMD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9-Victor.OpticAMD";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.UCI-Med-AppJam-2015-Team9.OpticAMD";
 				PRODUCT_NAME = OpticAMD;
 				PROVISIONING_PROFILE = "";
 			};

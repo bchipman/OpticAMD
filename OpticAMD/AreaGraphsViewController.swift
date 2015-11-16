@@ -51,7 +51,7 @@ class AreaGraphsViewController: UIViewController {
         leftChartDataSet.circleColors = [UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)]
         rightChartDataSet.colors = [UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)]
         rightChartDataSet.circleColors = [UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)]
-
+        
         
         switch dataType {
         case "wavy":
