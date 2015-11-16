@@ -127,7 +127,7 @@ class GraphViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Orange")
+        lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Blue")
         lineChartDataSet.colors = [UIColor(red: 15/255, green: 117/255, blue: 188/255, alpha: 1)]
         lineChartDataSet.circleColors = [UIColor(red: 15/255, green: 117/255, blue: 188/255, alpha: 1)]
         lineChartDataSet.circleHoleColor = UIColor(red: 15/255, green: 117/255, blue: 188/255, alpha: 1)
@@ -138,6 +138,7 @@ class GraphViewController: UIViewController {
 
         lineChartView.data = allLineChartData
         lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        lineChartView.descriptionText = ""
     }
     
     

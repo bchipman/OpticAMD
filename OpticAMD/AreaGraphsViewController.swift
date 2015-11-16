@@ -49,9 +49,15 @@ class AreaGraphsViewController: UIViewController {
         
         leftChartDataSet.colors = [UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)]
         leftChartDataSet.circleColors = [UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)]
+        leftChartDataSet.circleHoleColor = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
+        leftChartDataSet.lineWidth = 2.5
+        leftChartDataSet.circleRadius = 4.0
+        
         rightChartDataSet.colors = [UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)]
         rightChartDataSet.circleColors = [UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)]
-        
+        rightChartDataSet.circleHoleColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)
+        rightChartDataSet.lineWidth = 2.5
+        rightChartDataSet.circleRadius = 4.0
         
         switch dataType {
         case "wavy":
@@ -68,12 +74,13 @@ class AreaGraphsViewController: UIViewController {
             break
         }
         
-        
         let chartDataSets = [leftChartDataSet, rightChartDataSet]
         
         let chartData = LineChartData(xVals: xValues, dataSets: chartDataSets)
         //barChartView.xAxis.labelPosition = .Bottom
         lineChartView.data = chartData
+        lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        lineChartView.descriptionText = ""
     }
     
     override func viewDidLoad() {
