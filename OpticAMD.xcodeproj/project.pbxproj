@@ -26,6 +26,7 @@
 		D36FE7491BF91647009466F2 /* EasyImagy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36FE7441BF91616009466F2 /* EasyImagy.framework */; };
 		D36FE74A1BF91647009466F2 /* EasyImagy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D36FE7441BF91616009466F2 /* EasyImagy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D37F99771BEFD9BD006EBB84 /* TestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F99761BEFD9BD006EBB84 /* TestResult.swift */; };
+		D3FC35891BFA07FD00C1CAC0 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC35881BFA07FD00C1CAC0 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		D358371B1BF85B7A00B4D213 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		D36FE73D1BF91616009466F2 /* EasyImagy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyImagy.xcodeproj; path = EasyImagy/EasyImagy.xcodeproj; sourceTree = "<group>"; };
 		D37F99761BEFD9BD006EBB84 /* TestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResult.swift; sourceTree = "<group>"; };
+		D3FC35881BFA07FD00C1CAC0 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				D35836EC1BF6FEA200B4D213 /* WelcomeViewController.swift */,
 				D33AF5551BEC07D200B37DB1 /* Main.storyboard */,
 				ED188BFE1BED7FB100D163A1 /* Supporting Files */,
+				D3FC35881BFA07FD00C1CAC0 /* AboutUsViewController.swift */,
 			);
 			path = OpticAMD;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				D358371C1BF85B7A00B4D213 /* GraphViewController.swift in Sources */,
 				D33AF5521BEC07D200B37DB1 /* AppDelegate.swift in Sources */,
 				577219F51BF91322008545A2 /* InstructionsViewController.swift in Sources */,
+				D3FC35891BFA07FD00C1CAC0 /* AboutUsViewController.swift in Sources */,
 				D35836ED1BF6FEA200B4D213 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

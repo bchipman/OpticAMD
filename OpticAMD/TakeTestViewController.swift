@@ -21,7 +21,7 @@ class TakeTestViewController: UIViewController {
     var continuousStroke = false              // true if stroke is continuous
     var brushLineWidth: CGFloat = 50      // width of line to draw
     var gridLineWidth: CGFloat = 5
-    var squareSize: CGFloat = 25
+    var squareSize: CGFloat = 26
     var red:        CGFloat = 0.1
     var green:      CGFloat = 0.1
     var blue:       CGFloat = 0.1
@@ -318,7 +318,7 @@ class TakeTestViewController: UIViewController {
         CGContextSetRGBFillColor(context, 1, 1, 1, 1.0)
         CGContextFillRect(context, CGRect(x: 0, y: 0, width: mainImageView.superview!.frame.size.width, height: mainImageView.superview!.frame.size.height))
 
-        // BLUE (Horizontal)
+        // BLACK (Horizontal)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
         for _ in 1...gridNumLines() {
@@ -329,7 +329,7 @@ class TakeTestViewController: UIViewController {
         CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
 
-        // RED (Vertical)
+        // BLACK (Vertical)
         xPos = gridLeftDrawingEdge()
         yPos = gridTopDrawingEdge()
         for _ in 1...gridNumLines() {
@@ -337,9 +337,15 @@ class TakeTestViewController: UIViewController {
             CGContextAddLineToPoint(context, gridLeftEdge() + gridSize() - (gridLineWidth / 2), yPos)
             yPos += squareSize + gridLineWidth
         }
-
         CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextStrokePath(context)
+
+        // BLACK (Center Point)
+        for i in 1...8 {
+            CGContextAddArc(context, gridCenterX(), gridCenterY(), CGFloat(i), 0, CGFloat(2*M_PI), 1)
+        }
+        CGContextStrokePath(context)
+
 
         // Finish drawing
         mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -379,6 +385,12 @@ class TakeTestViewController: UIViewController {
         let imageRef = CGImageCreateWithImageInRect(mainImageView.image?.CGImage, cropRect)
         let croppedImage = UIImage(CGImage: imageRef!)
         return croppedImage
+    }
+    func gridCenterX() -> CGFloat {
+        return gridLeftEdge() + gridSize() / 2
+    }
+    func gridCenterY() -> CGFloat {
+        return gridTopEdge() + gridSize() / 2
     }
 
 
