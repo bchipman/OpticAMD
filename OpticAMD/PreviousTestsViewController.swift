@@ -18,11 +18,9 @@ class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: Properties
     var savedTestResults = SavedTestResults()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         savedTestResults.load()
-        
         let testResult = savedTestResults.get(0)
         leftImage.image = testResult.leftImage
         rightImage.image = testResult.rightImage

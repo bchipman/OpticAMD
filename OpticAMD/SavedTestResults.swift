@@ -45,13 +45,14 @@ class SavedTestResults {
     }
 
     func add(testResult: TestResult) {
-        testResults.append(testResult)
+        //testResults.append(testResult)
+        testResults = [testResult] + testResults
     }
 
 
     // MARK: NSCoding
     func save() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(testResults, toFile: TestResult.ArchiveURL.path!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(testResults.reverse(), toFile: TestResult.ArchiveURL.path!)
         if isSuccessfulSave {
             print("Successfully saved testResults.")
         } else {

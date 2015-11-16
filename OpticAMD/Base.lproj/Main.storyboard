@@ -36,8 +36,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wavy" translatesAutoresizingMaskIntoConstraints="NO" id="Ssr-V3-d6L">
-                                <rect key="frame" x="104" y="288" width="68" height="68"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wavy" translatesAutoresizingMaskIntoConstraints="NO" id="Ssr-V3-d6L">
+                                <rect key="frame" x="90" y="319" width="140" height="140"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="3mT-9M-FEN"/>
@@ -52,8 +52,8 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blindSpot" translatesAutoresizingMaskIntoConstraints="NO" id="uB7-D0-It6">
-                                <rect key="frame" x="128" y="401" width="72" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blindSpot" translatesAutoresizingMaskIntoConstraints="NO" id="uB7-D0-It6">
+                                <rect key="frame" x="90" y="504" width="140" height="140"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="7Tk-pZ-fRF"/>
@@ -68,24 +68,24 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Highlight wavy lines in orange:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhF-VP-DD9">
-                                <rect key="frame" x="20" y="244" width="289" height="45"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Highlight wavy lines in orange:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhF-VP-DD9">
+                                <rect key="frame" x="20" y="246" width="280" height="73.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.047058823530000002" green="0.40000000000000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Highlight blurry areas in blue:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDh-li-N7w">
-                                <rect key="frame" x="308" y="244" width="272" height="45"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Highlight blurry areas in blue:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDh-li-N7w">
+                                <rect key="frame" x="300" y="246" width="280" height="73.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.047058823530000002" green="0.40000000000000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blurred" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-RD-pfx">
-                                <rect key="frame" x="384" y="288" width="68" height="68"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurred" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-RD-pfx">
+                                <rect key="frame" x="370" y="319" width="140" height="140"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="DKa-c3-AxD"/>
@@ -104,24 +104,24 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Highlight blind areas in green:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVx-8A-6XP">
-                                <rect key="frame" x="20" y="356" width="278" height="45"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Highlight blind areas in green:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVx-8A-6XP">
+                                <rect key="frame" x="20" y="459" width="327.5" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.047058823530000002" green="0.40000000000000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Highlight dark areas in grey:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-IN-jDc">
-                                <rect key="frame" x="304" y="356" width="282" height="45"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Highlight dark areas in grey:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-IN-jDc">
+                                <rect key="frame" x="252" y="459" width="327.5" height="45"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.047058823530000002" green="0.40000000000000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="darkSpot" translatesAutoresizingMaskIntoConstraints="NO" id="7Zi-Eb-XhR">
-                                <rect key="frame" x="409" y="401" width="72" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkSpot" translatesAutoresizingMaskIntoConstraints="NO" id="7Zi-Eb-XhR">
+                                <rect key="frame" x="370" y="504" width="140" height="140"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="3yo-S2-afb"/>
@@ -140,24 +140,24 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="3) If you notice any of the following vision defects, mark them by selecting their appropriate icons and highlighting the area." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz0-dw-rha">
-                                <rect key="frame" x="20" y="166" width="560" height="77"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="3) If you notice any of the following vision defects, mark them by selecting their appropriate icons and highlighting the area." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz0-dw-rha">
+                                <rect key="frame" x="20" y="170" width="560" height="75"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.047058823530000002" green="0.40000000000000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="4) Once finished, repeat the test on your right eye by closing your left eye and focusing with your right eye." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krr-PH-hJX">
-                                <rect key="frame" x="20" y="472" width="560" height="102"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="4) Once finished, repeat the test on your right eye by closing your left eye and focusing with your right eye." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krr-PH-hJX">
+                                <rect key="frame" x="20" y="644" width="560" height="75"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.047058823530000002" green="0.40000000000000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="2) First close your right eye. When the grid appears, focus on the center." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5M-ey-KpZ">
-                                <rect key="frame" x="20" y="94" width="560" height="74"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="2) First close your right eye. When the grid appears, focus on the center." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5M-ey-KpZ">
+                                <rect key="frame" x="20" y="95" width="560" height="75"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.047058823530000002" green="0.40000000000000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,8 +175,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-GH-TJ0">
-                                <rect key="frame" x="19" y="576" width="561" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-GH-TJ0">
+                                <rect key="frame" x="20" y="509" width="560" height="41"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.37254901959999998" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
@@ -192,7 +192,7 @@
                         <constraints>
                             <constraint firstItem="krr-PH-hJX" firstAttribute="top" secondItem="aMu-GH-TJ0" secondAttribute="bottom" constant="-71" id="5MB-3N-geh"/>
                             <constraint firstItem="krr-PH-hJX" firstAttribute="leading" secondItem="KGv-2o-ueh" secondAttribute="leadingMargin" id="7wK-OA-J0W"/>
-                            <constraint firstItem="Nlt-Dp-0NK" firstAttribute="top" relation="lessThanOrEqual" secondItem="aMu-GH-TJ0" secondAttribute="bottom" constant="50" id="8KI-AT-pMp"/>
+                            <constraint firstItem="Nlt-Dp-0NK" firstAttribute="top" secondItem="aMu-GH-TJ0" secondAttribute="bottom" constant="50" id="8KI-AT-pMp"/>
                             <constraint firstItem="7fg-IN-jDc" firstAttribute="width" secondItem="xVx-8A-6XP" secondAttribute="width" id="93r-sD-Dqi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aMu-GH-TJ0" secondAttribute="trailing" id="9F2-ad-mc3"/>
                             <constraint firstItem="7Zi-Eb-XhR" firstAttribute="leading" secondItem="krr-PH-hJX" secondAttribute="trailing" constant="-171" id="Aib-b2-gec"/>
@@ -240,13 +240,13 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MnN-vB-lea"/>
-                                <exclude reference="pc7-s5-Wd8"/>
-                                <exclude reference="5MB-3N-geh"/>
-                                <exclude reference="Aib-b2-gec"/>
-                                <exclude reference="FlQ-qa-lIg"/>
                                 <exclude reference="piv-kV-Nrn"/>
                                 <exclude reference="tpf-Ze-9XI"/>
                                 <exclude reference="wqB-X3-Dc8"/>
+                                <exclude reference="pc7-s5-Wd8"/>
+                                <exclude reference="Aib-b2-gec"/>
+                                <exclude reference="FlQ-qa-lIg"/>
+                                <exclude reference="5MB-3N-geh"/>
                             </mask>
                         </variation>
                     </view>
@@ -293,7 +293,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EVr-7s-9ey" kind="show" id="pD9-kl-BPj"/>
+                                    <segue destination="H6m-YZ-fcG" kind="show" id="HIy-MJ-SgX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFY-Mw-ZEF">
@@ -365,6 +365,40 @@
             </objects>
             <point key="canvasLocation" x="-766" y="462"/>
         </scene>
+        <!--Area Graphs View Controller-->
+        <scene sceneID="elC-39-hRB">
+            <objects>
+                <viewController id="H6m-YZ-fcG" customClass="AreaGraphsViewController" customModule="OpticAMD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hST-XI-B5n"/>
+                        <viewControllerLayoutGuide type="bottom" id="VTb-3z-4Bd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ch9-yO-Z4c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIE-TC-8zC" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="eIE-TC-8zC" secondAttribute="trailing" id="5FT-7q-Xhg"/>
+                            <constraint firstItem="eIE-TC-8zC" firstAttribute="top" secondItem="hST-XI-B5n" secondAttribute="bottom" id="9jh-5S-uho"/>
+                            <constraint firstItem="VTb-3z-4Bd" firstAttribute="top" secondItem="eIE-TC-8zC" secondAttribute="bottom" id="dM2-Ck-EIb"/>
+                            <constraint firstItem="eIE-TC-8zC" firstAttribute="leading" secondItem="Ch9-yO-Z4c" secondAttribute="leadingMargin" id="tG4-Ch-JqY"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="eIE-TC-8zC" id="Nb2-1E-5jW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwA-tT-Kc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1272" y="1369"/>
+        </scene>
         <!--About Us-->
         <scene sceneID="HDa-0u-wCm">
             <objects>
@@ -404,7 +438,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="16" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-9f-1fl">
                                 <rect key="frame" x="20" y="171" width="560" height="278"/>
                                 <animations/>
-                                <mutableString key="text">Smartphones and tablets have drastically changed healthcare and it has empowered everyday people to take control of their own health.  Thousands of health applications (apps) currently exist.  There are apps to help people remember when and what medications to take, apps to assess sleeping patterns, apps to track sugar levels for diabetics, and even apps to store health information.  Yet even with the seemingly endless number of apps available, apps designed for those with eye conditions are surprisingly lacking.  And so, we created OpticAMD.  Our team, formerly known as Team 9 of the 2015 Med AppJam, is comprised of four ambitious students from UC Irvine who have worked diligently to create an app that will change the way patients living with age related macular degeneration (AMD) manage their condition.  Our goal is to provide users a simple, yet effective, method of monitoring changes in their vision.</mutableString>
+                                <string key="text">Smartphones and tablets have drastically changed healthcare and it has empowered everyday people to take control of their own health.  Thousands of health applications (apps) currently exist.  There are apps to help people remember when and what medications to take, apps to assess sleeping patterns, apps to track sugar levels for diabetics, and even apps to store health information.  Yet even with the seemingly endless number of apps available, apps designed for those with eye conditions are surprisingly lacking.  And so, we created OpticAMD.  Our team, formerly known as Team 9 of the 2015 Med AppJam, is comprised of four ambitious students from UC Irvine who have worked diligently to create an app that will change the way patients living with age related macular degeneration (AMD) manage their condition.  Our goal is to provide users a simple, yet effective, method of monitoring changes in their vision.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -765,8 +799,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He4-sD-IC5">
-                                <rect key="frame" x="20" y="448" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He4-sD-IC5">
+                                <rect key="frame" x="20" y="446" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="VY3-C4-AWl"/>
                                     <constraint firstAttribute="height" constant="100" id="ri0-QO-css"/>
@@ -779,24 +813,27 @@
                                 </variation>
                                 <connections>
                                     <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="YXc-Af-LGb"/>
+                                    <action selector="changeColor:" destination="HoZ-Vm-zVF" eventType="touchUpInside" id="zYd-Jr-SOx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnS-BS-zYa">
-                                <rect key="frame" x="135" y="448" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnS-BS-zYa">
+                                <rect key="frame" x="135" y="446" width="100" height="100"/>
                                 <state key="normal" title="blue" image="blurred"/>
                                 <connections>
                                     <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="FEk-kc-DOa"/>
+                                    <action selector="changeColor:" destination="HoZ-Vm-zVF" eventType="touchUpInside" id="jkg-hR-IAZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3d-B2-uNT">
-                                <rect key="frame" x="250" y="448" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3d-B2-uNT">
+                                <rect key="frame" x="250" y="446" width="100" height="100"/>
                                 <state key="normal" title="green" image="blindSpot"/>
                                 <connections>
                                     <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="IqO-Rg-njo"/>
+                                    <action selector="changeColor:" destination="HoZ-Vm-zVF" eventType="touchUpInside" id="bwJ-Sg-Oh8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgO-5w-P6a">
-                                <rect key="frame" x="480" y="448" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgO-5w-P6a">
+                                <rect key="frame" x="480" y="446" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="58k-OY-SZr"/>
                                 </constraints>
@@ -808,11 +845,12 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="changeColor:" destination="HoZ-Vm-zVF" eventType="touchUpInside" id="BrK-dt-jg6"/>
                                     <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="fYg-6C-OOl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvm-fa-Qsh">
-                                <rect key="frame" x="365" y="448" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvm-fa-Qsh">
+                                <rect key="frame" x="365" y="446" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="UPb-eI-ND3"/>
                                 </constraints>
@@ -823,6 +861,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="changeColor:" destination="HoZ-Vm-zVF" eventType="touchUpInside" id="BqD-jj-Wyw"/>
                                     <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="mgr-k7-FOc"/>
                                 </connections>
                             </button>
@@ -1080,6 +1119,7 @@
                                                                 </view>
                                                             </subviews>
                                                             <animations/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="75" id="FKv-pD-2Wv"/>
                                                                 <constraint firstAttribute="height" constant="90" id="aVt-2g-UhV"/>
@@ -1174,6 +1214,7 @@
                                                                 </view>
                                                             </subviews>
                                                             <animations/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="90" id="Dgw-O2-hbb"/>
                                                                 <constraint firstAttribute="width" constant="75" id="u0n-ys-MRe"/>
