@@ -64,12 +64,14 @@ class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITabl
         cell.nameLabel.text = dateString
         
         cell.leftImageView.image = testResult.leftImage
+        
         cell.leftWavy.text = String(format:"%.3f", testResult.leftImageAreaData!["wavy"]!)
         cell.leftBlurry.text = String(format:"%.3f", testResult.leftImageAreaData!["blurry"]!)
         cell.leftBlind.text = String(format:"%.3f", testResult.leftImageAreaData!["blind"]!)
         cell.leftDark.text = String(format:"%.3f", testResult.leftImageAreaData!["dark"]!)
 
         cell.rightImageView.image = testResult.rightImage
+        
         cell.rightWavy.text = String(format:"%.3f", testResult.rightImageAreaData!["wavy"]!)
         cell.rightBlurry.text = String(format:"%.3f", testResult.rightImageAreaData!["blurry"]!)
         cell.rightBlind.text = String(format:"%.3f", testResult.rightImageAreaData!["blind"]!)

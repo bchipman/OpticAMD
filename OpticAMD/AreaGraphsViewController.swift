@@ -13,18 +13,25 @@ class AreaGraphsViewController: UIViewController {
     
     var testResults = SavedTestResults()
     
-    @IBOutlet weak var lineChartView: LineChartView!
+    @IBOutlet weak var wavyAreaChart: LineChartView!
     
-    func setChart() {
+    @IBOutlet weak var blurryAreaChart: LineChartView!
+    
+    @IBOutlet weak var blindAreaChart: LineChartView!
+    
+    @IBOutlet weak var darkAreaChart: LineChartView!
+    
+    @IBOutlet weak var totalAreaChart: LineChartView!
+    
+    func setChart(lineChartView: LineChartView!, dataType: String) {
         var leftDataEntries: [ChartDataEntry] = []
         var rightDataEntries: [ChartDataEntry] = []
         var xValues = [String]()
         let count = testResults.count() - 1
         
         for i in 0..<testResults.count() {
-            let leftDataEntry = ChartDataEntry(value: testResults.get(count - i).leftImageAreaData!["total"]!, xIndex: i)
-            let rightDataEntry = ChartDataEntry(value: testResults.get(count - i).rightImageAreaData!["total"]!, xIndex: i)
-            
+            let leftDataEntry = ChartDataEntry(value: testResults.get(count - i).leftImageAreaData![dataType]!, xIndex: i)
+            let rightDataEntry = ChartDataEntry(value: testResults.get(count - i).rightImageAreaData![dataType]!, xIndex: i)
             
             leftDataEntries.append(leftDataEntry)
             rightDataEntries.append(rightDataEntry)
@@ -37,12 +44,30 @@ class AreaGraphsViewController: UIViewController {
             //xValues.append(i)
         }
         
-        let leftChartDataSet = LineChartDataSet(yVals: leftDataEntries, label: "Left Area (%)")
-        let rightChartDataSet = LineChartDataSet(yVals: rightDataEntries, label: "Right Area (%)")
+        let leftChartDataSet = LineChartDataSet(yVals: leftDataEntries, label: dataType + " Left Area (%)")
+        let rightChartDataSet = LineChartDataSet(yVals: rightDataEntries, label: dataType + " Right Area (%)")
         
-        leftChartDataSet.colors = [UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)]
-        leftChartDataSet.circleColors = [UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)]
+        leftChartDataSet.colors = [UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)]
+        leftChartDataSet.circleColors = [UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)]
+        rightChartDataSet.colors = [UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)]
+        rightChartDataSet.circleColors = [UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)]
 
+        
+        switch dataType {
+        case "wavy":
+            lineChartView.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 0.5)
+        case "blurry":
+            lineChartView.backgroundColor = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 0.5)
+        case "blind":
+            lineChartView.backgroundColor = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 0.5)
+        case "dark":
+            lineChartView.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5)
+        case "total":
+            lineChartView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
+        default:
+            break
+        }
+        
         
         let chartDataSets = [leftChartDataSet, rightChartDataSet]
         
@@ -53,7 +78,13 @@ class AreaGraphsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setChart()
+        print(testResults.count())
+        setChart(wavyAreaChart, dataType: "wavy")
+        setChart(blurryAreaChart, dataType: "blurry")
+        setChart(blindAreaChart, dataType: "blind")
+        setChart(darkAreaChart, dataType: "dark")
+        setChart(totalAreaChart, dataType: "total")
+
         // Do any additional setup after loading the view.
     }
 

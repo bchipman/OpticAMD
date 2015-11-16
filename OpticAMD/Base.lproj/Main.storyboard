@@ -377,22 +377,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIE-TC-8zC" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLE-LJ-5yV" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="0.0" width="560" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jm9-G9-voj" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="122" width="560" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOc-Hh-0i6" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="244" width="560" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvR-jO-Enm" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="366" width="560" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wt4-Rk-5LU" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="488" width="560" height="112"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="eIE-TC-8zC" secondAttribute="trailing" id="5FT-7q-Xhg"/>
-                            <constraint firstItem="eIE-TC-8zC" firstAttribute="top" secondItem="hST-XI-B5n" secondAttribute="bottom" id="9jh-5S-uho"/>
-                            <constraint firstItem="VTb-3z-4Bd" firstAttribute="top" secondItem="eIE-TC-8zC" secondAttribute="bottom" id="dM2-Ck-EIb"/>
-                            <constraint firstItem="eIE-TC-8zC" firstAttribute="leading" secondItem="Ch9-yO-Z4c" secondAttribute="leadingMargin" id="tG4-Ch-JqY"/>
+                            <constraint firstItem="MOc-Hh-0i6" firstAttribute="leading" secondItem="Ch9-yO-Z4c" secondAttribute="leadingMargin" id="1kl-Cc-ULS"/>
+                            <constraint firstItem="VTb-3z-4Bd" firstAttribute="top" secondItem="Wt4-Rk-5LU" secondAttribute="bottom" id="1vB-0h-ZKF"/>
+                            <constraint firstItem="MOc-Hh-0i6" firstAttribute="trailing" secondItem="Ch9-yO-Z4c" secondAttribute="trailingMargin" id="2us-PY-uhr"/>
+                            <constraint firstItem="xLE-LJ-5yV" firstAttribute="trailing" secondItem="Ch9-yO-Z4c" secondAttribute="trailingMargin" id="73D-dT-Lg5"/>
+                            <constraint firstItem="Jm9-G9-voj" firstAttribute="trailing" secondItem="Ch9-yO-Z4c" secondAttribute="trailingMargin" id="9fx-fm-1um"/>
+                            <constraint firstItem="Wt4-Rk-5LU" firstAttribute="trailing" secondItem="Ch9-yO-Z4c" secondAttribute="trailingMargin" id="9hS-nB-AM7"/>
+                            <constraint firstItem="MOc-Hh-0i6" firstAttribute="height" secondItem="xLE-LJ-5yV" secondAttribute="height" id="Auw-dZ-LZ1"/>
+                            <constraint firstItem="Wt4-Rk-5LU" firstAttribute="leading" secondItem="Ch9-yO-Z4c" secondAttribute="leadingMargin" id="Bjx-jE-txu"/>
+                            <constraint firstItem="Wt4-Rk-5LU" firstAttribute="top" secondItem="EvR-jO-Enm" secondAttribute="bottom" constant="10" id="G8S-vX-cBd"/>
+                            <constraint firstItem="Wt4-Rk-5LU" firstAttribute="height" secondItem="xLE-LJ-5yV" secondAttribute="height" id="HLI-ZM-GmV"/>
+                            <constraint firstItem="xLE-LJ-5yV" firstAttribute="top" secondItem="Ch9-yO-Z4c" secondAttribute="topMargin" id="NeZ-Rk-sUE"/>
+                            <constraint firstItem="EvR-jO-Enm" firstAttribute="top" secondItem="MOc-Hh-0i6" secondAttribute="bottom" constant="10" id="Ogf-WW-NlU"/>
+                            <constraint firstItem="xLE-LJ-5yV" firstAttribute="leading" secondItem="Ch9-yO-Z4c" secondAttribute="leadingMargin" id="Y5S-Lc-kqs"/>
+                            <constraint firstItem="xLE-LJ-5yV" firstAttribute="top" secondItem="hST-XI-B5n" secondAttribute="bottom" constant="-20" id="YiQ-v0-PSk"/>
+                            <constraint firstItem="Jm9-G9-voj" firstAttribute="leading" secondItem="Ch9-yO-Z4c" secondAttribute="leadingMargin" id="aA6-8W-J9p"/>
+                            <constraint firstItem="EvR-jO-Enm" firstAttribute="leading" secondItem="Ch9-yO-Z4c" secondAttribute="leadingMargin" id="bra-3M-sSP"/>
+                            <constraint firstItem="EvR-jO-Enm" firstAttribute="trailing" secondItem="Ch9-yO-Z4c" secondAttribute="trailingMargin" id="iLb-A6-M0I"/>
+                            <constraint firstItem="Jm9-G9-voj" firstAttribute="height" secondItem="xLE-LJ-5yV" secondAttribute="height" id="kMh-O1-YRJ"/>
+                            <constraint firstItem="Jm9-G9-voj" firstAttribute="top" secondItem="xLE-LJ-5yV" secondAttribute="bottom" constant="10" id="qo2-B8-POt"/>
+                            <constraint firstItem="EvR-jO-Enm" firstAttribute="height" secondItem="xLE-LJ-5yV" secondAttribute="height" id="toS-ui-lFZ"/>
+                            <constraint firstItem="MOc-Hh-0i6" firstAttribute="top" secondItem="Jm9-G9-voj" secondAttribute="bottom" constant="10" id="zgm-LX-eb8"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
-                        <outlet property="lineChartView" destination="eIE-TC-8zC" id="Nb2-1E-5jW"/>
+                        <outlet property="blindAreaChart" destination="MOc-Hh-0i6" id="bkU-ex-jWY"/>
+                        <outlet property="blurryAreaChart" destination="Jm9-G9-voj" id="sVb-xH-rL2"/>
+                        <outlet property="darkAreaChart" destination="EvR-jO-Enm" id="HAR-rT-Mj7"/>
+                        <outlet property="totalAreaChart" destination="Wt4-Rk-5LU" id="xLJ-x3-qir"/>
+                        <outlet property="wavyAreaChart" destination="xLE-LJ-5yV" id="ZRa-2C-8kt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwA-tT-Kc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -678,7 +715,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="wEz-PG-EbA"/>
+                                    <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="OJK-T8-xRz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijS-f9-zxp">
@@ -845,8 +882,8 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="changeColor:" destination="HoZ-Vm-zVF" eventType="touchUpInside" id="BrK-dt-jg6"/>
                                     <action selector="changeColor:" destination="GLd-MA-8hi" eventType="touchUpInside" id="fYg-6C-OOl"/>
+                                    <action selector="changeColor:" destination="HoZ-Vm-zVF" eventType="touchUpInside" id="z0M-wq-b1S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvm-fa-Qsh">
