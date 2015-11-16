@@ -10,9 +10,11 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBAction func graph(sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red:0.05, green:0.43, blue:0.70, alpha:1.0)
+        //self.view.backgroundColor = UIColor(red:0.05, green:0.43, blue:0.70, alpha:1.0)
         //self.view.backgroundColor = UIColor(red:0.87, green:0.87, blue:0.88, alpha:1.0)
     }
 
