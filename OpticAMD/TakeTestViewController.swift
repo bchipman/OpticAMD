@@ -31,6 +31,7 @@ class TakeTestViewController: UIViewController {
     var leftImage: UIImage?
     var rightImage: UIImage?
     var savedTestResults = SavedTestResults()
+    var isEraser = false
 
 
     // MARK: Setup
@@ -58,6 +59,13 @@ class TakeTestViewController: UIViewController {
         drawNewGrid()
     }
 
+    
+    // Brush width slider
+    @IBAction func changeBrushWidth(sender: UISlider) {
+        sender.value = ceil(sender.value / 10.0) * 10.0
+        brushLineWidth = CGFloat(sender.value)
+    }
+    
 
     // Color buttons
     @IBAction func changeColor(sender: UIButton) {
@@ -68,18 +76,24 @@ class TakeTestViewController: UIViewController {
             red = 1.0
             green = 0.5
             blue = 0.0
+            isEraser = false
         case "blue":
             red = 0.0
             green = 0.5
             blue = 1.0
+            isEraser = false
         case "green":
             red = 0.0
             green = 0.5
             blue = 0.0
+            isEraser = false
         case "grey":
             red = 0.1
             green = 0.1
             blue = 0.1
+            isEraser = false
+        case "eraser":
+            isEraser = true
         default:
             break
         }
@@ -138,6 +152,7 @@ class TakeTestViewController: UIViewController {
 
         tempImageView.image = nil*/
     }
+    
     func drawLineFrom(fromPoint:CGPoint, toPoint:CGPoint) {
         // Called by touchesMoved to draw a line between two points
 
@@ -155,7 +170,11 @@ class TakeTestViewController: UIViewController {
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetLineWidth(context, brushLineWidth)
         CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
-        CGContextSetBlendMode(context, CGBlendMode.Normal)
+        if isEraser {
+            CGContextSetBlendMode(context, CGBlendMode.Clear)
+        } else {
+            CGContextSetBlendMode(context, CGBlendMode.Normal)
+        }
 
         // 4
         CGContextStrokePath(context)
