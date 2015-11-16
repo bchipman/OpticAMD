@@ -11,8 +11,18 @@ import UIKit
 class PreviousTestsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+
     @IBOutlet weak var leftImageView: UIImageView!
+    @IBOutlet weak var leftWavy: UILabel!
+    @IBOutlet weak var leftBlurry: UILabel!
+    @IBOutlet weak var leftBlind: UILabel!
+    @IBOutlet weak var leftDark: UILabel!
+
     @IBOutlet weak var rightImageView: UIImageView!
+    @IBOutlet weak var rightWavy: UILabel!
+    @IBOutlet weak var rightBlurry: UILabel!
+    @IBOutlet weak var rightBlind: UILabel!
+    @IBOutlet weak var rightDark: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

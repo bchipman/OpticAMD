@@ -64,8 +64,25 @@ class PreviousTestsViewController: UIViewController, UITableViewDelegate, UITabl
 
         // Assign testResult data to cell and return cell
         cell.nameLabel.text = dateString
+        
         cell.leftImageView.image = testResult.leftImage
+        cell.leftWavy.text = String(format:"%.3f", testResult.leftImageAreaData!["wavy"]!)
+        cell.leftBlurry.text = String(format:"%.3f", testResult.leftImageAreaData!["blurry"]!)
+        cell.leftBlind.text = String(format:"%.3f", testResult.leftImageAreaData!["blind"]!)
+        cell.leftDark.text = String(format:"%.3f", testResult.leftImageAreaData!["dark"]!)
+
         cell.rightImageView.image = testResult.rightImage
+        cell.rightWavy.text = String(format:"%.3f", testResult.rightImageAreaData!["wavy"]!)
+        cell.rightBlurry.text = String(format:"%.3f", testResult.rightImageAreaData!["blurry"]!)
+        cell.rightBlind.text = String(format:"%.3f", testResult.rightImageAreaData!["blind"]!)
+        cell.rightDark.text = String(format:"%.3f", testResult.rightImageAreaData!["dark"]!)
+
+        for cellLabel in [cell.leftWavy, cell.leftBlurry, cell.leftBlind, cell.leftDark, cell.rightWavy, cell.rightBlurry, cell.rightBlind, cell.rightDark] {
+            if cellLabel.text == "0.000" {
+                cellLabel.text = "-"
+            }
+        }
+        
         return cell
     }
 
